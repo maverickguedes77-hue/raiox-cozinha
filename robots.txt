@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maverickguedes77-hue.github.io/raiox-cozinha/sitemap.xml
