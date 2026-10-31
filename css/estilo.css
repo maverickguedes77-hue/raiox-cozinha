@@ -206,15 +206,25 @@ html:not(.js) .so-js { display: none; }
 .quem h2 { margin-bottom: 16px; }
 .formacoes { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--grafite); }
 .formacoes-lead { max-width: 68ch; margin: 8px 0 24px; }
+.formacoes-faixa { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; list-style: none; margin: 0 0 24px; padding: 0; background: var(--grafite); border: 1px solid var(--grafite); }
+.formacoes-faixa li { padding: 16px; background: var(--preto-fosco); font-size: 15px; font-weight: 700; line-height: 1.3; color: var(--branco-osso); }
+.formacoes-faixa span { display: block; margin-bottom: 4px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--dourado-claro); }
 .formacoes-grade { display: grid; gap: 16px; }
 .formacao { display: flex; flex-direction: column; padding: 24px 24px 24px 27px; background: var(--preto-carvao); border: 1px solid var(--grafite); border-left: 3px solid var(--dourado); border-radius: 2px; }
-.formacao h4 { margin: 0 0 16px; font: 700 19px/1.3 var(--texto); color: var(--branco-osso); text-wrap: balance; }
+.formacao h4 { margin: 0 0 12px; font: 700 19px/1.3 var(--texto); color: var(--branco-osso); text-wrap: balance; }
 .formacao p { margin: 0; font-size: 15px; line-height: 1.55; }
-.formacao .formacao-onde { margin-bottom: 4px; font-size: 13px; font-weight: 700; color: var(--cinza-texto); }
-.formacao .formacao-estudei { margin-bottom: 16px; }
+.formacao .formacao-onde { margin-bottom: 4px; font-size: 13px; color: var(--cinza-texto); }
+.formacao .formacao-onde b { color: var(--dourado-claro); letter-spacing: .1em; text-transform: uppercase; }
+.formacao .formacao-gancho { margin-bottom: 20px; font: 600 24px/1.2 var(--serifa); color: var(--dourado); text-wrap: balance; }
+.formacao-rotulo { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 700; color: var(--cinza-texto); }
+.formacao-lista { list-style: none; margin: 0; padding: 0; font-size: 15px; line-height: 1.5; }
+.formacao-lista li { position: relative; padding: 0 0 8px 22px; }
+.formacao-lista li::before { content: ""; position: absolute; left: 2px; top: .5em; width: 8px; height: 8px; border: 1.5px solid var(--dourado); transform: rotate(45deg); }
+.formacao .formacao-extra { margin: 4px 0 20px; font-size: 13px; color: var(--cinza-texto); }
 .formacao .formacao-muda { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--grafite); }
-.formacao-rotulo { display: block; margin-bottom: 2px; font-size: 13px; font-weight: 700; color: var(--cinza-texto); }
-.formacao-muda .formacao-rotulo { color: var(--dourado-claro); }
+.formacao-muda .formacao-rotulo { margin-bottom: 4px; color: var(--dourado-claro); }
+.formacao .formacao-resultado { font-size: 16px; font-weight: 700; color: var(--branco-osso); }
+.formacao .formacao-fuga { display: inline-block; margin-top: 12px; padding: 4px 8px; border: 1px solid var(--dourado); border-radius: 2px; font-size: 12px; font-weight: 700; letter-spacing: .04em; line-height: 1.3; color: var(--dourado-claro); }
 .formacoes-nota { margin-top: 16px; }
 
 /* BLOCO 11 · Perguntas */
@@ -313,7 +323,9 @@ h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .ficha b, .
 
   .bloco-nao h2 { font-size: 48px; }
   .quem { grid-template-columns: 148px 1fr; gap: 64px; }
+  .formacoes-faixa { grid-template-columns: repeat(4, 1fr); }
   .formacoes-grade { grid-template-columns: 1fr 1fr; }
+  .formacao .formacao-gancho { font-size: 26px; }
   .fechamento h2 { font-size: 56px; }
   .rodape .conteudo { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; }
   .barra-fixa { display: none; }
