@@ -69,7 +69,7 @@ h3 { font: 700 19px/1.3 var(--texto); color: var(--branco-osso); margin: 0 0 8px
 .etiqueta { font-size: 13px; line-height: 1.45; color: var(--cinza-texto); margin-bottom: 16px; }
 .subtitulo { margin: 12px 0 0; }
 .oferta { margin: 12px 0 0; font-weight: 700; color: var(--branco-osso); }
-.preco-topo { display: block; margin: 8px 0 12px; font: 700 52px/1 var(--serifa); color: var(--dourado); }
+.preco-topo { display: block; font: 700 52px/1 var(--serifa); color: var(--dourado); }
 .apoio { margin: 12px 0 0; font-size: 13px; line-height: 1.5; color: var(--cinza-texto); }
 .link-marcar { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; font-weight: 700; color: var(--dourado-claro); text-underline-offset: 3px; }
 
@@ -116,14 +116,7 @@ h3 { font: 700 19px/1.3 var(--texto); color: var(--branco-osso); margin: 0 0 8px
 .lista-numeros { list-style: none; margin: 16px 0 0; padding: 0; }
 .lista-numeros > li { position: relative; padding: 0 0 16px 24px; }
 .lista-numeros > li::before { content: ""; position: absolute; left: 0; top: .62em; width: 10px; height: 10px; border: 1.5px solid var(--dourado); transform: rotate(45deg); }
-.mais { margin: 24px 0 0; padding: 24px 0 0; border-top: 1px solid var(--grafite); }
 .subtitulo-lista { font: 700 19px var(--texto); color: var(--branco-osso); margin-bottom: 8px; }
-.ficha { padding: 24px; background: var(--preto-fosco); border: 1px solid var(--dourado); outline: 1px solid var(--grafite); outline-offset: 5px; margin: 6px; }
-.ficha-topo { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 16px; padding-bottom: 12px; border-bottom: 1px solid var(--dourado); font: 600 24px/1.2 var(--serifa); color: var(--branco-osso); }
-.ficha-topo span { font: 400 13px var(--texto); color: var(--cinza-texto); }
-.ficha ol { list-style: none; margin: 0; padding: 0; }
-.ficha li { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 12px 0; border-bottom: 1px dashed var(--grafite); font-size: 15px; line-height: 1.35; color: var(--branco-osso); }
-.ficha li b { font: 700 32px/1 var(--serifa); color: var(--dourado); }
 
 /* BLOCO 10 · Prova visual */
 .telas { display: grid; gap: 16px; margin-top: 32px; }
@@ -161,7 +154,7 @@ h3 { font: 700 19px/1.3 var(--texto); color: var(--branco-osso); margin: 0 0 8px
 
 /* BLOCO 7 · Preço e agendamento */
 .fechar-grade { display: grid; gap: 24px; align-items: start; }
-.preco-caixa { padding: 32px 24px; background: var(--preto-fosco); border: 1px solid var(--dourado); text-align: center; }
+.preco-caixa { padding: 32px 24px; background: var(--preto-carvao); border: 1px solid var(--dourado); text-align: center; }
 .preco-caixa h2 { font-size: 52px; line-height: 1; font-weight: 700; margin-bottom: 24px; }
 .preco-caixa p { text-align: left; }
 .preco-condicao { margin-bottom: 24px; }
@@ -187,7 +180,7 @@ h3 { font: 700 19px/1.3 var(--texto); color: var(--branco-osso); margin: 0 0 8px
 .envio { margin-top: 24px; }
 .pagamento { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--grafite); }
 .pagamento-titulo { margin: 0 0 12px; font-weight: 700; color: var(--branco-osso); }
-html:not(.js) .so-js { display: none; }
+html:not(.js) .so-js, html.js .so-sem-js { display: none; }
 [hidden] { display: none; }
 
 /* BLOCO 8 · Quando eu digo não: o único bloco claro da página */
@@ -213,7 +206,7 @@ html:not(.js) .so-js { display: none; }
 .quem h2 { margin-bottom: 16px; }
 .formacoes { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--grafite); }
 .formacoes-lead { max-width: 68ch; margin: 8px 0 24px; }
-.formacoes-faixa { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; list-style: none; margin: 0 0 24px; padding: 0; background: var(--grafite); border: 1px solid var(--grafite); }
+.formacoes-faixa { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; list-style: none; margin: 0 0 24px; padding: 0; background: var(--grafite); border: 1px solid var(--grafite); }
 .formacoes-faixa li { padding: 16px; background: var(--preto-fosco); font-size: 15px; font-weight: 700; line-height: 1.3; color: var(--branco-osso); }
 .formacoes-faixa span { display: block; margin-bottom: 4px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--dourado-claro); }
 .formacoes-grade { display: grid; gap: 16px; }
@@ -257,7 +250,7 @@ html:not(.js) .so-js { display: none; }
 .rodape strong { color: var(--areia); }
 
 /* Barra fixa no celular, leva para a agenda */
-.barra-fixa { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; padding: 12px var(--margem) calc(12px + env(safe-area-inset-bottom)); background: rgba(14, 14, 14, .96); border-top: 1px solid var(--grafite); transform: translateY(110%); transition: transform .55s var(--curva); }
+.barra-fixa { display: grid; grid-template-columns: 1.15fr 1fr; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; padding: 12px var(--margem) calc(12px + env(safe-area-inset-bottom)); background: rgba(14, 14, 14, .96); border-top: 1px solid var(--grafite); transform: translateY(110%); transition: transform .55s var(--curva); }
 .barra-fixa.visivel { transform: none; }
 
 /* Página de privacidade */
@@ -265,8 +258,105 @@ html:not(.js) .so-js { display: none; }
 .privacidade h1 { color: var(--dourado); margin-bottom: 24px; }
 .privacidade h2 { font: 700 17px/1.4 var(--texto); color: var(--branco-osso); margin: 24px 0 8px; }
 
+/* Preço do topo com o que ele paga */
+.preco-linha { display: flex; align-items: center; gap: 12px; margin: 8px 0 12px; }
+.preco-nota { font-size: 13px; font-weight: 700; line-height: 1.3; color: var(--areia); }
+.preco-caixa .preco-chamada { margin-bottom: 8px; text-align: center; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--dourado-claro); }
+
+/* Fatos da oferta */
+.fatos { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 16px; list-style: none; margin: 32px auto 0; padding: 0; max-width: 960px; }
+.fatos li { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; font-size: 14px; font-weight: 700; line-height: 1.35; color: var(--branco-osso); }
+.fatos .icone { color: var(--dourado); }
+
+/* Quanto uma cozinha pode estar perdendo */
+.perdas-grade { display: grid; gap: 16px; }
+.perdas { list-style: none; margin: 0; padding: 0; }
+.perdas li { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding-bottom: 12px; font-size: 14px; }
+.perdas b, .perdas-total b { font: 700 22px/1 var(--serifa); color: var(--dourado); }
+.perda-rotulo { color: var(--areia); }
+.perda-barra { grid-column: 1 / -1; display: block; width: var(--v); height: 8px; background: var(--dourado); opacity: .75; border-radius: 1px; }
+.perdas-total { display: grid; gap: 12px; margin-top: 8px; padding-top: 16px; border-top: 1px solid var(--dourado); }
+.perdas-total > div { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: baseline; font-size: 14px; font-weight: 700; color: var(--branco-osso); }
+.perdas-total b { font-size: 30px; }
+.perdas-total .perda-raiox { color: var(--branco-osso); }
+.perda-barra-cheia { height: 14px; opacity: 1; }
+.perda-barra-raiox { height: 14px; background: var(--branco-osso); opacity: 1; }
+.calc { padding: 24px; background: var(--preto-fosco); border: 1px solid var(--dourado); }
+.calc-rotulo { display: block; margin: 16px 0 4px; font-size: 15px; font-weight: 700; color: var(--branco-osso); }
+.calc-rotulo b { display: block; font: 700 30px/1.2 var(--serifa); color: var(--dourado); }
+.calc input[type="range"] { display: block; width: 100%; height: 44px; margin: 0; accent-color: var(--dourado); cursor: pointer; }
+html:not(.js) .calc input[type="range"] { display: none; }
+.calc-saida { margin: 12px 0 0; }
+.calc-saida > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--grafite); font-size: 14px; }
+.calc-saida dd { margin: 0; font: 700 28px/1 var(--serifa); color: var(--dourado); white-space: nowrap; }
+.calc-nota { margin-top: 16px; font-size: 15px; font-weight: 700; color: var(--branco-osso); }
+
+/* Amostra do relatório: a página em papel */
+.titulo-lista { margin: 32px 0 16px; }
+.relatorio-fig { margin: 0; min-width: 0; }
+.relatorio { position: relative; padding: 24px 20px; background: #F5F1E8; color: #23201a; border-radius: 2px; box-shadow: 8px 8px 0 #2A2A2A; font-size: 13px; line-height: 1.4; }
+.relatorio-topo { display: flex; justify-content: space-between; gap: 12px; padding-bottom: 8px; border-bottom: 2px solid #23201a; font-size: 12px; letter-spacing: .08em; }
+.relatorio-casa { margin: 8px 0 16px; font-size: 12px; color: #4a453b; }
+.relatorio-titulo { margin: 0; font: 700 22px/1.15 var(--serifa); color: #23201a; }
+.relatorio-grande { margin: 4px 0 0; font: 700 44px/1 var(--serifa); color: var(--dourado-escuro); }
+.relatorio-grande small { font-size: 20px; }
+.relatorio-sub { margin: 4px 0 16px; font-size: 12px; color: #4a453b; }
+.relatorio-numeros { margin: 0 0 16px; border-top: 1px solid #23201a; }
+.relatorio-numeros > div { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid rgba(35, 32, 26, .22); }
+.relatorio-numeros dt { color: #3a362e; }
+.relatorio-numeros dd { margin: 0; font-weight: 700; text-align: right; white-space: nowrap; }
+.relatorio-titulo-p { margin: 0 0 8px; font-weight: 700; }
+.relatorio-correcoes { margin: 0; padding-left: 18px; }
+.relatorio-correcoes li { padding-bottom: 8px; }
+.relatorio-correcoes span { display: block; }
+.relatorio-correcoes b { margin-right: 8px; color: var(--dourado-escuro); }
+.relatorio-correcoes i { font-style: normal; color: #4a453b; }
+.relatorio-selo { float: right; margin-left: 12px; padding: 4px 8px; border: 2px solid var(--dourado-escuro); border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--dourado-escuro); transform: rotate(6deg); }
+.relatorio-fig figcaption { margin-top: 24px; }
+
+/* Antes e depois */
+.comparar-cabeca { display: none; }
+.comparar { display: grid; gap: 12px; list-style: none; margin: 0; padding: 0; }
+.comparar li { display: grid; gap: 1px; background: var(--grafite); border: 1px solid var(--grafite); }
+.comparar p { margin: 0; padding: 16px; font-size: 15px; line-height: 1.45; }
+.comparar span { display: block; margin-bottom: 4px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.antes { background: var(--preto-fosco); color: var(--cinza-texto); }
+.antes span { color: var(--cinza-texto); }
+.depois { background: var(--preto-carvao); border-left: 3px solid var(--dourado); font-weight: 700; color: var(--branco-osso); }
+.depois span { color: var(--dourado-claro); }
+.comparar-seta { display: none; }
+.meio-cta { margin-top: 24px; }
+
+/* Garantia e agenda */
+.garantia { display: flex; gap: 12px; margin: 24px 0; padding: 16px; text-align: left; background: var(--preto-fosco); border: 1px solid var(--dourado); font-size: 15px; line-height: 1.5; }
+.garantia .icone { width: 32px; height: 32px; color: var(--dourado); }
+.garantia p { margin: 0; }
+.garantia .garantia-titulo { margin-bottom: 4px; font-weight: 700; color: var(--dourado-claro); }
+.preco-caixa .preco-depois { margin-top: 0; padding-top: 0; border-top: 0; }
+.agenda-fluxo { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; list-style: none; margin: 16px 0 0; padding: 0; font-size: 12px; font-weight: 700; line-height: 1.25; text-align: center; color: var(--branco-osso); }
+.agenda-fluxo li { padding: 8px 4px; background: var(--preto-fosco); border-top: 2px solid var(--dourado); }
+.agenda-fluxo b { display: block; font: 700 20px/1.1 var(--serifa); color: var(--dourado); }
+.resumo { margin-bottom: 12px; padding: 12px 16px; border: 1px solid var(--grafite); border-left: 3px solid var(--grafite); background: var(--preto-fosco); font-weight: 400; }
+.resumo.completo { border-color: var(--dourado); }
+.resumo-titulo { margin: 0 0 8px; font-size: 14px; font-weight: 700; color: var(--branco-osso); }
+.resumo dl { margin: 0; }
+.resumo dl > div { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; font-size: 14px; }
+.resumo dt { color: var(--cinza-texto); }
+.resumo dd { margin: 0; color: var(--cinza-texto); text-align: right; }
+.resumo dd.escolhido { font-weight: 700; color: var(--branco-osso); }
+.aviso-pedido { margin: 12px 0 0; font-size: 14px; line-height: 1.5; color: var(--areia); }
+
+/* Regras do atendimento */
+.regras { display: grid; gap: 16px; list-style: none; margin: 24px 0 0; padding: 0; }
+.regra { padding: 24px; background: var(--preto-fosco); border: 1px solid var(--grafite); font-size: 15px; line-height: 1.55; }
+.regra .icone { margin-bottom: 12px; color: var(--dourado); }
+.regra h3 { font-size: 18px; }
+
+/* Fechamento com dois caminhos */
+.fechamento-botoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px; }
+
 /* Números alinhados na serifada. Fica depois de tudo porque o atalho "font:" zera este ajuste. */
-h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .ficha b, .marca text, .assinatura blockquote, .etapa-numero { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
+h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-grande, .calc-saida dd, .perdas b, .perdas-total b, .marca text, .assinatura blockquote, .etapa-numero, .calc-rotulo b, .agenda-fluxo b, .relatorio-titulo { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 
 @media (min-width: 480px) {
   .visita-acoes { grid-template-columns: repeat(3, 1fr); }
@@ -308,7 +398,6 @@ h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .ficha b, .
   .dupla { grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
   .dupla-topo { align-items: start; }
   .visita-acoes li { padding: 24px; }
-  .ficha { padding: 32px; position: sticky; top: 32px; }
 
   .telas { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .tela-larga { grid-column: 1 / -1; }
@@ -321,7 +410,7 @@ h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .ficha b, .
   .passo { padding: 72px 0 0; }
   .passo::before { left: 48px; right: -32px; top: 24px; bottom: auto; width: auto; height: 1px; }
 
-  .botao-ir { display: none; }
+  .preco-caixa .botao-ir { display: none; }
   .fechar-grade { grid-template-columns: 5fr 7fr; gap: 32px; }
   .preco-caixa { padding: 48px 32px; position: sticky; top: 24px; }
   .preco-caixa h2 { font-size: 72px; }
@@ -330,7 +419,6 @@ h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .ficha b, .
   .bloco-nao h2 { font-size: 48px; }
   .quem { grid-template-columns: 300px 1fr; gap: 64px; align-items: start; }
   .quem-id { position: sticky; top: 32px; }
-  .formacoes-faixa { grid-template-columns: repeat(4, 1fr); }
   .formacoes-grade { grid-template-columns: 1fr 1fr; }
   .formacao .formacao-gancho { font-size: 26px; }
   .fechamento h2 { font-size: 56px; }
@@ -341,6 +429,30 @@ h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .ficha b, .
 @media (min-width: 1200px) {
   .topo-grade { gap: 80px; }
   .fechar-grade { gap: 48px; }
+}
+
+@media (min-width: 768px) {
+  .fatos { grid-template-columns: repeat(4, 1fr); margin-top: 48px; }
+  .fatos li { font-size: 15px; }
+  .perdas-grade { grid-template-columns: 7fr 5fr; gap: 24px; align-items: start; }
+  .perdas-grade .tela { margin: 0; }
+  .calc { padding: 32px; }
+  .relatorio { padding: 32px 28px; transform: rotate(-1deg); font-size: 14px; }
+  .relatorio-fig { position: sticky; top: 32px; }
+  .relatorio-grande { font-size: 56px; }
+  .comparar-cabeca { display: grid; grid-template-columns: 1fr 40px 1fr; margin-bottom: 8px; font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--cinza-texto); }
+  .comparar-cabeca span:last-child { grid-column: 3; color: var(--dourado-claro); }
+  .comparar li { grid-template-columns: 1fr 40px 1fr; align-items: stretch; gap: 0; background: none; border: 0; }
+  .comparar p { padding: 16px 20px; font-size: 16px; border: 1px solid var(--grafite); }
+  .comparar p span { display: none; }
+  .depois { border-left: 3px solid var(--dourado); }
+  .comparar-seta { display: block; align-self: center; justify-self: center; width: 24px; height: 24px; fill: none; stroke: var(--dourado); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .visita-acoes { grid-template-columns: repeat(5, 1fr); }
+  .visita-acoes li:last-child { grid-column: span 1; }
+  .regras { grid-template-columns: repeat(6, 1fr); gap: 24px; margin-top: 32px; }
+  .regra { grid-column: span 2; padding: 32px; }
+  .regra:nth-child(4), .regra:nth-child(5) { grid-column: span 3; }
+  .formacao:last-child { grid-column: 1 / -1; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -7,8 +7,24 @@ const MENSAGENS = {
   "RAIOX-TOPO": "Oi Anderson, vi a sua página e quero entender o Raio-X da Cozinha.",
   "RAIOX-TRIAGEM": "Oi Anderson, meu faturamento é menor, queria saber o que dá para fazer.",
   "RAIOX-FINAL": "Oi Anderson, quero conversar sobre o Raio-X.",
-  "RAIOX-AGENDA": "Oi Anderson, quero marcar o Raio-X da Cozinha."
+  "RAIOX-FIXO": "Oi Anderson, vim pela página do Raio-X da Cozinha.",
+  "RAIOX-AGENDA": pedidoTexto({})
 };
+
+function pedidoTexto(e) {
+  return [
+    "Oi Anderson, quero marcar o Raio-X da Cozinha (R$ 397).",
+    "",
+    "Negócio: " + (e.negocio || "a combinar"),
+    "Dia de preferência: " + (e.dia || "a combinar"),
+    "Período: " + (e.periodo || "a combinar"),
+    "",
+    "Nome do negócio: ",
+    "Bairro: ",
+    "",
+    "Sei que o horário só fica marcado depois da sua confirmação."
+  ].join("\n");
+}
 
 function linkWhats(chave, texto) {
   const mensagem = (texto || MENSAGENS[chave]) + " [" + chave + "]";
@@ -31,7 +47,22 @@ if (barraFixa && "IntersectionObserver" in window) {
   ["topo", "agendar"].forEach((id) => observador.observe(document.getElementById(id)));
 }
 
-// 3. Agendamento: monta o pedido e abre o WhatsApp. Nada fica salvo.
+// 3. Calculadora: quanto vale 1 ponto de CMV
+const calc = document.getElementById("calc-fat");
+if (calc) {
+  const reais = (v) => "R$ " + v.toLocaleString("pt-BR");
+  const escrever = (id, texto) => { document.getElementById(id).textContent = texto; };
+  calc.addEventListener("input", () => {
+    const mil = Number(calc.value);
+    const ponto = mil * 10;
+    escrever("calc-fat-txt", "R$ " + mil + " mil");
+    escrever("calc-mes", reais(ponto));
+    escrever("calc-ano", reais(ponto * 12));
+    escrever("calc-dias", "Corrigindo 1 ponto, o diagnóstico se paga em cerca de " + Math.round(397 / ponto * 30) + " dias.");
+  });
+}
+
+// 4. Agendamento: monta o pedido e abre o WhatsApp. Nada fica salvo.
 const agenda = document.getElementById("agenda");
 if (agenda) {
   const escolha = { negocio: "", dia: "", periodo: "" };
@@ -54,12 +85,12 @@ if (agenda) {
 
   agenda.addEventListener("change", (evento) => {
     escolha[evento.target.name] = evento.target.value;
-    const partes = [escolha.negocio, escolha.dia, escolha.periodo].filter(Boolean);
-    resumo.textContent = "Seu pedido: " + partes.join(" · ");
-    let texto = MENSAGENS["RAIOX-AGENDA"];
-    if (escolha.negocio) texto += " Negócio: " + escolha.negocio + ".";
-    if (escolha.dia) texto += " Dia: " + escolha.dia + ".";
-    if (escolha.periodo) texto += " Período: " + escolha.periodo + ".";
-    botao.href = linkWhats("RAIOX-AGENDA", texto);
+    resumo.querySelectorAll("[data-campo]").forEach((campo) => {
+      const valor = escolha[campo.dataset.campo];
+      campo.textContent = valor || "falta escolher";
+      campo.classList.toggle("escolhido", Boolean(valor));
+    });
+    resumo.classList.toggle("completo", Boolean(escolha.negocio && escolha.dia && escolha.periodo));
+    botao.href = linkWhats("RAIOX-AGENDA", pedidoTexto(escolha));
   });
 }
