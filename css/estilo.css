@@ -381,8 +381,19 @@ html:not(.js) .calc input[type="range"] { display: none; }
 .rota-legenda b { display: inline-grid; place-items: center; width: 26px; height: 26px; margin-bottom: 6px; border: 1.5px solid var(--dourado); border-radius: 50%; font: 700 15px/1 var(--serifa); color: var(--dourado); }
 .rota-legenda span { display: block; font-weight: 700; color: var(--branco-osso); }
 
+/* Escada: Etapa 1 e Etapa 2 */
+.escada { display: grid; gap: 16px; list-style: none; margin: 24px 0 48px; padding: 0; }
+.etapa { padding: 24px; background: var(--preto-carvao); border: 1px solid var(--grafite); border-top: 3px solid var(--grafite); }
+.etapa-atual { border-color: var(--dourado); border-top-color: var(--dourado); }
+.etapa-rotulo { display: block; margin-bottom: 8px; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--dourado-claro); }
+.etapa .etapa-objetivo { font-weight: 700; color: var(--branco-osso); }
+.etapa-preco { margin: 0 0 8px; font: 700 44px/1 var(--serifa); color: var(--dourado); }
+.etapa .lista-numeros { margin-top: 0; }
+.etapa .lista-numeros > li { padding-bottom: 8px; }
+.etapa-nota { margin: 8px 0 0; font-size: 14px; color: var(--cinza-texto); }
+
 /* Números alinhados na serifada. Fica depois de tudo porque o atalho "font:" zera este ajuste. */
-h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-grande, .calc-saida dd, .perdas b, .perdas-total b, .marca text, .assinatura blockquote, .etapa-numero, .calc-rotulo b, .agenda-fluxo b, .relatorio-titulo, .cem-valor, .cem-legenda b, .rota-legenda b { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
+h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-grande, .calc-saida dd, .perdas b, .perdas-total b, .marca text, .assinatura blockquote, .etapa-numero, .calc-rotulo b, .agenda-fluxo b, .relatorio-titulo, .cem-valor, .cem-legenda b, .rota-legenda b, .etapa-preco { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 
 @media (min-width: 480px) {
   .visita-acoes { grid-template-columns: repeat(3, 1fr); }
@@ -477,6 +488,8 @@ h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-
   .cem { grid-template-columns: 280px 1fr; gap: 48px; padding: 32px 40px; }
   .cem-grafico { max-width: 280px; }
   .rota-legenda { grid-template-columns: repeat(6, 1fr); }
+  .escada { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .etapa { padding: 32px; }
   .visita-acoes li:last-child { grid-column: span 1; }
   .regras { grid-template-columns: repeat(6, 1fr); gap: 24px; margin-top: 32px; }
   .regra { grid-column: span 2; padding: 32px; }
