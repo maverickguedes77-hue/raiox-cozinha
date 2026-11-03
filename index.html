@@ -344,15 +344,31 @@
   <div class="conteudo">
     <h2>O que muda depois do Raio-X</h2>
     <p class="abertura leitura">Muda o que você sabe. O que fazer com isso continua sendo decisão sua.</p>
-    <div class="comparar-cabeca" aria-hidden="true"><span>Antes</span><span>Depois</span></div>
-    <ul class="comparar">
-      <li><p class="antes"><span>Antes</span>Você paga o preço que o fornecedor passa.</p><svg class="comparar-seta" aria-hidden="true"><use href="#i-seta"/></svg><p class="depois"><span>Depois</span>Você sabe quanto paga por item, e onde o preço subiu.</p></li>
-      <li><p class="antes"><span>Antes</span>A diferença entre o que entra e o que sai ninguém vê.</p><svg class="comparar-seta" aria-hidden="true"><use href="#i-seta"/></svg><p class="depois"><span>Depois</span>CMV real, calculado com nota e contagem de estoque.</p></li>
-      <li><p class="antes"><span>Antes</span>A sobra vai pro lixo e ninguém anota.</p><svg class="comparar-seta" aria-hidden="true"><use href="#i-seta"/></svg><p class="depois"><span>Depois</span>Mapa das perdas, em reais por mês.</p></li>
-      <li><p class="antes"><span>Antes</span>O preço foi feito olhando o vizinho.</p><svg class="comparar-seta" aria-hidden="true"><use href="#i-seta"/></svg><p class="depois"><span>Depois</span>Custo do prato na ficha técnica e curva ABC do cardápio.</p></li>
-      <li><p class="antes"><span>Antes</span>Você só descobre se sobrou quando o mês fecha.</p><svg class="comparar-seta" aria-hidden="true"><use href="#i-seta"/></svg><p class="depois"><span>Depois</span>Ponto de equilíbrio: quanto vender por dia para fechar no zero.</p></li>
-      <li><p class="antes"><span>Antes</span>Muita coisa para arrumar e nenhuma ordem.</p><svg class="comparar-seta" aria-hidden="true"><use href="#i-seta"/></svg><p class="depois"><span>Depois</span>Três correções priorizadas, com responsável.</p></li>
-    </ul>
+    <div class="virada">
+      <input type="radio" name="virada" id="v-antes" class="virada-input" checked>
+      <input type="radio" name="virada" id="v-depois" class="virada-input">
+      <div class="virada-botoes">
+        <label for="v-antes">Antes</label>
+        <label for="v-depois">Depois do Raio-X</label>
+      </div>
+      <p class="virada-dica so-antes">Toque em "Depois do Raio-X" e veja a mesma cozinha com os números na mão.</p>
+      <div class="virada-painel">
+        <div class="virada-topo">
+          <span>Quanto escapa por mês</span>
+          <b class="so-antes">Ninguém sabe</b>
+          <b class="so-depois">R$ 3.600 identificados</b>
+        </div>
+        <ul class="virada-linhas">
+          <li><span class="virada-area">Compras</span><span class="so-antes virada-antes">Paga o preço que o fornecedor passa</span><span class="so-depois virada-depois">5 itens acima do preço: R$ 720 por mês</span></li>
+          <li><span class="virada-area">Estoque</span><span class="so-antes virada-antes">Não sabe o que sumiu</span><span class="so-depois virada-depois">CMV real de 38%, com nota e contagem</span></li>
+          <li><span class="virada-area">Lixo</span><span class="so-antes virada-antes">A sobra vai embora sem ninguém anotar</span><span class="so-depois virada-depois">Sobra medida: R$ 900 por mês</span></li>
+          <li><span class="virada-area">Preço</span><span class="so-antes virada-antes">Preço feito olhando o vizinho</span><span class="so-depois virada-depois">Prato mais vendido custa R$ 5,80</span></li>
+          <li><span class="virada-area">Fim do mês</span><span class="so-antes virada-antes">Só descobre se sobrou quando o mês fecha</span><span class="so-depois virada-depois">Ponto de equilíbrio: R$ 1.538 por dia</span></li>
+          <li><span class="virada-area">Prioridade</span><span class="so-antes virada-antes">Muita coisa para arrumar e nenhuma ordem</span><span class="so-depois virada-depois">3 correções, cada uma com responsável</span></li>
+        </ul>
+        <p class="virada-nota">Exemplo com os mesmos dados fictícios da amostra do relatório.</p>
+      </div>
+    </div>
     <a class="botao botao-ir meio-cta" href="#agendar">Escolher o dia da visita</a>
   </div>
 </section>
@@ -467,6 +483,9 @@
         <defs><pattern id="grade-planta" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#2A2A2A" stroke-width=".7"/></pattern></defs>
         <rect x="0" y="0" width="640" height="392" fill="#121211"/>
         <rect x="20" y="20" width="600" height="340" fill="url(#grade-planta)"/>
+        <rect class="zona zona-estoque" x="20" y="20" width="180" height="130"/>
+        <rect class="zona zona-cozinha" x="200" y="20" width="420" height="230"/>
+        <rect class="zona zona-salao" x="20" y="250" width="600" height="110"/>
         <path class="planta-parede" d="M300 360H20V20H620V150M620 230V360H360M200 20V150H190M140 150H20"/>
         <rect class="tr" x="35" y="34" width="150" height="12" rx="2"/>
         <rect class="tr" x="35" y="62" width="150" height="12" rx="2"/>
@@ -482,7 +501,9 @@
         <path class="tr tr-fino" d="M60 293h28v18H60zM66 299h16M66 305h10"/>
         <circle class="tr" cx="490" cy="305" r="24"/>
         <path class="tr tr-fino" d="M478 272h24M478 338h24"/>
-        <path class="ou fluxo" d="M330 352V300H110H165V112H110H165V165H335V112H585V185H360H490V305"/>
+        <path class="planta-rastro" d="M330 352V300H110H165V112H110H165V165H335V112H585V185H360H490V305"/>
+        <path class="planta-rota" pathLength="100" d="M330 352V300H110H165V112H110H165V165H335V112H585V185H360H490V305"/>
+        <g class="planta-andador"><circle r="11" class="andador-halo"/><circle r="6" class="andador-ponto"/><animateMotion dur="16s" repeatCount="indefinite" path="M330 352V300H110H165V112H110H165V165H335V112H585V185H360H490V305"/></g>
         <g class="planta-rotulo">
           <text x="110" y="138">ESTOQUE</text><text x="335" y="32">FOGÃO</text><text x="495" y="32">PIA</text><text x="585" y="32">LIXO</text>
           <text x="360" y="262">PRAÇA</text><text x="110" y="342">CAIXA E NOTAS</text><text x="490" y="352">MESA</text>
@@ -517,27 +538,36 @@
     <h2>Do diagnóstico à correção</h2>
     <ol class="escada">
       <li class="etapa etapa-atual">
-        <span class="etapa-rotulo">Etapa 1</span>
+        <span class="etapa-rotulo">Etapa 1 · Descobrir</span>
         <h3>Raio-X da Cozinha</h3>
         <p class="etapa-objetivo">Descobrir onde o dinheiro está sendo perdido.</p>
         <p class="etapa-preco">R$ 397</p>
         <p>Diagnóstico, relatório e as três primeiras correções priorizadas.</p>
       </li>
       <li class="etapa">
-        <span class="etapa-rotulo">Etapa 2</span>
+        <span class="etapa-rotulo">Etapa 2 · Corrigir</span>
         <h3>Implantação <span data-metodo>LUCRO 360°</span></h3>
-        <p class="etapa-objetivo">Corrigir o que o diagnóstico encontrou.</p>
+        <p class="etapa-objetivo">Corrigir o que o diagnóstico encontrou, uma correção de cada vez.</p>
         <ul class="lista-numeros">
-          <li>Implantação de controles</li>
-          <li>Fichas técnicas</li>
-          <li>Padronização de processos</li>
+          <li>Fichas técnicas, CMV e cardápio com margem</li>
           <li>Controle de compras e estoque</li>
+          <li>Rotinas e processos com responsável</li>
+          <li>Controle de caixa e indicadores</li>
           <li>Treinamento da rotina com a equipe</li>
-          <li>Acompanhamento dos indicadores</li>
         </ul>
-        <p class="etapa-nota">Orçamento depois do diagnóstico, só se você quiser. O crédito da garantia vale aqui.</p>
+      </li>
+      <li class="etapa">
+        <span class="etapa-rotulo">Etapa 3 · Manter</span>
+        <h3>Acompanhamento mensal</h3>
+        <p class="etapa-objetivo">Não deixar o que foi corrigido voltar.</p>
+        <ul class="lista-numeros">
+          <li>Os números do mês na mesa: CMV, perdas, compras e ponto de equilíbrio</li>
+          <li>Preço e cardápio revistos quando o custo muda</li>
+          <li>A próxima correção, com prazo e responsável</li>
+        </ul>
       </li>
     </ol>
+    <p class="etapa-nota">Etapas 2 e 3 com orçamento depois do diagnóstico, só se você quiser. O crédito da garantia vale na implantação.</p>
   </div>
   <div class="conteudo fechar-grade">
     <div class="preco-caixa">
@@ -671,69 +701,35 @@
       <div class="leitura">
         <p>Anderson Guedes. Trabalho com cozinha desde 2013, em bistrôs, restaurantes, hotelaria e alimentação saudável. Já toquei operação própria, então eu sei o que é fechar o mês com o caixa apertado e não conseguir explicar para onde foi o dinheiro.</p>
         <p>Hoje eu faço uma coisa só: entro em cozinha, meço o que ninguém mede e mostro a conta.</p>
-        <p>Não vendo sistema, não vendo curso e não recebo comissão de fornecedor nenhum. Isso é regra fixa aqui, porque no dia em que eu cotar um fornecedor para você, você precisa ter certeza de que eu não ganho nada com a escolha.</p>
+        <p>Não vendo sistema, não vendo curso e não recebo comissão de fornecedor.</p>
       </div>
+      <ul class="credenciais">
+        <li><b>Desde 2013</b>trabalhando em cozinha</li>
+        <li><b>Chef e gerente</b>em bistrô, hotel e alimentação saudável</li>
+        <li><b>Desde 2018</b>consultor gastronômico</li>
+        <li><b>3 países</b>de formação: Brasil, Espanha e Itália</li>
+      </ul>
       <div class="formacoes">
         <h3>O que eu estudei e o que isso muda na sua cozinha</h3>
         <p class="formacoes-lead">Sou chef e estudei cozinha e gestão de restaurante em três escolas de três países. Veja o que cada uma muda na sua cozinha.</p>
-        <ul class="formacoes-faixa" aria-label="Escolas onde estudei">
-          <li><span>Brasil</span>Centro Europeu</li>
-          <li><span>Espanha</span>Basque Culinary Center</li>
-          <li><span>Itália</span>Università Bocconi</li>
-        </ul>
-        <div class="formacoes-grade">
-          <article class="formacao">
-            <p class="formacao-onde"><b>Brasil</b> · Centro Europeu · Curitiba</p>
+        <div class="formacoes-grade formacoes-grade-curta">
+          <article class="formacao formacao-curta">
+            <p class="formacao-onde"><b>Brasil</b> · Centro Europeu</p>
             <h4>Chef de Cuisine e Restaurateur</h4>
             <p class="formacao-gancho">Cozinha de verdade por trás de cada número.</p>
-            <span class="formacao-rotulo">O que estudei</span>
-            <ul class="formacao-lista">
-              <li>Cozinha francesa clássica, italiana regional, brasileira e contemporânea</li>
-              <li>Cocções, molhos, peixes, confeitaria e cozinha fria</li>
-              <li>Planejamento de cozinha profissional, de cardápio, compras e logística</li>
-              <li>Serviço de restaurante, formação de equipe e formação de preço</li>
-            </ul>
-            <p class="formacao-extra">Com chancelas da Federazione Italiana Cuochi, do Swiss Education Group e da Abrasel.</p>
-            <div class="formacao-muda">
-              <span class="formacao-rotulo">Na sua cozinha</span>
-              <p class="formacao-resultado">Eu sei o que a limpeza e a cocção tiram do peso de cada prato, porque já cozinhei isso.</p>
-              <p class="formacao-fuga">Aplicado nas fugas 3 e 4</p>
-            </div>
+            <p class="formacao-resultado">Técnica, ficha técnica e formação de preço. Sei o que a limpeza e a cocção tiram de cada prato.</p>
           </article>
-          <article class="formacao">
+          <article class="formacao formacao-curta">
             <p class="formacao-onde"><b>Espanha</b> · Basque Culinary Center</p>
-            <h4>Gestão de Restaurantes e Gestão de Pessoas e Equipes</h4>
-            <p class="formacao-gancho">O restaurante lido como negócio, não só como cozinha.</p>
-            <span class="formacao-rotulo">O que estudei</span>
-            <ul class="formacao-lista">
-              <li>Análise de custos e rentabilidade, orçamento, contas a pagar e a receber</li>
-              <li>Engenharia de cardápio: o que vende e o que dá margem</li>
-              <li>Compras, armazenamento e padronização de processos</li>
-              <li>Liderança de equipe: avaliação, motivação e conflito</li>
-            </ul>
-            <div class="formacao-muda">
-              <span class="formacao-rotulo">Na sua cozinha</span>
-              <p class="formacao-resultado">Custo e compra viram decisão com número, e cada tarefa da rotina fica com um responsável com nome.</p>
-              <p class="formacao-fuga">Aplicado nas fugas 1, 4 e 5</p>
-            </div>
+            <h4>Gestão de Restaurantes e de Equipes</h4>
+            <p class="formacao-gancho">O restaurante lido como negócio.</p>
+            <p class="formacao-resultado">Custo, compras, engenharia de cardápio e liderança de equipe, com decisão tomada por número.</p>
           </article>
-          <article class="formacao">
+          <article class="formacao formacao-curta">
             <p class="formacao-onde"><b>Itália</b> · Università Bocconi</p>
             <h4>Food &amp; Beverage Management</h4>
-            <p class="formacao-gancho">Preço pelo valor que o cliente enxerga, não pelo palpite.</p>
-            <span class="formacao-rotulo">O que estudei</span>
-            <ul class="formacao-lista">
-              <li>Como um prato gera valor e como o cliente julga a qualidade</li>
-              <li>Posicionamento: para quem o prato é e por que vale o preço</li>
-              <li>Tradição e inovação no cardápio, e o valor da marca</li>
-              <li>Como um negócio pequeno compete ao lado de um grande</li>
-            </ul>
-            <p class="formacao-extra">Curso online, com casos de empresas como Eataly e Barilla.</p>
-            <div class="formacao-muda">
-              <span class="formacao-rotulo">Na sua cozinha</span>
-              <p class="formacao-resultado">O preço do prato passa a acompanhar o valor que o cliente enxerga, e não o preço do vizinho.</p>
-              <p class="formacao-fuga">Aplicado na fuga 4</p>
-            </div>
+            <p class="formacao-gancho">Preço pelo valor que o cliente enxerga.</p>
+            <p class="formacao-resultado">Valor percebido e posicionamento. O preço do prato deixa de seguir o vizinho.</p>
           </article>
         </div>
         <p class="legenda formacoes-nota">São cursos de tamanhos diferentes. Nenhum deles mede a sua cozinha: quem mede é a balança, na visita.</p>

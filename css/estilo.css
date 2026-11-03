@@ -392,8 +392,61 @@ html:not(.js) .calc input[type="range"] { display: none; }
 .etapa .lista-numeros > li { padding-bottom: 8px; }
 .etapa-nota { margin: 8px 0 0; font-size: 14px; color: var(--cinza-texto); }
 
+/* Planta animada */
+.zona { stroke: none; }
+.zona-estoque { fill: rgba(201, 162, 39, .07); }
+.zona-cozinha { fill: rgba(237, 232, 223, .035); }
+.zona-salao { fill: rgba(201, 162, 39, .035); }
+.planta-rastro { fill: none; stroke: var(--grafite); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.planta-rota { fill: none; stroke: var(--dourado); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 100; stroke-dashoffset: 100; animation: desenhar-rota 16s linear infinite; }
+.andador-ponto { fill: var(--dourado-claro); }
+.andador-halo { fill: var(--dourado); opacity: .25; }
+.planta .marca .anel { animation: pulsar 2.4s ease-in-out infinite; }
+@keyframes desenhar-rota { 0% { stroke-dashoffset: 100; } 85%, 100% { stroke-dashoffset: 0; } }
+@keyframes pulsar { 50% { opacity: .9; } }
+
+/* Escada em três etapas */
+.etapa-nota { margin: -32px 0 48px; }
+
+/* Autoridade em números */
+.credenciais { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; list-style: none; margin: 24px 0 0; padding: 0; background: var(--grafite); border: 1px solid var(--grafite); }
+.credenciais li { padding: 16px; background: var(--preto-carvao); font-size: 14px; line-height: 1.35; color: var(--areia); }
+.credenciais b { display: block; margin-bottom: 4px; font: 700 21px/1.1 var(--serifa); color: var(--dourado); }
+
+/* Formações enxutas */
+.formacao-curta .formacao-gancho { margin-bottom: 12px; }
+.formacao-curta .formacao-resultado { font-weight: 400; color: var(--areia); }
+
+/* Antes e depois interativo */
+.virada { position: relative; }
+.virada-input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.virada-botoes { display: grid; width: 100%; max-width: 420px; grid-template-columns: 1fr 1fr; margin-bottom: 16px; border: 1px solid var(--dourado); border-radius: 4px; overflow: hidden; }
+.virada-botoes label { display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 8px 10px; font-size: 15px; font-weight: 700; white-space: nowrap; color: var(--areia); cursor: pointer; transition: background-color .35s var(--curva), color .35s var(--curva); }
+#v-antes:checked ~ .virada-botoes label[for="v-antes"] { background: var(--grafite); color: var(--branco-osso); }
+#v-depois:checked ~ .virada-botoes label[for="v-depois"] { background: var(--dourado); color: var(--preto-fosco); }
+#v-antes:focus-visible ~ .virada-botoes label[for="v-antes"], #v-depois:focus-visible ~ .virada-botoes label[for="v-depois"] { outline: 2px solid var(--dourado-claro); outline-offset: 3px; }
+#v-antes:checked ~ .virada-botoes label[for="v-depois"] { animation: chamar 2s ease-in-out infinite; }
+@keyframes chamar { 50% { background: rgba(201, 162, 39, .22); } }
+.virada-dica { margin: 0 0 16px; font-size: 14px; color: var(--cinza-texto); }
+.virada-painel { padding: 20px; background: var(--preto-fosco); border: 1px solid var(--grafite); transition: border-color .4s var(--curva); }
+#v-depois:checked ~ .virada-painel { border-color: var(--dourado); }
+.virada-topo { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 16px; padding-bottom: 16px; border-bottom: 2px solid var(--grafite); font-size: 14px; font-weight: 700; color: var(--areia); }
+.virada-topo b { font: 700 30px/1.1 var(--serifa); color: var(--cinza-texto); }
+.virada-topo b.so-depois { color: var(--dourado); }
+.virada-linhas { list-style: none; margin: 0; padding: 0; }
+.virada-linhas li { display: grid; gap: 4px; padding: 14px 0; border-bottom: 1px solid var(--grafite); }
+.virada-area { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--cinza-texto); }
+.virada-antes { font-size: 16px; color: var(--cinza-texto); text-decoration: line-through; text-decoration-color: rgba(168, 162, 154, .5); }
+.virada-depois { position: relative; padding-left: 28px; font-size: 16px; font-weight: 700; color: var(--branco-osso); }
+.virada-depois::before { content: ""; position: absolute; left: 4px; top: .2em; width: 8px; height: 14px; border: solid var(--dourado); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
+.virada-nota { margin: 12px 0 0; font-size: 13px; color: var(--cinza-texto); }
+#v-antes:checked ~ .so-depois, #v-antes:checked ~ .virada-painel .so-depois { display: none; }
+#v-depois:checked ~ .so-antes, #v-depois:checked ~ .virada-painel .so-antes { display: none; }
+#v-depois:checked ~ .virada-painel .so-depois { animation: surgir .5s var(--curva) both; }
+@keyframes surgir { from { opacity: 0; transform: translateY(6px); } }
+
 /* Números alinhados na serifada. Fica depois de tudo porque o atalho "font:" zera este ajuste. */
-h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-grande, .calc-saida dd, .perdas b, .perdas-total b, .marca text, .assinatura blockquote, .etapa-numero, .calc-rotulo b, .agenda-fluxo b, .relatorio-titulo, .cem-valor, .cem-legenda b, .rota-legenda b, .etapa-preco { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
+h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-grande, .calc-saida dd, .perdas b, .perdas-total b, .marca text, .assinatura blockquote, .etapa-numero, .calc-rotulo b, .agenda-fluxo b, .relatorio-titulo, .cem-valor, .cem-legenda b, .rota-legenda b, .etapa-preco, .credenciais b, .virada-topo b { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 
 @media (min-width: 480px) {
   .visita-acoes { grid-template-columns: repeat(3, 1fr); }
@@ -488,7 +541,12 @@ h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-
   .cem { grid-template-columns: 280px 1fr; gap: 48px; padding: 32px 40px; }
   .cem-grafico { max-width: 280px; }
   .rota-legenda { grid-template-columns: repeat(6, 1fr); }
-  .escada { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .escada { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .credenciais { grid-template-columns: repeat(4, 1fr); }
+  .formacoes-grade-curta { grid-template-columns: repeat(3, 1fr); }
+  .formacoes-grade-curta .formacao:last-child { grid-column: auto; }
+  .virada-painel { padding: 32px; }
+  .virada-linhas li { grid-template-columns: 160px 1fr; align-items: center; gap: 16px; }
   .etapa { padding: 32px; }
   .visita-acoes li:last-child { grid-column: span 1; }
   .regras { grid-template-columns: repeat(6, 1fr); gap: 24px; margin-top: 32px; }
@@ -499,6 +557,8 @@ h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .feixe, .fluxo { animation: none; }
+  .feixe, .fluxo, .planta-rota, .planta .marca .anel, .virada-botoes label { animation: none; }
+  .planta-rota { stroke-dashoffset: 0; }
+  .planta-andador { display: none; }
   .botao, .fuga, .opcao span, .barra-fixa, .perguntas summary::after { transition: none; }
 }
