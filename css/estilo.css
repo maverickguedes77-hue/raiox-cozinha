@@ -355,8 +355,34 @@ html:not(.js) .calc input[type="range"] { display: none; }
 /* Fechamento com dois caminhos */
 .fechamento-botoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px; }
 
+/* De cada R$ 100 que entram */
+.cem { display: grid; gap: 24px; align-items: center; margin-bottom: 32px; padding: 24px; background: var(--preto-fosco); border: 1px solid var(--grafite); }
+.cem-grafico { margin: 0 auto; width: 100%; max-width: 240px; }
+.cem-grafico svg { width: 100%; height: auto; }
+.cem-valor { font: 700 28px var(--serifa); fill: var(--branco-osso); }
+.cem-rotulo { font: 400 11px var(--texto); fill: var(--cinza-texto); }
+.cem-texto h3 { margin-bottom: 16px; }
+.cem-legenda { list-style: none; margin: 0; padding: 0; }
+.cem-legenda li { display: grid; grid-template-columns: 14px 1fr auto; gap: 12px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--grafite); font-size: 15px; color: var(--areia); }
+.cem-legenda .cor { width: 14px; height: 14px; border-radius: 2px; }
+.cem-legenda b { font: 700 22px/1 var(--serifa); color: var(--branco-osso); }
+.cem-legenda .destaque-fuga { color: var(--dourado-claro); font-weight: 700; }
+.cem-legenda .destaque-fuga b { color: var(--dourado); }
+.cem-frase { margin: 16px 0 0; font-weight: 700; color: var(--branco-osso); }
+
+/* O caminho da visita */
+.planta { margin: 0; }
+.planta svg { width: 100%; height: auto; border: 1px solid var(--grafite); }
+.planta-parede { fill: none; stroke: var(--areia); stroke-width: 3; stroke-linecap: square; opacity: .8; }
+.planta-rotulo text { font: 700 13px var(--texto); letter-spacing: .12em; fill: var(--cinza-texto); text-anchor: middle; }
+.planta figcaption { margin-top: 8px; }
+.rota-legenda { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; list-style: none; margin: 16px 0 0; padding: 0; background: var(--grafite); border: 1px solid var(--grafite); }
+.rota-legenda li { padding: 12px; background: var(--preto-fosco); font-size: 14px; line-height: 1.35; color: var(--areia); }
+.rota-legenda b { display: inline-grid; place-items: center; width: 26px; height: 26px; margin-bottom: 6px; border: 1.5px solid var(--dourado); border-radius: 50%; font: 700 15px/1 var(--serifa); color: var(--dourado); }
+.rota-legenda span { display: block; font-weight: 700; color: var(--branco-osso); }
+
 /* Números alinhados na serifada. Fica depois de tudo porque o atalho "font:" zera este ajuste. */
-h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-grande, .calc-saida dd, .perdas b, .perdas-total b, .marca text, .assinatura blockquote, .etapa-numero, .calc-rotulo b, .agenda-fluxo b, .relatorio-titulo { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
+h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-grande, .calc-saida dd, .perdas b, .perdas-total b, .marca text, .assinatura blockquote, .etapa-numero, .calc-rotulo b, .agenda-fluxo b, .relatorio-titulo, .cem-valor, .cem-legenda b, .rota-legenda b { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 
 @media (min-width: 480px) {
   .visita-acoes { grid-template-columns: repeat(3, 1fr); }
@@ -448,6 +474,9 @@ h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-
   .depois { border-left: 3px solid var(--dourado); }
   .comparar-seta { display: block; align-self: center; justify-self: center; width: 24px; height: 24px; fill: none; stroke: var(--dourado); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
   .visita-acoes { grid-template-columns: repeat(5, 1fr); }
+  .cem { grid-template-columns: 280px 1fr; gap: 48px; padding: 32px 40px; }
+  .cem-grafico { max-width: 280px; }
+  .rota-legenda { grid-template-columns: repeat(6, 1fr); }
   .visita-acoes li:last-child { grid-column: span 1; }
   .regras { grid-template-columns: repeat(6, 1fr); gap: 24px; margin-top: 32px; }
   .regra { grid-column: span 2; padding: 32px; }
