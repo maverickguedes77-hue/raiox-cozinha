@@ -477,56 +477,85 @@
         <p>Presencial, com o relatório impresso na mão. Eu explico cada número e deixo as três primeiras correções priorizadas. O que você faz com isso depois é decisão sua.</p>
       </li>
     </ol>
-    <h3 class="titulo-lista">O caminho da visita, em média 3 horas</h3>
-    <figure class="planta">
-      <svg viewBox="0 0 640 392" role="img" aria-label="Planta de uma cozinha com o caminho da visita: 1 caixa e notas, 2 estoque, 3 fogão, 4 lixo, 5 praça e 6 mesa para a conversa.">
-        <defs><pattern id="grade-planta" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#2A2A2A" stroke-width=".7"/></pattern></defs>
-        <rect x="0" y="0" width="640" height="392" fill="#121211"/>
-        <rect x="20" y="20" width="600" height="340" fill="url(#grade-planta)"/>
-        <rect class="zona zona-estoque" x="20" y="20" width="180" height="130"/>
-        <rect class="zona zona-cozinha" x="200" y="20" width="420" height="230"/>
-        <rect class="zona zona-salao" x="20" y="250" width="600" height="110"/>
-        <path class="planta-parede" d="M300 360H20V20H620V150M620 230V360H360M200 20V150H190M140 150H20"/>
-        <rect class="tr" x="35" y="34" width="150" height="12" rx="2"/>
-        <rect class="tr" x="35" y="62" width="150" height="12" rx="2"/>
-        <path class="tr tr-fino" d="M50 34v-10h20v10M95 34v-14h24v14M140 34v-8h18v8M55 62v-12h22v12M105 62v-9h20v9M150 62v-13h20v13"/>
-        <rect class="tr" x="250" y="40" width="170" height="50" rx="3"/>
-        <path class="tr tr-fino" d="M275 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0M310 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0M345 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0M380 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0"/>
-        <rect class="tr" x="450" y="40" width="90" height="40" rx="3"/>
-        <rect class="tr tr-fino" x="462" y="48" width="66" height="24" rx="6"/>
-        <path class="tr" d="M560 44h44M566 44l4 42h24l4-42"/>
-        <rect class="tr" x="250" y="205" width="220" height="36" rx="3"/>
-        <rect class="tr tr-fino" x="280" y="213" width="34" height="20" rx="2"/>
-        <rect class="tr" x="40" y="285" width="140" height="34" rx="3"/>
-        <path class="tr tr-fino" d="M60 293h28v18H60zM66 299h16M66 305h10"/>
-        <circle class="tr" cx="490" cy="305" r="24"/>
-        <path class="tr tr-fino" d="M478 272h24M478 338h24"/>
-        <path class="planta-rastro" d="M330 352V300H110H165V112H110H165V165H335V112H585V185H360H490V305"/>
-        <path class="planta-rota" pathLength="100" d="M330 352V300H110H165V112H110H165V165H335V112H585V185H360H490V305"/>
-        <g class="planta-andador"><circle r="11" class="andador-halo"/><circle r="6" class="andador-ponto"/><animateMotion dur="16s" repeatCount="indefinite" path="M330 352V300H110H165V112H110H165V165H335V112H585V185H360H490V305"/></g>
-        <g class="planta-rotulo">
-          <text x="110" y="138">ESTOQUE</text><text x="335" y="32">FOGÃO</text><text x="495" y="32">PIA</text><text x="585" y="32">LIXO</text>
-          <text x="360" y="262">PRAÇA</text><text x="110" y="342">CAIXA E NOTAS</text><text x="490" y="352">MESA</text>
-          <text x="604" y="194" text-anchor="end">SALÃO</text><text x="330" y="384">ENTRADA</text>
-        </g>
-        <g class="marca">
-          <g transform="translate(110 300)"><circle class="anel" r="19"/><circle r="14"/><text y="6">1</text></g>
-          <g transform="translate(110 112)"><circle class="anel" r="19"/><circle r="14"/><text y="6">2</text></g>
-          <g transform="translate(335 112)"><circle class="anel" r="19"/><circle r="14"/><text y="6">3</text></g>
-          <g transform="translate(585 112)"><circle class="anel" r="19"/><circle r="14"/><text y="6">4</text></g>
-          <g transform="translate(360 185)"><circle class="anel" r="19"/><circle r="14"/><text y="6">5</text></g>
-          <g transform="translate(490 305)"><circle class="anel" r="19"/><circle r="14"/><text y="6">6</text></g>
-        </g>
-      </svg>
-      <figcaption class="legenda">Ilustração de uma cozinha qualquer. A ordem muda conforme a sua operação.</figcaption>
-    </figure>
+    <h3 class="titulo-lista">Como é a visita, parada por parada</h3>
+    <p class="visita-lead">Em média 3 horas dentro da sua cozinha, no movimento. Toque em cada parada e veja o que eu faço ali e o que isso vira no seu relatório.</p>
+    <div class="visita-interativa">
+      <div class="rota-cartao so-js" id="rota-cartao" aria-live="polite">
+        <p class="rota-cartao-rotulo" id="rota-rotulo">Entrada</p>
+        <p class="rota-titulo" id="rota-titulo">A visita começa pelos números</p>
+        <p id="rota-faz">Toque em uma parada da planta ou veja a visita inteira.</p>
+        <p class="rota-recebe" id="rota-recebe"></p>
+        <button type="button" class="rota-tour" id="rota-tour">Ver a visita inteira</button>
+      </div>
+      <figure class="planta">
+        <svg viewBox="0 0 640 392" role="group" aria-label="Planta de uma cozinha com as seis paradas da visita">
+          <defs><pattern id="grade-planta" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#2A2A2A" stroke-width=".7"/></pattern></defs>
+          <rect x="0" y="0" width="640" height="392" fill="#121211"/>
+          <rect x="20" y="20" width="600" height="340" fill="url(#grade-planta)"/>
+          <rect class="zona zona-estoque" x="20" y="20" width="180" height="130"/>
+          <rect class="zona zona-cozinha" x="200" y="20" width="420" height="230"/>
+          <rect class="zona zona-salao" x="20" y="250" width="600" height="110"/>
+          <path class="planta-parede" d="M300 360H20V20H620V150M620 230V360H360M200 20V150H190M140 150H20"/>
+          <rect class="tr" x="35" y="34" width="150" height="12" rx="2"/>
+          <rect class="tr" x="35" y="62" width="150" height="12" rx="2"/>
+          <path class="tr tr-fino" d="M50 34v-10h20v10M95 34v-14h24v14M140 34v-8h18v8M55 62v-12h22v12M105 62v-9h20v9M150 62v-13h20v13"/>
+          <rect class="tr" x="250" y="40" width="170" height="50" rx="3"/>
+          <path class="tr tr-fino" d="M275 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0M310 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0M345 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0M380 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0"/>
+          <rect class="tr" x="450" y="40" width="90" height="40" rx="3"/>
+          <rect class="tr tr-fino" x="462" y="48" width="66" height="24" rx="6"/>
+          <path class="tr" d="M560 44h44M566 44l4 42h24l4-42"/>
+          <rect class="tr" x="250" y="205" width="220" height="36" rx="3"/>
+          <rect class="tr tr-fino" x="280" y="213" width="34" height="20" rx="2"/>
+          <rect class="tr" x="40" y="285" width="140" height="34" rx="3"/>
+          <path class="tr tr-fino" d="M60 293h28v18H60zM66 299h16M66 305h10"/>
+          <circle class="tr" cx="490" cy="305" r="24"/>
+          <path class="tr tr-fino" d="M478 272h24M478 338h24"/>
+          <path class="planta-rastro" d="M330 352V300H110H165V112H110H165V165H335V112H585V185H360H490V305"/>
+          <path class="planta-feito" id="planta-feito" d="M330 352V300H110H165V112H110H165V165H335V112H585V185H360H490V305"/>
+          <g class="planta-rotulo">
+            <text x="110" y="138">ESTOQUE</text><text x="335" y="32">FOGÃO</text><text x="495" y="32">PIA</text><text x="585" y="32">LIXO</text>
+            <text x="360" y="262">PRAÇA</text><text x="110" y="342">CAIXA E NOTAS</text><text x="490" y="352">MESA</text>
+            <text x="604" y="194" text-anchor="end">SALÃO</text><text x="330" y="384">ENTRADA</text>
+          </g>
+          <g class="marca">
+            <g class="parada" data-parada="1" data-xy="110 300" transform="translate(110 300)" tabindex="0" role="button" aria-label="Parada 1: Caixa e notas, abro os números"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">1</text></g>
+            <g class="parada" data-parada="2" data-xy="110 112" transform="translate(110 112)" tabindex="0" role="button" aria-label="Parada 2: Estoque, conto o que tem"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">2</text></g>
+            <g class="parada" data-parada="3" data-xy="335 112" transform="translate(335 112)" tabindex="0" role="button" aria-label="Parada 3: Fogão, acompanho a produção"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">3</text></g>
+            <g class="parada" data-parada="4" data-xy="585 112" transform="translate(585 112)" tabindex="0" role="button" aria-label="Parada 4: Lixo, olho o que vira sobra"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">4</text></g>
+            <g class="parada" data-parada="5" data-xy="360 185" transform="translate(360 185)" tabindex="0" role="button" aria-label="Parada 5: Praça, peso a porção"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">5</text></g>
+            <g class="parada" data-parada="6" data-xy="490 305" transform="translate(490 305)" tabindex="0" role="button" aria-label="Parada 6: Mesa, converso com você"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">6</text></g>
+          </g>
+          <g class="boneco so-js" id="boneco" transform="translate(330 352)" aria-hidden="true">
+            <ellipse class="boneco-sombra" cx="0" cy="2" rx="9" ry="3"/>
+            <g class="boneco-corpo">
+              <circle cx="0" cy="-30" r="6"/>
+              <path d="M0-24v14M0-10l-6 11M0-10l6 11M-8-19l8 4 8-4"/>
+              <rect x="7" y="-20" width="7" height="9" rx="1"/>
+            </g>
+          </g>
+        </svg>
+        <figcaption class="legenda">Ilustração de uma cozinha qualquer. A ordem muda conforme a sua operação.</figcaption>
+      </figure>
+    </div>
     <ol class="rota-legenda">
-      <li><b>1</b><span>Caixa e notas</span>Confiro nota de compra</li>
-      <li><b>2</b><span>Estoque</span>Conto o que tem</li>
-      <li><b>3</b><span>Fogão</span>Acompanho a produção</li>
-      <li><b>4</b><span>Lixo</span>Vejo o que vira sobra</li>
-      <li><b>5</b><span>Praça</span>Peso a porção</li>
-      <li><b>6</b><span>Mesa</span>Pergunto e converso com você</li>
+      <li><button type="button" data-parada="1"><b>1</b><span>Caixa e notas</span></button>
+        <div class="rota-detalhe"><p class="rota-titulo">Abro os números</p><p>Faturamento, custos fixos e notas de compra. É daqui que saem o CMV real e o ponto de equilíbrio.</p><p class="rota-recebe"><strong>No relatório:</strong> Quanto a casa precisa vender por dia para fechar o mês no zero.</p></div>
+      </li>
+      <li><button type="button" data-parada="2"><b>2</b><span>Estoque</span></button>
+        <div class="rota-detalhe"><p class="rota-titulo">Conto o que tem</p><p>Contagem dos itens que mais pesam no custo, conferida contra o que entrou nas notas.</p><p class="rota-recebe"><strong>No relatório:</strong> Quanto produto some sem explicação, em reais.</p></div>
+      </li>
+      <li><button type="button" data-parada="3"><b>3</b><span>Fogão</span></button>
+        <div class="rota-detalhe"><p class="rota-titulo">Acompanho a produção</p><p>O preparo no movimento: rendimento, cocção e quanto cada insumo perde na limpeza.</p><p class="rota-recebe"><strong>No relatório:</strong> O fator de correção e o índice de cocção dos pratos principais.</p></div>
+      </li>
+      <li><button type="button" data-parada="4"><b>4</b><span>Lixo</span></button>
+        <div class="rota-detalhe"><p class="rota-titulo">Olho o que vira sobra</p><p>Sobra de produção, produto vencido e porção fora do padrão, que somem do caixa sem relatório.</p><p class="rota-recebe"><strong>No relatório:</strong> O mapa das perdas, em reais por mês.</p></div>
+      </li>
+      <li><button type="button" data-parada="5"><b>5</b><span>Praça</span></button>
+        <div class="rota-detalhe"><p class="rota-titulo">Peso a porção</p><p>Na balança, durante o serviço, comparando o que sai com o que a ficha manda.</p><p class="rota-recebe"><strong>No relatório:</strong> O custo real do prato que mais vende.</p></div>
+      </li>
+      <li><button type="button" data-parada="6"><b>6</b><span>Mesa</span></button>
+        <div class="rota-detalhe"><p class="rota-titulo">Converso com você</p><p>Junto o que medi e pergunto o que só o dono sabe: fornecedor, escala, o que já foi tentado.</p><p class="rota-recebe"><strong>No relatório:</strong> As três primeiras correções, em ordem de retorno.</p></div>
+      </li>
     </ol>
   </div>
 </section>
@@ -557,11 +586,17 @@
         </ul>
       </li>
       <li class="etapa">
-        <span class="etapa-rotulo">Etapa 3 · Manter</span>
+        <span class="etapa-rotulo">Etapa 3 · Manter, se fizer sentido</span>
         <h3>Acompanhamento mensal</h3>
-        <p class="etapa-objetivo">Não deixar o que foi corrigido voltar.</p>
+        <p class="etapa-objetivo">Para a casa não voltar a ser o que era.</p>
+        <p>Corrigir uma vez é a parte fácil. O difícil é o número continuar certo quando o fornecedor sobe o preço, a equipe troca ou o cardápio muda. Uma vez por mês, a gente olha os números juntos:</p>
         <ul class="lista-numeros">
-          <li>Os números do mês na mesa: CMV, perdas, compras e ponto de equilíbrio</li>
+          <li>CMV, perdas, compras e ponto de equilíbrio do mês</li>
+          <li>Preço e cardápio revistos quando o custo muda</li>
+          <li>A próxima correção, com prazo e responsável</li>
+        </ul>
+        <p class="etapa-livre">Não é obrigatório. Você sai do Raio-X com as planilhas e pode seguir sozinho. O acompanhamento é para quem prefere ter alguém olhando o número todo mês.</p>
+      </li>
           <li>Preço e cardápio revistos quando o custo muda</li>
           <li>A próxima correção, com prazo e responsável</li>
         </ul>
@@ -699,14 +734,14 @@
     <div>
       <h2>Quem vai entrar na sua cozinha e no seu negócio</h2>
       <div class="leitura">
-        <p>Anderson Guedes. Trabalho com cozinha desde 2013, em bistrôs, restaurantes, hotelaria e alimentação saudável. Já toquei operação própria, então eu sei o que é fechar o mês com o caixa apertado e não conseguir explicar para onde foi o dinheiro.</p>
-        <p>Hoje eu faço uma coisa só: entro em cozinha, meço o que ninguém mede e mostro a conta.</p>
-        <p>Não vendo sistema, não vendo curso e não recebo comissão de fornecedor.</p>
+        <p>Sou Anderson Guedes, chef de cozinha formado no Centro Europeu, com estudos de gestão de restaurantes no Basque Culinary Center, na Espanha, e na Università Bocconi, na Itália. Trabalho com cozinha desde 2013, em bistrô, restaurante, hotel e alimentação saudável, como cozinheiro, chef e gerente.</p>
+        <p>Também já toquei operação própria. Sei o que é fechar o mês com o caixa apertado e não conseguir explicar para onde foi o dinheiro. Por isso faço uma coisa só: entro na cozinha, meço o que ninguém mede e mostro a conta.</p>
+        <p>Não vendo sistema, não vendo curso e não recebo comissão de fornecedor. O que eu recomendo é pensado só no seu caixa.</p>
       </div>
       <ul class="credenciais">
         <li><b>Desde 2013</b>trabalhando em cozinha</li>
         <li><b>Chef e gerente</b>em bistrô, hotel e alimentação saudável</li>
-        <li><b>Desde 2018</b>consultor gastronômico</li>
+        <li><b>Operação própria</b>já fechei mês apertado do lado de dentro</li>
         <li><b>3 países</b>de formação: Brasil, Espanha e Itália</li>
       </ul>
       <div class="formacoes">

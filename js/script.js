@@ -94,3 +94,74 @@ if (agenda) {
     botao.href = linkWhats("RAIOX-AGENDA", pedidoTexto(escolha));
   });
 }
+
+// 5. Visita interativa: o boneco anda pela rota até a parada escolhida
+const planta = document.querySelector(".planta svg");
+if (planta && planta.querySelector("#boneco")) {
+  const rota = planta.querySelector(".planta-rastro");
+  const feito = planta.querySelector("#planta-feito");
+  const boneco = planta.querySelector("#boneco");
+  const total = rota.getTotalLength();
+  const calmo = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const marcas = [...planta.querySelectorAll(".parada")];
+  const botoes = [...document.querySelectorAll(".rota-legenda button")];
+  const texto = (id, valor) => { document.getElementById(id).textContent = valor; };
+  feito.style.strokeDasharray = total;
+  // onde cada parada fica na rota, sempre depois da anterior
+  const posicao = [];
+  let inicio = 0;
+  marcas.forEach((m) => {
+    const [x, y] = m.dataset.xy.split(" ").map(Number);
+    let melhor = inicio, menor = Infinity;
+    for (let s = inicio; s <= total; s += 2) {
+      const p = rota.getPointAtLength(s);
+      const d = (p.x - x) ** 2 + (p.y - y) ** 2;
+      if (d < menor) { menor = d; melhor = s; }
+      if (d < 4) break;
+    }
+    posicao.push(melhor);
+    inicio = melhor;
+  });
+  let atual = 0, quadro = 0, passeio = 0;
+  const colocar = (s) => {
+    const p = rota.getPointAtLength(s);
+    boneco.setAttribute("transform", "translate(" + p.x + " " + p.y + ")");
+    feito.style.strokeDashoffset = total - s;
+  };
+  colocar(0);
+  function andar(destino, pronto) {
+    cancelAnimationFrame(quadro);
+    const de = atual, dur = calmo ? 0 : Math.min(2600, Math.abs(destino - de) * 3 + 300), t0 = performance.now();
+    boneco.classList.add("andando");
+    const passo = (t) => {
+      const k = dur ? Math.min(1, (t - t0) / dur) : 1;
+      atual = de + (destino - de) * (k < .5 ? 2 * k * k : 1 - (-2 * k + 2) ** 2 / 2);
+      colocar(atual);
+      if (k < 1) quadro = requestAnimationFrame(passo);
+      else { boneco.classList.remove("andando"); if (pronto) pronto(); }
+    };
+    quadro = requestAnimationFrame(passo);
+  }
+  function mostrar(n) {
+    const det = botoes[n].parentElement.querySelector(".rota-detalhe").children;
+    texto("rota-rotulo", "Parada " + (n + 1) + " · " + botoes[n].querySelector("span").textContent);
+    texto("rota-titulo", det[0].textContent);
+    texto("rota-faz", det[1].textContent);
+    document.getElementById("rota-recebe").innerHTML = det[2].innerHTML;
+    marcas.forEach((m, i) => { m.classList.toggle("ativa", i === n); m.classList.toggle("feita", i < n); });
+    botoes.forEach((b, i) => b.setAttribute("aria-pressed", String(i === n)));
+  }
+  const ir = (n) => { clearTimeout(passeio); mostrar(n); andar(posicao[n]); };
+  marcas.forEach((m, i) => {
+    m.addEventListener("click", () => ir(i));
+    m.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); ir(i); } });
+  });
+  botoes.forEach((b, i) => b.addEventListener("click", () => ir(i)));
+  document.getElementById("rota-tour").addEventListener("click", () => {
+    let n = 0;
+    atual = 0;
+    const seguir = () => { mostrar(n); andar(posicao[n]); if (++n < marcas.length) passeio = setTimeout(seguir, 4200); };
+    clearTimeout(passeio);
+    seguir();
+  });
+}

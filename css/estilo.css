@@ -398,11 +398,6 @@ html:not(.js) .calc input[type="range"] { display: none; }
 .zona-cozinha { fill: rgba(237, 232, 223, .035); }
 .zona-salao { fill: rgba(201, 162, 39, .035); }
 .planta-rastro { fill: none; stroke: var(--grafite); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
-.planta-rota { fill: none; stroke: var(--dourado); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 100; stroke-dashoffset: 100; animation: desenhar-rota 16s linear infinite; }
-.andador-ponto { fill: var(--dourado-claro); }
-.andador-halo { fill: var(--dourado); opacity: .25; }
-.planta .marca .anel { animation: pulsar 2.4s ease-in-out infinite; }
-@keyframes desenhar-rota { 0% { stroke-dashoffset: 100; } 85%, 100% { stroke-dashoffset: 0; } }
 @keyframes pulsar { 50% { opacity: .9; } }
 
 /* Escada em três etapas */
@@ -444,6 +439,44 @@ html:not(.js) .calc input[type="range"] { display: none; }
 #v-depois:checked ~ .so-antes, #v-depois:checked ~ .virada-painel .so-antes { display: none; }
 #v-depois:checked ~ .virada-painel .so-depois { animation: surgir .5s var(--curva) both; }
 @keyframes surgir { from { opacity: 0; transform: translateY(6px); } }
+
+/* Visita interativa */
+.visita-lead { max-width: 68ch; margin: -4px 0 16px; }
+.visita-interativa { display: grid; gap: 16px; }
+.rota-cartao { padding: 20px; background: var(--preto-fosco); border: 1px solid var(--dourado); min-height: 210px; }
+.rota-cartao-rotulo { margin: 0 0 4px; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--dourado-claro); }
+.rota-titulo, .rota-cartao .rota-titulo { margin: 0 0 8px; font: 700 26px/1.15 var(--serifa); color: var(--branco-osso); }
+.rota-cartao p { font-size: 15px; line-height: 1.5; }
+.rota-recebe { margin: 8px 0 0; padding-top: 8px; border-top: 1px solid var(--grafite); color: var(--branco-osso); }
+.rota-recebe:empty { display: none; }
+.rota-recebe strong { color: var(--dourado-claro); }
+.rota-tour { margin-top: 16px; min-height: 44px; padding: 8px 16px; background: transparent; border: 1px solid var(--dourado); border-radius: 4px; font: 700 14px var(--texto); color: var(--dourado-claro); cursor: pointer; }
+.rota-tour:hover { background: var(--preto-carvao); }
+.parada { cursor: pointer; outline: none; }
+.parada .anel { fill: none; stroke: var(--dourado); stroke-width: 1; opacity: .35; transition: opacity .3s var(--curva); }
+.parada .miolo { fill: var(--preto-fosco); stroke: var(--dourado); stroke-width: 1.5; transition: fill .3s var(--curva); }
+.parada:hover .anel, .parada:focus-visible .anel { opacity: 1; stroke-width: 2; }
+.parada.ativa .miolo { fill: var(--dourado); }
+.parada.ativa text { fill: var(--preto-fosco); }
+.parada.feita .miolo { fill: var(--preto-carvao); }
+.planta-feito { fill: none; stroke: var(--dourado); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+html:not(.js) .planta-feito { stroke-dasharray: 3 9; }
+.boneco { pointer-events: none; }
+.boneco-sombra { fill: rgba(0, 0, 0, .55); }
+.boneco-corpo { fill: none; stroke: var(--dourado-claro); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.boneco-corpo circle { fill: var(--dourado-claro); stroke: none; }
+.boneco-corpo rect { fill: var(--preto-fosco); stroke-width: 2; }
+.boneco.andando .boneco-corpo { animation: passo .35s ease-in-out infinite alternate; }
+@keyframes passo { to { transform: translateY(-3px); } }
+.rota-legenda li { padding: 0; }
+.rota-legenda button { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; width: 100%; min-height: 64px; padding: 12px; background: none; border: 0; font: inherit; text-align: left; color: var(--areia); cursor: pointer; }
+.rota-legenda button[aria-pressed="true"] { background: var(--preto-carvao); box-shadow: inset 0 -3px 0 var(--dourado); }
+.rota-detalhe { padding: 0 12px 12px; font-size: 14px; }
+.rota-detalhe .rota-titulo { font-size: 19px; }
+html.js .rota-detalhe { display: none; }
+
+/* Etapa 3 sem pressão */
+.etapa-livre { margin: 8px 0 0; padding: 12px; background: var(--preto-fosco); border-left: 3px solid var(--grafite); font-size: 14px; color: var(--areia); }
 
 /* Números alinhados na serifada. Fica depois de tudo porque o atalho "font:" zera este ajuste. */
 h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-grande, .calc-saida dd, .perdas b, .perdas-total b, .marca text, .assinatura blockquote, .etapa-numero, .calc-rotulo b, .agenda-fluxo b, .relatorio-titulo, .cem-valor, .cem-legenda b, .rota-legenda b, .etapa-preco, .credenciais b, .virada-topo b { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
@@ -541,6 +574,8 @@ h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-
   .cem { grid-template-columns: 280px 1fr; gap: 48px; padding: 32px 40px; }
   .cem-grafico { max-width: 280px; }
   .rota-legenda { grid-template-columns: repeat(6, 1fr); }
+  .visita-interativa { grid-template-columns: 1fr 2fr; align-items: start; }
+  .rota-cartao { position: sticky; top: 32px; min-height: 260px; }
   .escada { grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .credenciais { grid-template-columns: repeat(4, 1fr); }
   .formacoes-grade-curta { grid-template-columns: repeat(3, 1fr); }
@@ -557,8 +592,6 @@ h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .feixe, .fluxo, .planta-rota, .planta .marca .anel, .virada-botoes label { animation: none; }
-  .planta-rota { stroke-dashoffset: 0; }
-  .planta-andador { display: none; }
+  .feixe, .fluxo, .virada-botoes label, .boneco.andando .boneco-corpo { animation: none; }
   .botao, .fuga, .opcao span, .barra-fixa, .perguntas summary::after { transition: none; }
 }
