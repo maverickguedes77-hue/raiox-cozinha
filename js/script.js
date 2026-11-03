@@ -47,7 +47,7 @@ if (barraFixa && "IntersectionObserver" in window) {
   ["topo", "agendar"].forEach((id) => observador.observe(document.getElementById(id)));
 }
 
-// 3. Calculadora: quanto vale 1 ponto de CMV
+// 3. Calculadora: quanto vale 1% do que a casa vende
 const calc = document.getElementById("calc-fat");
 if (calc) {
   const reais = (v) => "R$ " + v.toLocaleString("pt-BR");
@@ -58,7 +58,7 @@ if (calc) {
     escrever("calc-fat-txt", "R$ " + mil + " mil");
     escrever("calc-mes", reais(ponto));
     escrever("calc-ano", reais(ponto * 12));
-    escrever("calc-dias", "Corrigindo 1 ponto, o diagnóstico se paga em cerca de " + Math.round(397 / ponto * 30) + " dias.");
+    escrever("calc-dias", "Se o Raio-X ajudar a segurar só esse 1%, ele se paga em cerca de " + Math.round(397 / ponto * 30) + " dias. É conta, não promessa.");
   });
 }
 
