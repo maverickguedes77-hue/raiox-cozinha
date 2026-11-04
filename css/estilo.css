@@ -478,6 +478,24 @@ html.js .rota-detalhe { display: none; }
 /* Etapa 3 sem pressão */
 .etapa-livre { margin: 8px 0 0; padding: 12px; background: var(--preto-fosco); border-left: 3px solid var(--grafite); font-size: 14px; color: var(--areia); }
 
+/* Ilustrações dos passos */
+.passo-cena { margin: 16px 0 0; }
+.cena { width: 100%; height: auto; border: 1px solid var(--grafite); border-radius: 4px; }
+.il-tr { fill: none; stroke: var(--areia); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: .85; }
+.il-fino { stroke-width: 1.3; }
+.il-ou { fill: none; stroke: var(--dourado); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.il-cheio { fill: var(--dourado); opacity: .85; }
+.il-roupa { fill: #1d1d1c; }
+.il-pele { fill: #2b2a28; stroke: var(--areia); stroke-width: 2; opacity: .9; }
+.il-botao { fill: var(--dourado); }
+.il-balcao { fill: #171716; }
+.il-chao { opacity: .35; }
+.il-tracejado { stroke-dasharray: 3 5; }
+.cena text { font: 700 14px var(--texto); fill: var(--areia); }
+.cena .il-destaque, .cena .il-visor { fill: var(--dourado-claro); }
+.cena .il-visor { font-size: 11px; }
+.il-balao text { fill: var(--dourado-claro); }
+
 /* Números alinhados na serifada. Fica depois de tudo porque o atalho "font:" zera este ajuste. */
 h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-grande, .calc-saida dd, .perdas b, .perdas-total b, .marca text, .assinatura blockquote, .etapa-numero, .calc-rotulo b, .agenda-fluxo b, .relatorio-titulo, .cem-valor, .cem-legenda b, .rota-legenda b, .etapa-preco, .credenciais b, .virada-topo b { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 
