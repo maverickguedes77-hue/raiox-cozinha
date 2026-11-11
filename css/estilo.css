@@ -496,6 +496,14 @@ html.js .rota-detalhe { display: none; }
 .cena .il-visor { font-size: 11px; }
 .il-balao text { fill: var(--dourado-claro); }
 
+/* Fotos nos cartões das fugas e nos passos */
+.fuga { overflow: hidden; }
+.fuga-foto { display: block; width: calc(100% + 51px); max-width: none; height: 150px; margin: -24px -24px 20px -27px; object-fit: cover; border-bottom: 1px solid var(--dourado); }
+.fuga .fuga-numero { top: 12px; right: 12px; min-width: 52px; padding: 4px 10px; background: rgba(14, 14, 14, .82); border: 1px solid var(--dourado); border-radius: 4px; font-size: 40px; text-align: center; }
+.fuga:hover .fuga-foto { filter: brightness(1.08); }
+.passo-foto img { display: block; width: 100%; height: 170px; object-fit: cover; border: 1px solid var(--dourado); border-radius: 4px; }
+.fotos-ia { margin: 12px 0 0; }
+
 /* Números alinhados na serifada. Fica depois de tudo porque o atalho "font:" zera este ajuste. */
 h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-grande, .calc-saida dd, .perdas b, .perdas-total b, .marca text, .assinatura blockquote, .etapa-numero, .calc-rotulo b, .agenda-fluxo b, .relatorio-titulo, .cem-valor, .cem-legenda b, .rota-legenda b, .etapa-preco, .credenciais b, .virada-topo b { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 
@@ -507,6 +515,7 @@ h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-
 }
 
 @media (min-width: 768px) {
+  .fuga-foto { width: calc(100% + 67px); height: 170px; margin: -32px -32px 24px -35px; }
   :root { --respiro: 96px; --margem: 32px; }
   body { font-size: 18px; padding-bottom: 0; }
   h1 { font-size: clamp(44px, 5vw, 56px); }
