@@ -496,6 +496,12 @@ html.js .rota-detalhe { display: none; }
 .cena .il-visor { font-size: 11px; }
 .il-balao text { fill: var(--dourado-claro); }
 
+/* Imagens ilustrativas */
+.foto { margin: 0 0 24px; }
+.foto img { display: block; width: 100%; height: auto; border: 1px solid var(--grafite); border-radius: 4px; }
+.foto figcaption { margin-top: 8px; }
+.foto figcaption span { opacity: .8; }
+
 /* Números alinhados na serifada. Fica depois de tudo porque o atalho "font:" zera este ajuste. */
 h1, h2, .preco-topo, .fuga-numero, .fechamento-bloco, .tela-total b, .relatorio-grande, .calc-saida dd, .perdas b, .perdas-total b, .marca text, .assinatura blockquote, .etapa-numero, .calc-rotulo b, .agenda-fluxo b, .relatorio-titulo, .cem-valor, .cem-legenda b, .rota-legenda b, .etapa-preco, .credenciais b, .virada-topo b { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 
