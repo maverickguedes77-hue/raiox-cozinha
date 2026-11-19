@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- BLOCO 0 · Metadados -->
+<!-- Metadados -->
 <title>Consultoria para restaurantes em Curitiba | Raio-X da Cozinha</title>
-<meta name="description" content="Diagnóstico de custos, compras e perdas para restaurantes, marmitarias e cafeterias em Curitiba. Visita, relatório e três correções priorizadas. R$ 397.">
+<meta name="description" content="Diagnóstico técnico de custos, compras, estoque, produção e perdas para restaurantes, marmitarias e cafeterias em Curitiba. Visita, relatório e três correções priorizadas. R$ 397.">
 <meta name="author" content="Anderson Guedes">
 <meta name="geo.region" content="BR-PR">
 <meta name="geo.placename" content="Curitiba">
@@ -13,19 +13,22 @@
 <meta name="theme-color" content="#0E0E0E">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Raio-X da Cozinha">
 <meta property="og:url" content="https://maverickguedes77-hue.github.io/raiox-cozinha/">
-<meta property="og:title" content="Seu restaurante vende bem e não sobra nada?">
-<meta property="og:description" content="O problema quase nunca é a venda. Raio-X da Cozinha, R$ 397.">
+<meta property="og:title" content="Raio-X da Cozinha · A engenharia invisível do lucro">
+<meta property="og:description" content="Descubra onde o dinheiro da sua operação gastronômica está escapando. Diagnóstico técnico em Curitiba, R$ 397.">
 <meta property="og:image" content="https://maverickguedes77-hue.github.io/raiox-cozinha/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Raio-X da Cozinha, diagnóstico de gestão para negócios de alimentação">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Seu restaurante vende bem e não sobra nada?">
-<meta name="twitter:description" content="O problema quase nunca é a venda. Raio-X da Cozinha, R$ 397.">
+<meta name="twitter:title" content="Raio-X da Cozinha · A engenharia invisível do lucro">
+<meta name="twitter:description" content="Descubra onde o dinheiro da sua operação gastronômica está escapando. Diagnóstico técnico em Curitiba, R$ 397.">
 <meta name="twitter:image" content="https://maverickguedes77-hue.github.io/raiox-cozinha/img/og.jpg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preload" href="fontes/cormorant-garamond-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fontes/cormorant-garamond-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fontes/montserrat-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/heroi-cozinha.webp" as="image" type="image/webp" imagesrcset="img/heroi-cozinha-p.webp 331w, img/heroi-cozinha.webp 662w" imagesizes="(min-width: 1024px) 46vw, 100vw">
 <link rel="stylesheet" href="css/estilo.css">
 <script>document.documentElement.className = "js";</script>
 <script type="application/ld+json">
@@ -35,6 +38,8 @@
 </head>
 <body>
 
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
 <!-- Ícones em traço, desenhados para esta página -->
 <svg class="sprite" aria-hidden="true" focusable="false">
   <symbol id="i-zap" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
@@ -42,552 +47,691 @@
   <symbol id="i-estante" viewBox="0 0 48 48"><path d="M8 6v36M40 6v36M8 20h32M8 36h32"/><path d="M13 20v-8h9v8M26 20v-5h9v5M13 36v-6h7v6M24 36v-9h11v9"/></symbol>
   <symbol id="i-lixo" viewBox="0 0 48 48"><path d="M9 13h30M19 13V7h10v6M13 13l2.5 29h17L35 13M20 20v15M28 20v15"/></symbol>
   <symbol id="i-preco" viewBox="0 0 48 48"><path d="M6 25 24 7h15a2 2 0 0 1 2 2v15L23 42z"/><circle cx="33" cy="15" r="3"/><path d="M19 26l5 5M24 21l5 5"/></symbol>
-  <symbol id="i-rotina" viewBox="0 0 48 48"><path d="M18 8h-6a2 2 0 0 0-2 2v30a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-6"/><path d="M18 5h12v6H18zM16 21l2.500 3 4-5M27 21h6M16 31h6v6h-6zM27 34h6"/></symbol>
-  <symbol id="i-contar" viewBox="0 0 48 48"><path d="M7 22h15v20H7zM26 10h15v32H26z"/><path d="M11 28h7M11 34h7M30 17h7M30 24h7M30 31h7"/></symbol>
-  <symbol id="i-balanca" viewBox="0 0 48 48"><path d="M9 15h30a15 7 0 0 1-30 0z"/><path d="M24 22v9"/><rect x="10" y="31" width="28" height="11" rx="2"/><path d="M20 37h8"/></symbol>
-  <symbol id="i-conferir" viewBox="0 0 48 48"><path d="M12 6h24v36l-4-3-4 3-4-3-4 3-4-3-4 3z"/><path d="M18 22l4.500 5 8-10"/></symbol>
   <symbol id="i-panela" viewBox="0 0 48 48"><path d="M10 22h28v15a5 5 0 0 1-5 5H15a5 5 0 0 1-5-5zM5 27h5M38 27h5M7 22h34"/><path d="M19 15c-2-3 2-5 0-9M29 15c-2-3 2-5 0-9"/></symbol>
-  <symbol id="i-pergunta" viewBox="0 0 48 48"><path d="M7 9h34v24H23l-9 8v-8H7z"/><path d="M20 17a4 4 0 1 1 6 3.500c-1.500.8-2 1.500-2 3M24 28v.1"/></symbol>
+  <symbol id="i-grafico" viewBox="0 0 48 48"><path d="M6 6v36h36"/><path d="M13 32l8-9 6 5 12-14"/><path d="M33 14h6v6"/></symbol>
+  <symbol id="i-balanca" viewBox="0 0 48 48"><path d="M9 15h30a15 7 0 0 1-30 0z"/><path d="M24 22v9"/><rect x="10" y="31" width="28" height="11" rx="2"/><path d="M20 37h8"/></symbol>
+  <symbol id="i-conferir" viewBox="0 0 48 48"><path d="M12 6h24v36l-4-3-4 3-4-3-4 3-4-3-4 3z"/><path d="M18 22l4.5 5 8-10"/></symbol>
   <symbol id="i-conversa" viewBox="0 0 48 48"><rect x="13" y="4" width="22" height="40" rx="3"/><path d="M21 39h6M18 13h12M18 19h12M18 25h7"/></symbol>
   <symbol id="i-relatorio" viewBox="0 0 48 48"><path d="M12 5h18l8 8v30H12z"/><path d="M30 5v8h8M18 23h14M18 29h14M18 35h8"/></symbol>
-  <symbol id="i-escudo" viewBox="0 0 48 48"><path d="M24 5l15 6v12c0 10-6.500 16.500-15 20-8.500-3.500-15-10-15-20V11z"/><path d="M17 24l5 5 9-11"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 48 48"><path d="M24 5l15 6v12c0 10-6.5 16.5-15 20-8.5-3.5-15-10-15-20V11z"/><path d="M17 24l5 5 9-11"/></symbol>
   <symbol id="i-relogio" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M24 13v11l8 5"/></symbol>
   <symbol id="i-calendario" viewBox="0 0 48 48"><rect x="7" y="10" width="34" height="31" rx="2"/><path d="M7 19h34M16 5v9M32 5v9M16 28l5 5 10-10"/></symbol>
-  <symbol id="i-rota" viewBox="0 0 48 48"><path d="M24 43s13-13.500 13-23a13 13 0 1 0-26 0c0 9.500 13 23 13 23z"/><circle cx="24" cy="20" r="5"/></symbol>
+  <symbol id="i-rota" viewBox="0 0 48 48"><path d="M24 43s13-13.5 13-23a13 13 0 1 0-26 0c0 9.5 13 23 13 23z"/><circle cx="24" cy="20" r="5"/></symbol>
   <symbol id="i-cadeado" viewBox="0 0 48 48"><rect x="10" y="21" width="28" height="21" rx="2"/><path d="M16 21v-7a8 8 0 0 1 16 0v7M24 29v5"/></symbol>
+  <symbol id="i-lupa" viewBox="0 0 48 48"><circle cx="21" cy="21" r="13"/><path d="M31 31l11 11M15 21h12M21 15v12"/></symbol>
   <symbol id="i-seta" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12"/></symbol>
 </svg>
 
-<!-- Cabeçalho: logo; o menu só aparece no computador -->
+<!-- Cabeçalho: logo, menu no computador e menu recolhível no celular -->
 <header class="cabecalho">
-  <div class="conteudo">
+  <div class="conteudo cabecalho-linha">
     <a class="marca-logo" href="#topo">
       <img src="img/logo-lucro360-p.webp" width="420" height="123" alt="LUCRO 360 Consultoria, Anderson Guedes">
     </a>
-    <nav aria-label="Seções da página">
-      <a href="#o-que-e">O diagnóstico</a>
+    <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir o menu">
+      <svg aria-hidden="true"><use href="#i-menu"/></svg><span>Menu</span>
+    </button>
+    <nav class="menu" id="menu" aria-label="Seções da página">
+      <a href="#fugas">Onde escapa</a>
+      <a href="#relatorio">O relatório</a>
       <a href="#como-funciona">Como funciona</a>
-      <a href="#quem-sou">Quem sou</a>
-      <a class="nav-agendar" href="#agendar">Agendar</a>
+      <a href="#quem-sou">Quem realiza</a>
+      <a href="#preco">Investimento</a>
+      <a class="menu-agendar" href="#agendar">Agendar</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="conteudo">
 
-<!-- BLOCO 1 · Topo (hero) -->
-<section class="topo" id="topo">
-  <div class="conteudo topo-grade">
-    <div>
-      <p class="etiqueta">Anderson Guedes · Gestão de cozinha para negócios de alimentação · Curitiba</p>
-      <h1>Seu restaurante vende bem e no fim do mês não sobra nada?</h1>
-      <p class="subtitulo">O problema quase nunca é a venda. É que o dinheiro sai por cinco lugares que ninguém mede.</p>
-      <p class="oferta">Raio-X da Cozinha: uma visita, um relatório, cinco números que você não tem.</p>
-      <div class="preco-linha"><strong class="preco-topo">R$ 397</strong><span class="preco-nota">investimento único<br>no diagnóstico</span></div>
-      <a class="botao botao-zap" data-wa="RAIOX-TOPO" href="https://wa.me/5541998824094?text=Oi%20Anderson%2C%20vi%20a%20sua%20p%C3%A1gina%20e%20quero%20entender%20o%20Raio-X%20da%20Cozinha.%20%5BRAIOX-TOPO%5D" target="_blank" rel="noopener">
-        <svg aria-hidden="true"><use href="#i-zap"/></svg>Quero conversar no WhatsApp
-      </a>
-      <p class="apoio">Respondo das 14h30 às 17h. Atendo Curitiba e região metropolitana.</p>
-      <a class="link-marcar" href="#agendar">Prefere marcar direto? Escolha o dia da visita.</a>
+<!-- 1 · Herói -->
+<section class="heroi" id="topo" aria-labelledby="heroi-titulo">
+  <div class="conteudo heroi-grade">
+    <div class="heroi-texto">
+      <p class="sobretitulo"><span>Diagnóstico de gestão para negócios de alimentação</span><span>Anderson Guedes · Curitiba e região</span></p>
+      <h1 id="heroi-titulo"><span class="heroi-marca">Raio-X da Cozinha</span>A engenharia invisível do lucro.</h1>
+      <p class="heroi-chamada">Descubra onde o dinheiro da sua operação gastronômica está escapando.</p>
+      <p class="heroi-apoio">Um diagnóstico técnico que investiga custos, perdas, compras, estoque, produção e resultados para mostrar o que precisa ser corrigido.</p>
+      <div class="heroi-botoes">
+        <a class="botao botao-ouro" href="#agendar">Quero fazer o Raio-X da minha cozinha</a>
+        <a class="botao botao-linha" href="#como-funciona">Ver como funciona</a>
+      </div>
+      <dl class="heroi-fatos">
+        <div><dt>Investimento único</dt><dd>R$ 397</dd></div>
+        <div><dt>Dentro da cozinha</dt><dd>3 h <small>em média</small></dd></div>
+        <div><dt>Relatório</dt><dd>3 dias <small>úteis</small></dd></div>
+      </dl>
+      <p class="heroi-zap">Prefere conversar antes? <a data-wa="RAIOX-TOPO" href="https://wa.me/5541998824094?text=Oi%20Anderson%2C%20vi%20a%20sua%20p%C3%A1gina%20e%20quero%20entender%20o%20Raio-X%20da%20Cozinha.%20%5BRAIOX-TOPO%5D" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Chame no WhatsApp</a> · respondo das 14h30 às 17h.</p>
     </div>
 
-    <figure class="raio-quadro">
-      <svg class="raio" viewBox="0 0 620 620" role="img" aria-label="Ilustração em traço dourado de uma cozinha vista em raio-X, com nota de compra, prateleira de estoque, prato com etiqueta de preço, lixeira e quadro de rotina. Cinco pontos numerados vazam para um cano sob o piso, por onde o dinheiro sai.">
-        <defs>
-          <pattern id="grade" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#2A2A2A" stroke-width=".7"/></pattern>
-          <linearGradient id="feixe-luz" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E3C66B" stop-opacity="0"/><stop offset=".92" stop-color="#E3C66B" stop-opacity=".13"/><stop offset="1" stop-color="#E3C66B" stop-opacity=".5"/></linearGradient>
-          <clipPath id="filme"><rect x="10" y="10" width="600" height="600" rx="4"/></clipPath>
-        </defs>
-
-        <!-- Filme -->
-        <rect x="10" y="10" width="600" height="600" rx="4" fill="#121211"/>
-        <rect x="10" y="10" width="600" height="600" rx="4" fill="url(#grade)"/>
-        <rect x="10" y="10" width="600" height="600" rx="4" fill="none" stroke="#2A2A2A"/>
-        <path class="ou" d="M10 40V14a4 4 0 0 1 4-4h26M580 10h26a4 4 0 0 1 4 4v26M610 580v26a4 4 0 0 1-4 4h-26M40 610H14a4 4 0 0 1-4-4v-26"/>
-        <text class="raio-rotulo" x="32" y="46">RAIO-X · COZINHA</text>
-
-        <!-- Prateleira e estoque -->
-        <g class="ou-cheio">
-          <rect x="62" y="124" width="40" height="26"/><rect x="112" y="134" width="34" height="16"/><rect x="156" y="112" width="42" height="38"/><rect x="208" y="138" width="36" height="12"/>
-        </g>
-        <path class="tr" d="M48 150h248M78 150v14M268 150v14M62 150V100a4 4 0 0 1 4-4h32a4 4 0 0 1 4 4v50M66 96v-8h32v8M112 150v-40a4 4 0 0 1 4-4h26a4 4 0 0 1 4 4v40M115 106v-7h28v7M156 150V96a4 4 0 0 1 4-4h34a4 4 0 0 1 4 4v54M160 92v-8h34v8M208 150v-42a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v42M211 104v-7h30v7M254 150v-38h30v38"/>
-
-        <!-- Nota de compra -->
-        <path class="tr" d="M52 196h56v92l-7-7-7 7-7-7-7 7-7-7-7 7-7-7-7 7z"/>
-        <path class="tr tr-fino" d="M60 212h40M60 226h40M60 240h26M60 254h40"/>
-
-        <!-- Quadro de rotina -->
-        <rect class="tr" x="124" y="192" width="72" height="100" rx="3"/>
-        <path class="tr" d="M146 192v-6h28v6"/>
-        <path class="tr tr-fino" d="M134 208h10v10h-10zM134 230h10v10h-10zM134 252h10v10h-10zM134 274h10v10h-10zM152 213h34M152 235h34M152 257h34M152 279h24"/>
-        <path class="ou" d="M136 213l2.500 3 4-5"/>
-
-        <!-- Bancada, balança e prato com preço -->
-        <path class="tr" d="M34 360h284"/>
-        <path class="tr" d="M44 366h264v134H44zM132 366v134M220 366v134M118 420v22M146 420v22M234 420v22"/>
-        <path class="tr" d="M56 342h76M68 342a26 10 0 0 0 52 0M94 352v0"/>
-        <rect class="tr" x="72" y="350" width="44" height="10" rx="2"/>
-        <path class="tr" d="M158 360a38 6 0 0 0 76 0"/>
-        <path class="tr" d="M166 356c5-26 55-26 60 0"/>
-        <path class="ou" d="M222 332l14-14M232 298h40l9 11-9 11h-40z"/>
-        <text x="256" y="315" text-anchor="middle" style="font:700 15px var(--serifa);fill:var(--dourado)">R$ ?</text>
-
-        <!-- Lixeira -->
-        <path class="ou-cheio" d="M322 452l9-11 11 9 11-8 7 10-3 48h-33z"/>
-        <path class="tr" d="M312 422h56M332 422v-7h16v7M316 422l5 78h38l5-78"/>
-
-        <!-- Fogão, panela, coifa -->
-        <path class="tr" d="M404 62h146l28 54H376zM448 22v40M506 22v40"/>
-        <path class="tr tr-fino" d="M450 142c-8-10 8-18 0-28M478 142c-8-10 8-18 0-28M506 142c-8-10 8-18 0-28"/>
-        <rect class="ou-cheio" x="424" y="268" width="106" height="46"/>
-        <path class="tr" d="M424 244h106v66a4 4 0 0 1-4 4h-98a4 4 0 0 1-4-4zM416 244h122M424 258h-12v14h12M530 258h12v14h-12M464 244v-7h26v7"/>
-        <path class="tr" d="M432 314h90v6M372 320h208M382 320h190v180H382z"/>
-        <rect class="tr" x="398" y="372" width="158" height="96" rx="2"/>
-        <rect class="tr tr-fino" x="414" y="392" width="126" height="60" rx="2"/>
-        <path class="tr" d="M414 382h126"/>
-        <path class="tr tr-fino" d="M406 346a7 7 0 1 0 14 0a7 7 0 1 0-14 0M436 346a7 7 0 1 0 14 0a7 7 0 1 0-14 0M466 346a7 7 0 1 0 14 0a7 7 0 1 0-14 0M496 346a7 7 0 1 0 14 0a7 7 0 1 0-14 0M526 346a7 7 0 1 0 14 0a7 7 0 1 0-14 0"/>
-
-        <!-- Piso e cano por onde o dinheiro sai -->
-        <path class="tr" d="M26 500h568"/>
-        <path class="tr tr-fino" d="M26 512l12-12M66 512l12-12M106 512l12-12M146 512l12-12M186 512l12-12M226 512l12-12M266 512l12-12M306 512l12-12M346 512l12-12M386 512l12-12M426 512l12-12M466 512l12-12M506 512l12-12M546 512l12-12"/>
-        <path class="ou queda" d="M80 196V556M160 186V556M212 300V556M276 118V556M340 410V556"/>
-        <path class="ou" d="M60 546h520M60 566h520"/>
-        <path class="ou fluxo" d="M66 556h518"/>
-        <path class="ou" d="M584 538l26 18-26 18"/>
-        <text class="raio-rotulo" x="32" y="594">POR ONDE O DINHEIRO SAI</text>
-
-        <!-- Cinco fugas -->
-        <g class="marca">
-          <g transform="translate(80 178)"><circle class="anel" r="19"/><circle r="14"/><text y="6">1</text></g>
-          <g transform="translate(276 112)"><circle class="anel" r="19"/><circle r="14"/><text y="6">2</text></g>
-          <g transform="translate(340 396)"><circle class="anel" r="19"/><circle r="14"/><text y="6">3</text></g>
-          <g transform="translate(212 290)"><circle class="anel" r="19"/><circle r="14"/><text y="6">4</text></g>
-          <g transform="translate(160 168)"><circle class="anel" r="19"/><circle r="14"/><text y="6">5</text></g>
-        </g>
-
-        <!-- Feixe do raio-X -->
-        <g clip-path="url(#filme)"><rect class="feixe" x="10" y="-90" width="600" height="90" fill="url(#feixe-luz)"/></g>
-      </svg>
+    <figure class="heroi-foto">
+      <div class="heroi-quadro">
+        <img src="img/heroi-cozinha.webp" srcset="img/heroi-cozinha-p.webp 331w, img/heroi-cozinha.webp 662w" sizes="(min-width: 1024px) 46vw, 100vw" width="662" height="720" alt="Cozinha profissional de inox, com bancada, prateleiras de insumos e fogões ao fundo." fetchpriority="high">
+        <svg class="heroi-planta" viewBox="0 0 662 720" aria-hidden="true" focusable="false">
+          <defs>
+            <pattern id="heroi-grade" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#EDE8DF" stroke-opacity=".07" stroke-width="1"/></pattern>
+            <linearGradient id="heroi-feixe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9A227" stop-opacity="0"/><stop offset=".85" stop-color="#C9A227" stop-opacity=".10"/><stop offset="1" stop-color="#E3C66B" stop-opacity=".55"/></linearGradient>
+          </defs>
+          <rect width="662" height="720" fill="url(#heroi-grade)"/>
+          <!-- cotas -->
+          <g class="cota">
+            <path d="M28 30H634M28 22v16M634 22v16M180 26v8M331 24v12M482 26v8"/>
+            <path d="M30 60V690M22 60h16M22 690h16M26 220h8M24 375h12M26 530h8"/>
+          </g>
+          <text class="cota-texto" x="331" y="18" text-anchor="middle">LEITURA DA OPERAÇÃO</text>
+          <!-- pontos de inspeção -->
+          <g class="inspecao" style="--i:0"><path class="guia" d="M96 410 L150 470 H246"/><circle class="anel" cx="96" cy="410" r="15"/><circle class="ponto" cx="96" cy="410" r="4.5"/><text x="156" y="462">01 COMPRAS</text></g>
+          <g class="inspecao" style="--i:1"><path class="guia" d="M64 214 L120 160 H226"/><circle class="anel" cx="64" cy="214" r="15"/><circle class="ponto" cx="64" cy="214" r="4.5"/><text x="126" y="152">02 ESTOQUE</text></g>
+          <g class="inspecao" style="--i:2"><path class="guia" d="M598 404 L560 470 H446"/><circle class="anel" cx="598" cy="404" r="15"/><circle class="ponto" cx="598" cy="404" r="4.5"/><text x="554" y="462" text-anchor="end">03 PRODUÇÃO</text></g>
+          <g class="inspecao" style="--i:3"><path class="guia" d="M462 616 L520 660 H624"/><circle class="anel" cx="462" cy="616" r="15"/><circle class="ponto" cx="462" cy="616" r="4.5"/><text x="620" y="652" text-anchor="end">04 DESPERDÍCIO</text></g>
+          <g class="inspecao" style="--i:4"><path class="guia" d="M346 262 L400 196 H528"/><circle class="anel" cx="346" cy="262" r="15"/><circle class="ponto" cx="346" cy="262" r="4.5"/><text x="406" y="188">05 GESTÃO</text></g>
+          <!-- feixe de leitura -->
+          <rect class="feixe" x="0" y="-120" width="662" height="120" fill="url(#heroi-feixe)"/>
+          <!-- cantos -->
+          <path class="canto" d="M10 46V10h36M616 10h36v36M652 674v36h-36M46 710H10v-36"/>
+        </svg>
+      </div>
+      <figcaption>Cinco pontos que o Raio-X mede. Imagem ilustrativa, criada por IA.</figcaption>
     </figure>
   </div>
 </section>
 
-<!-- BLOCO 2 · Assinatura e fatos da oferta -->
-<section class="assinatura">
-  <div class="conteudo">
+<!-- 2 · Manifesto -->
+<section class="manifesto" aria-label="Assinatura">
+  <div class="conteudo manifesto-grade">
     <blockquote>Eu não ensino a vender mais. Mostro onde o seu dinheiro está saindo.</blockquote>
-    <ul class="fatos">
-      <li><svg class="icone" aria-hidden="true"><use href="#i-balanca"/></svg>Em média 3 horas dentro da sua cozinha</li>
-      <li><svg class="icone" aria-hidden="true"><use href="#i-relatorio"/></svg>Relatório em até 3 dias úteis</li>
-      <li><svg class="icone" aria-hidden="true"><use href="#i-conferir"/></svg>Sem mensalidade e sem contrato amarrado</li>
-      <li><svg class="icone" aria-hidden="true"><use href="#i-escudo"/></svg>Garantia: 60% de volta ou crédito</li>
+    <ul class="manifesto-fatos">
+      <li><svg aria-hidden="true"><use href="#i-balanca"/></svg>Em média 3 horas dentro da sua cozinha</li>
+      <li><svg aria-hidden="true"><use href="#i-relatorio"/></svg>Relatório em até 3 dias úteis</li>
+      <li><svg aria-hidden="true"><use href="#i-conferir"/></svg>Raio-X sem mensalidade e sem contrato amarrado</li>
+      <li><svg aria-hidden="true"><use href="#i-escudo"/></svg>Garantia: 60% de volta ou crédito</li>
     </ul>
   </div>
 </section>
 
-<!-- BLOCO 3 · As cinco fugas -->
-<section class="bloco" id="fugas">
+<!-- 3 · Onde o dinheiro está escapando -->
+<section class="bloco" id="fugas" aria-labelledby="fugas-titulo">
   <div class="conteudo">
-    <h2>O lucro não some. Ele sai por algum lugar.</h2>
-    <p class="abertura leitura">Em quase toda cozinha que eu visito, o dinheiro está saindo pelos mesmos cinco lugares. Nenhum deles aparece no extrato. Todos aparecem na conta do fim do mês.</p>
-    <ol class="fugas">
-      <li class="fuga">
-        <img class="fuga-foto" src="img/fuga-compra.webp" width="640" height="418" loading="lazy" alt="Caixas de tomate e verduras ao lado de uma prancheta com lista de compras.">
-        <span class="fuga-numero" aria-hidden="true">1</span>
-        <svg class="icone" aria-hidden="true"><use href="#i-nota"/></svg>
-        <h3>Você compra no escuro</h3>
-        <p>Sem cotação comparada e sem conferência de nota, você paga preços diferentes pelo mesmo item dentro do mesmo mês e não percebe. O fornecedor sabe. Você não.</p>
+    <header class="cabeca">
+      <p class="indice"><span>01</span>Onde o dinheiro está escapando</p>
+      <h2 id="fugas-titulo">O lucro não some. Ele sai por algum lugar.</h2>
+      <p class="cabeca-texto">Em quase toda cozinha que eu visito, o dinheiro está saindo pelos mesmos cinco lugares. Nenhum deles aparece no extrato. Todos aparecem na conta do fim do mês.</p>
+    </header>
+
+    <ol class="areas">
+      <li class="area">
+        <figure class="area-foto"><img src="img/fuga-compra.webp" width="640" height="418" loading="lazy" alt="Caixas de tomate e verduras ao lado de uma prancheta com lista de compras."></figure>
+        <div class="area-corpo">
+          <p class="area-numero"><span>01</span><svg aria-hidden="true"><use href="#i-nota"/></svg>Compras</p>
+          <h3>Você compra no escuro</h3>
+          <div class="area-colunas">
+            <div><p class="area-rotulo">O problema</p><p>Sem cotação comparada e sem conferência de nota, você paga preços diferentes pelo mesmo item dentro do mesmo mês e não percebe. O fornecedor sabe. Você não.</p></div>
+            <div><p class="area-rotulo">Como o Raio-X identifica</p><p>Abro as notas de compra e comparo o preço pago nos itens que mais pesam no custo.</p></div>
+          </div>
+          <p class="area-saida"><span>No relatório</span>Quanto a casa paga a mais por mês, item por item.</p>
+        </div>
       </li>
-      <li class="fuga">
-        <img class="fuga-foto" src="img/fuga-estoque.webp" width="640" height="464" loading="lazy" alt="Prateleiras de estoque com potes etiquetados e geladeira ao fundo.">
-        <span class="fuga-numero" aria-hidden="true">2</span>
-        <svg class="icone" aria-hidden="true"><use href="#i-estante"/></svg>
-        <h3>Você não sabe o que é seu</h3>
-        <p>Sem contagem de estoque, a diferença entre o que entrou e o que saiu vira prejuízo invisível. Quebra, desvio e erro de porção ficam todos no mesmo lugar: em lugar nenhum.</p>
+      <li class="area">
+        <figure class="area-foto"><img src="img/fuga-estoque.webp" width="640" height="464" loading="lazy" alt="Prateleiras de estoque com potes etiquetados e geladeira ao fundo."></figure>
+        <div class="area-corpo">
+          <p class="area-numero"><span>02</span><svg aria-hidden="true"><use href="#i-estante"/></svg>Estoque</p>
+          <h3>Você não sabe o que é seu</h3>
+          <div class="area-colunas">
+            <div><p class="area-rotulo">O problema</p><p>Sem contagem de estoque, a diferença entre o que entrou e o que saiu vira prejuízo invisível. Quebra, desvio e erro de porção ficam todos no mesmo lugar: em lugar nenhum.</p></div>
+            <div><p class="area-rotulo">Como o Raio-X identifica</p><p>Contagem dos itens que mais pesam no custo, conferida contra o que entrou nas notas.</p></div>
+          </div>
+          <p class="area-saida"><span>No relatório</span>Quanto produto some sem explicação, em reais.</p>
+        </div>
       </li>
-      <li class="fuga">
-        <img class="fuga-foto" src="img/fuga-lixo.webp" width="640" height="459" loading="lazy" alt="Cuba de inox cheia de sobras de preparo.">
-        <span class="fuga-numero" aria-hidden="true">3</span>
-        <svg class="icone" aria-hidden="true"><use href="#i-lixo"/></svg>
-        <h3>O dinheiro vai pro lixo</h3>
-        <p>Sobra de produção, produto vencido e porção fora do padrão somem do caixa sem passar por nenhum relatório. É o custo mais fácil de cortar e o menos medido.</p>
+      <li class="area">
+        <figure class="area-foto"><img src="img/fuga-rotina.webp" width="640" height="413" loading="lazy" alt="Chef com prancheta orientando duas pessoas da equipe."></figure>
+        <div class="area-corpo">
+          <p class="area-numero"><span>03</span><svg aria-hidden="true"><use href="#i-panela"/></svg>Produção</p>
+          <h3>Cada um faz de um jeito</h3>
+          <div class="area-colunas">
+            <div><p class="area-rotulo">O problema</p><p>Sem checklist e sem responsável com nome, cada pessoa faz de um jeito. A porção cresce, o rendimento muda conforme quem está na escala, e você só descobre quando o cliente reclama.</p></div>
+            <div><p class="area-rotulo">Como o Raio-X identifica</p><p>Acompanho o preparo no movimento, meço rendimento e cocção e peso a porção na praça, comparando com o que a ficha manda.</p></div>
+          </div>
+          <p class="area-saida"><span>No relatório</span>O fator de correção, o índice de cocção e o custo real do prato que mais vende.</p>
+        </div>
       </li>
-      <li class="fuga">
-        <img class="fuga-foto" src="img/fuga-preco.webp" width="640" height="464" loading="lazy" alt="Prato montado ao lado de uma calculadora e de uma ficha técnica.">
-        <span class="fuga-numero" aria-hidden="true">4</span>
-        <svg class="icone" aria-hidden="true"><use href="#i-preco"/></svg>
-        <h3>Seu preço foi chutado</h3>
-        <p>Preço feito olhando o vizinho, sem ficha técnica, sem fator de correção e sem índice de cocção. Tem prato no seu cardápio que vende muito e dá prejuízo. Normalmente é o carro-chefe.</p>
+      <li class="area">
+        <figure class="area-foto"><img src="img/fuga-lixo.webp" width="640" height="459" loading="lazy" alt="Cuba de inox cheia de sobras de preparo."></figure>
+        <div class="area-corpo">
+          <p class="area-numero"><span>04</span><svg aria-hidden="true"><use href="#i-lixo"/></svg>Desperdício</p>
+          <h3>O dinheiro vai pro lixo</h3>
+          <div class="area-colunas">
+            <div><p class="area-rotulo">O problema</p><p>Sobra de produção, produto vencido e porção fora do padrão somem do caixa sem passar por nenhum relatório. É o custo mais fácil de cortar e o menos medido.</p></div>
+            <div><p class="area-rotulo">Como o Raio-X identifica</p><p>Olho o que vira sobra durante o serviço e separo o que é sobra, vencimento e porção fora do padrão.</p></div>
+          </div>
+          <p class="area-saida"><span>No relatório</span>O mapa das perdas, em reais por mês.</p>
+        </div>
       </li>
-      <li class="fuga">
-        <img class="fuga-foto" src="img/fuga-rotina.webp" width="640" height="413" loading="lazy" alt="Chef com prancheta orientando duas pessoas da equipe.">
-        <span class="fuga-numero" aria-hidden="true">5</span>
-        <svg class="icone" aria-hidden="true"><use href="#i-rotina"/></svg>
-        <h3>Ninguém segue uma rotina</h3>
-        <p>Sem checklist e sem responsável com nome, cada pessoa faz de um jeito. O resultado muda conforme quem está na escala, e você só descobre quando o cliente reclama.</p>
+      <li class="area">
+        <figure class="area-foto"><img src="img/fuga-preco.webp" width="640" height="464" loading="lazy" alt="Prato montado ao lado de uma calculadora e de uma ficha técnica."></figure>
+        <div class="area-corpo">
+          <p class="area-numero"><span>05</span><svg aria-hidden="true"><use href="#i-grafico"/></svg>Gestão financeira</p>
+          <h3>Seu preço foi chutado</h3>
+          <div class="area-colunas">
+            <div><p class="area-rotulo">O problema</p><p>Preço feito olhando o vizinho, sem ficha técnica, sem fator de correção e sem índice de cocção. Tem prato no seu cardápio que vende muito e dá prejuízo. Normalmente é o carro-chefe.</p></div>
+            <div><p class="area-rotulo">Como o Raio-X identifica</p><p>Faturamento, custos fixos e notas de compra. É daqui que saem o CMV real, a margem de cada prato e o ponto de equilíbrio.</p></div>
+          </div>
+          <p class="area-saida"><span>No relatório</span>CMV real, curva ABC e quanto a casa precisa vender por dia.</p>
+        </div>
       </li>
     </ol>
-    <p class="legenda fotos-ia">Imagens ilustrativas, criadas por IA.</p>
-    <p class="fechamento-bloco">O Raio-X mede os cinco. Com os números da sua cozinha, não com média de mercado.</p>
+    <p class="legenda">Imagens ilustrativas, criadas por IA.</p>
+    <p class="frase-destaque">O Raio-X mede os cinco. Com os números da sua cozinha, não com média de mercado.</p>
   </div>
 </section>
 
-<!-- Quanto uma cozinha pode estar perdendo: exemplo fictício e calculadora -->
-<section class="bloco bloco-carvao" id="quanto-perde">
+<!-- 4 · Quanto pode estar perdendo: calculadora e exemplo -->
+<section class="bloco bloco-fundo" id="quanto-perde" aria-labelledby="quanto-titulo">
   <div class="conteudo">
-    <h2>Quanto dinheiro a sua cozinha pode estar perdendo?</h2>
-    <p class="abertura leitura">O problema não é só perder dinheiro. É não saber quanto está perdendo e onde corrigir. O Raio-X transforma essas perdas em números e prioridades de ação. Veja a conta de uma casa fictícia e depois faça a da sua.</p>
-    <div class="cem">
-      <figure class="cem-grafico">
-        <svg viewBox="0 0 200 200" role="img" aria-label="Exemplo fictício de para onde vão R$ 100 do faturamento: R$ 38 de insumo, R$ 24 de equipe, R$ 12 de aluguel e contas, R$ 10 de impostos e taxas, R$ 6 de perdas pelas cinco fugas e R$ 10 que sobram.">
-          <g transform="rotate(-90 100 100)">
-            <circle cx="100" cy="100" r="70" fill="none" stroke="#8A847A" stroke-width="30" stroke-dasharray="165.13 274.69" stroke-dashoffset="0.00"/>
-            <circle cx="100" cy="100" r="70" fill="none" stroke="#6A655E" stroke-width="30" stroke-dasharray="103.56 336.27" stroke-dashoffset="-167.13"/>
-            <circle cx="100" cy="100" r="70" fill="none" stroke="#4F4B46" stroke-width="30" stroke-dasharray="50.78 389.04" stroke-dashoffset="-272.69"/>
-            <circle cx="100" cy="100" r="70" fill="none" stroke="#3A3733" stroke-width="30" stroke-dasharray="41.98 397.84" stroke-dashoffset="-325.47"/>
-            <circle cx="100" cy="100" r="70" fill="none" stroke="#C9A227" stroke-width="30" stroke-dasharray="24.39 415.43" stroke-dashoffset="-369.45"/>
-            <circle cx="100" cy="100" r="70" fill="none" stroke="#FAF8F5" stroke-width="30" stroke-dasharray="41.98 397.84" stroke-dashoffset="-395.84"/>
-          </g>
-          <text x="100" y="96" text-anchor="middle" class="cem-valor">R$ 100</text>
-          <text x="100" y="118" text-anchor="middle" class="cem-rotulo">que entram</text>
-        </svg>
-      </figure>
-      <div class="cem-texto">
-        <h3>De cada R$ 100 que entram, para onde vai cada real</h3>
-        <ul class="cem-legenda">
-            <li><span class="cor" style="background:#8A847A"></span>Insumo (CMV)<b>R$ 38</b></li>
-            <li><span class="cor" style="background:#6A655E"></span>Equipe<b>R$ 24</b></li>
-            <li><span class="cor" style="background:#4F4B46"></span>Aluguel e contas<b>R$ 12</b></li>
-            <li><span class="cor" style="background:#3A3733"></span>Impostos e taxas<b>R$ 10</b></li>
-            <li class="destaque-fuga"><span class="cor" style="background:#C9A227"></span>Perdas pelas cinco fugas<b>R$ 6</b></li>
-            <li><span class="cor" style="background:#FAF8F5"></span>O que sobra<b>R$ 10</b></li>
-        </ul>
-        <p class="cem-frase">No exemplo, as fugas levam R$ 6 de cada R$ 100. É mais da metade do que sobra no fim do mês.</p>
-      </div>
-    </div>
-    <div class="perdas-grade">
-      <figure class="tela">
-        <figcaption class="tela-barra">Restaurante fictício que fatura cerca de R$ 60 mil por mês <span class="selo-exemplo">Exemplo</span></figcaption>
-        <div class="tela-corpo">
+    <header class="cabeca">
+      <p class="indice"><span>02</span>A conta</p>
+      <h2 id="quanto-titulo">Quanto dinheiro a sua cozinha pode estar perdendo?</h2>
+      <p class="cabeca-texto">O problema não é só perder dinheiro. É não saber quanto está perdendo e onde corrigir. Faça a conta com o seu faturamento e veja, ao lado, como as perdas se dividem numa casa fictícia.</p>
+    </header>
+
+    <div class="conta-grade">
+      <form class="calc" id="calc" aria-labelledby="calc-titulo" novalidate>
+        <h3 id="calc-titulo">Simulador de perda</h3>
+        <div class="calc-campo">
+          <label for="calc-fat">Faturamento médio por mês</label>
+          <div class="calc-valor"><span aria-hidden="true">R$</span><input id="calc-fat" type="number" inputmode="numeric" min="20" max="500" step="5" value="60" aria-describedby="calc-fat-ajuda"><span aria-hidden="true">mil</span></div>
+          <input class="so-js calc-faixa" id="calc-fat-faixa" type="range" min="20" max="200" step="5" value="60" aria-label="Faturamento médio por mês, em mil reais">
+          <p class="calc-ajuda" id="calc-fat-ajuda">O que entra no caixa num mês normal, em mil reais. Arredonde, não precisa ser exato.</p>
+        </div>
+        <div class="calc-campo">
+          <label for="calc-pct">Quanto do que você vende pode estar escapando <output id="calc-pct-txt" for="calc-pct">1%</output></label>
+          <input class="calc-faixa" id="calc-pct" type="range" min="0.5" max="10" step="0.5" value="1" aria-describedby="calc-pct-ajuda">
+          <p class="calc-ajuda" id="calc-pct-ajuda">Você escolhe. A conta começa em 1% só para ter um ponto de partida: não é média de mercado. O número da sua cozinha só aparece medindo.</p>
+        </div>
+        <dl class="calc-saida" aria-live="polite">
+          <div class="calc-mes"><dt>Por mês</dt><dd id="calc-mes">R$ 600</dd></div>
+          <div><dt>Em 12 meses</dt><dd id="calc-ano">R$ 7.200</dd></div>
+          <div><dt>Raio-X, uma vez</dt><dd>R$ 397</dd></div>
+        </dl>
+        <figure class="calc-grafico">
+          <svg viewBox="0 0 320 120" role="img" aria-labelledby="calc-grafico-txt" id="calc-svg">
+            <g id="calc-barras"></g>
+            <path class="calc-linha-raiox" id="calc-linha" d="M0 110H320"/>
+            <text class="calc-linha-texto" id="calc-linha-txt" x="2" y="105">RAIO-X R$ 397</text>
+          </svg>
+          <figcaption id="calc-grafico-txt">Perda acumulada mês a mês, em 12 meses, comparada com os R$ 397 do Raio-X.</figcaption>
+        </figure>
+        <p class="calc-nota" id="calc-dias">Se o Raio-X ajudar a segurar só esse 1%, ele se paga em cerca de 20 dias. É conta, não promessa.</p>
+        <p class="calc-aviso">Estimativa. Serve para dar ordem de grandeza, não é diagnóstico.</p>
+      </form>
+
+      <div class="exemplo">
+        <figure class="exemplo-cem">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Exemplo fictício de para onde vão R$ 100 do faturamento: R$ 38 de insumo, R$ 24 de equipe, R$ 12 de aluguel e contas, R$ 10 de impostos e taxas, R$ 6 de perdas pelas cinco fugas e R$ 10 que sobram.">
+            <g transform="rotate(-90 100 100)">
+              <circle cx="100" cy="100" r="70" fill="none" stroke="#8A847A" stroke-width="22" stroke-dasharray="165.13 274.69" stroke-dashoffset="0.00"/>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="#6A655E" stroke-width="22" stroke-dasharray="103.56 336.27" stroke-dashoffset="-167.13"/>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="#4F4B46" stroke-width="22" stroke-dasharray="50.78 389.04" stroke-dashoffset="-272.69"/>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="#3A3733" stroke-width="22" stroke-dasharray="41.98 397.84" stroke-dashoffset="-325.47"/>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="#C9A227" stroke-width="22" stroke-dasharray="24.39 415.43" stroke-dashoffset="-369.45"/>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="#F5F3EE" stroke-width="22" stroke-dasharray="41.98 397.84" stroke-dashoffset="-395.84"/>
+            </g>
+            <text x="100" y="98" text-anchor="middle" class="cem-valor">R$ 100</text>
+            <text x="100" y="118" text-anchor="middle" class="cem-rotulo">que entram</text>
+          </svg>
+          <figcaption>
+            <p class="exemplo-titulo">De cada R$ 100 que entram <span class="selo">Exemplo</span></p>
+            <ul class="cem-legenda">
+              <li><i style="background:#8A847A"></i>Insumo (CMV)<b>R$ 38</b></li>
+              <li><i style="background:#6A655E"></i>Equipe<b>R$ 24</b></li>
+              <li><i style="background:#4F4B46"></i>Aluguel e contas<b>R$ 12</b></li>
+              <li><i style="background:#3A3733"></i>Impostos e taxas<b>R$ 10</b></li>
+              <li class="cem-fuga"><i style="background:#C9A227"></i>Perdas pelas cinco fugas<b>R$ 6</b></li>
+              <li><i style="background:#F5F3EE"></i>O que sobra<b>R$ 10</b></li>
+            </ul>
+          </figcaption>
+        </figure>
+        <figure class="exemplo-perdas">
+          <figcaption class="exemplo-titulo">Composição das perdas · casa fictícia de cerca de R$ 60 mil por mês <span class="selo">Exemplo</span></figcaption>
           <ul class="perdas">
-            <li><span class="perda-rotulo">Compra sem cotação</span><b>R$ 720</b><span class="perda-barra" style="--v:80%"></span></li>
-            <li><span class="perda-rotulo">Estoque sem contagem</span><b>R$ 480</b><span class="perda-barra" style="--v:53.3%"></span></li>
-            <li><span class="perda-rotulo">Sobra e lixo</span><b>R$ 900</b><span class="perda-barra" style="--v:100%"></span></li>
-            <li><span class="perda-rotulo">Preço abaixo do custo</span><b>R$ 840</b><span class="perda-barra" style="--v:93.3%"></span></li>
-            <li><span class="perda-rotulo">Porção sem padrão</span><b>R$ 660</b><span class="perda-barra" style="--v:73.3%"></span></li>
+            <li><span>Compra sem cotação</span><b>R$ 720</b><i style="--v:80%"></i></li>
+            <li><span>Estoque sem contagem</span><b>R$ 480</b><i style="--v:53.3%"></i></li>
+            <li><span>Sobra e lixo</span><b>R$ 900</b><i style="--v:100%"></i></li>
+            <li><span>Preço abaixo do custo</span><b>R$ 840</b><i style="--v:93.3%"></i></li>
+            <li><span>Porção sem padrão</span><b>R$ 660</b><i style="--v:73.3%"></i></li>
           </ul>
           <div class="perdas-total">
-            <div><span>Perda do exemplo, todo mês</span><b>R$ 3.600</b><span class="perda-barra perda-barra-cheia" style="--v:100%"></span></div>
-            <div><span>Raio-X, uma vez só</span><b class="perda-raiox">R$ 397</b><span class="perda-barra perda-barra-raiox" style="--v:11%"></span></div>
+            <div><span>Perda do exemplo, todo mês</span><b>R$ 3.600</b></div>
+            <div><span>Raio-X, uma vez só</span><b class="ouro">R$ 397</b></div>
           </div>
-        </div>
-      </figure>
-      <div class="calc">
-        <h3>Quanto vale 1% do que você vende?</h3>
-        <p>Se 1% do que entra no caixa vai embora em sobra, porção maior ou compra mais cara, quanto isso dá no fim do mês? Mexa na barra e veja na sua cozinha.</p>
-        <label class="calc-rotulo so-js" for="calc-fat">Quanto o seu negócio fatura por mês? <b id="calc-fat-txt">R$ 60 mil</b></label>
-        <input class="so-js" id="calc-fat" type="range" min="20" max="200" step="5" value="60">
-        <p class="so-sem-js">Exemplo com faturamento de R$ 60 mil por mês:</p>
-        <dl class="calc-saida">
-          <div><dt>1% do que você vende, por mês</dt><dd id="calc-mes">R$ 600</dd></div>
-          <div><dt>Em um ano</dt><dd id="calc-ano">R$ 7.200</dd></div>
-          <div><dt>O Raio-X, uma vez</dt><dd>R$ 397</dd></div>
-        </dl>
-        <p class="calc-nota" id="calc-dias">Se o Raio-X ajudar a segurar só esse 1%, ele se paga em cerca de 20 dias. É conta, não promessa.</p>
+          <p class="exemplo-frase">No exemplo, as fugas levam R$ 6 de cada R$ 100. É mais da metade do que sobra no fim do mês.</p>
+        </figure>
       </div>
     </div>
-    <p class="legenda legenda-telas">Exemplo ilustrativo, com dados fictícios. Não é média de mercado nem promessa: o número da sua cozinha pode ser maior ou menor, e é para isso que serve a medição.</p>
+    <p class="legenda">Exemplo ilustrativo, com dados fictícios. Não é média de mercado nem promessa: o número da sua cozinha pode ser maior ou menor, e é para isso que serve a medição.</p>
   </div>
 </section>
 
-<!-- O diagnóstico: o que os R$ 397 pagam, os cinco números e a amostra do relatório -->
-<section class="bloco" id="o-que-e">
-  <div class="conteudo dupla dupla-topo">
-    <div class="leitura">
-      <h2>R$ 397 é o investimento no diagnóstico</h2>
-      <p>Você está pagando pela análise da cozinha e do negócio: custos, compras, perdas, preço e rotina. O objetivo é descobrir onde o dinheiro está escapando e quais correções devem vir primeiro.</p>
-      <p>Serve para restaurante, marmitaria, cafeteria, lanchonete e buffet por quilo em Curitiba e região. A implantação das correções não está nesse valor: se você quiser ajuda para executar, a gente conversa depois da devolutiva.</p>
-      <h3 class="titulo-lista">Cinco números que você não tem hoje</h3>
-      <ul class="lista-numeros">
-        <li><strong>O seu CMV real</strong>, calculado com as suas notas e a sua contagem de estoque, não com estimativa de percentual.</li>
-        <li><strong>O custo do seu prato mais vendido</strong>, com ficha técnica, fator de correção e índice de cocção.</li>
-        <li><strong>A curva ABC do seu cardápio:</strong> o que vende, o que dá margem e o que só ocupa espaço na praça e na cabeça da equipe.</li>
-        <li><strong>O seu ponto de equilíbrio:</strong> quanto você precisa vender por dia para o mês fechar no zero.</li>
-        <li><strong>O mapa das perdas:</strong> onde o produto está indo embora e quanto isso custa por mês.</li>
-      </ul>
-      <p class="fechamento-bloco">Tudo isso sai da sua operação. Nenhum número desse relatório vem de média do setor.</p>
+<!-- 5 · O relatório: páginas de demonstração -->
+<section class="bloco" id="relatorio" aria-labelledby="relatorio-titulo">
+  <div class="conteudo">
+    <header class="cabeca">
+      <p class="indice"><span>03</span>O que você recebe</p>
+      <h2 id="relatorio-titulo">Um relatório com as contas abertas</h2>
+      <p class="cabeca-texto">Impresso, entregue em mãos na devolutiva. Cada número dá para conferir conta por conta, não é uma nota de 0 a 10. Folheie as oito páginas de demonstração.</p>
+    </header>
+
+    <div class="leitor" id="leitor">
+      <ol class="leitor-indice" aria-label="Páginas do relatório">
+        <li><button type="button" data-ir="0" aria-current="true"><b>01</b>Visão geral</button></li>
+        <li><button type="button" data-ir="1"><b>02</b>Indicadores financeiros</button></li>
+        <li><button type="button" data-ir="2"><b>03</b>CMV e margens</button></li>
+        <li><button type="button" data-ir="3"><b>04</b>Compras e estoque</button></li>
+        <li><button type="button" data-ir="4"><b>05</b>Desperdícios e perdas</button></li>
+        <li><button type="button" data-ir="5"><b>06</b>Problemas identificados</button></li>
+        <li><button type="button" data-ir="6"><b>07</b>Oportunidades</button></li>
+        <li><button type="button" data-ir="7"><b>08</b>Plano de correção</button></li>
+      </ol>
+
+      <div class="leitor-palco">
+        <div class="folhas" id="folhas" tabindex="0" aria-label="Páginas de demonstração do relatório. Deslize ou use as setas.">
+
+          <article class="pagina" aria-label="Página 1 de 8: Visão geral">
+            <header class="pagina-topo"><b>Raio-X da Cozinha</b><span>Visão geral · 01/08</span></header>
+            <p class="pagina-demo">Demonstração · dados fictícios</p>
+            <p class="pagina-casa">Restaurante Exemplo · Visita em 03/11 · Entrega em 06/11</p>
+            <p class="pagina-rotulo">Por onde o dinheiro sai</p>
+            <p class="pagina-grande">R$ 3.600 <small>por mês</small></p>
+            <p class="pagina-sub">Perda e melhoria medidas na operação</p>
+            <dl class="pagina-numeros">
+              <div><dt>CMV real</dt><dd>38,0%</dd></div>
+              <div><dt>Custo do prato mais vendido</dt><dd>R$ 5,80</dd></div>
+              <div><dt>Curva ABC</dt><dd>2 pratos = 69,1%</dd></div>
+              <div><dt>Ponto de equilíbrio</dt><dd>R$ 1.538 por dia</dd></div>
+              <div><dt>Maior perda</dt><dd>Sobra, R$ 900</dd></div>
+            </dl>
+          </article>
+
+          <article class="pagina" aria-label="Página 2 de 8: Indicadores financeiros">
+            <header class="pagina-topo"><b>Raio-X da Cozinha</b><span>Indicadores · 02/08</span></header>
+            <p class="pagina-demo">Demonstração · dados fictícios</p>
+            <h3 class="pagina-titulo">Indicadores financeiros</h3>
+            <dl class="pagina-kpis">
+              <div><dt>Faturamento do mês</dt><dd>R$ 58.420</dd></div>
+              <div><dt>CMV real</dt><dd>38,0%</dd></div>
+              <div><dt>Custos fixos</dt><dd>R$ 18.000</dd></div>
+              <div><dt>Margem de contribuição</dt><dd>45%</dd></div>
+            </dl>
+            <svg class="pagina-grafico" viewBox="0 0 360 208" role="img" aria-label="Gráfico de exemplo do ponto de equilíbrio. Com custos fixos de 18 mil reais e margem de contribuição de 45 por cento, a linha de vendas cruza a linha de custo total em 40 mil reais por mês, ou 1.538 reais por dia em 26 dias de operação.">
+              <path class="g-eixo" d="M34 20V180H346"/>
+              <path class="g-tracejada" d="M34 144H346"/>
+              <text x="346" y="138" text-anchor="end">Custos fixos R$ 18.000</text>
+              <path class="g-cinza" d="M34 144 346 56"/>
+              <path class="g-linha" d="M34 180 346 20"/>
+              <path class="g-tracejada" d="M190 100V180"/>
+              <circle class="g-ponto" cx="190" cy="100" r="6"/>
+              <text class="g-forte" x="322" y="26" text-anchor="end">Vendas</text>
+              <text x="346" y="92" text-anchor="end">Custo total</text>
+              <text class="g-forte" x="182" y="88" text-anchor="end">Fecha no zero</text>
+              <text x="34" y="198" text-anchor="middle">0</text>
+              <text class="g-forte" x="190" y="198" text-anchor="middle">R$ 40.000</text>
+              <text x="346" y="198" text-anchor="end">R$ 80.000</text>
+            </svg>
+            <p class="pagina-nota">Ponto de equilíbrio: R$ 18.000 ÷ 0,45 = R$ 40.000 por mês, ou R$ 1.538 por dia em 26 dias.</p>
+          </article>
+
+          <article class="pagina" aria-label="Página 3 de 8: CMV e margens">
+            <header class="pagina-topo"><b>Raio-X da Cozinha</b><span>CMV e margens · 03/08</span></header>
+            <p class="pagina-demo">Demonstração · dados fictícios</p>
+            <h3 class="pagina-titulo">Ficha técnica · Marmita de frango</h3>
+            <table class="pagina-tabela">
+              <caption class="sprite">Exemplo de ficha técnica com dados fictícios</caption>
+              <thead><tr><th scope="col">Ingrediente</th><th scope="col">Bruto</th><th scope="col">FC</th><th scope="col">Custo</th></tr></thead>
+              <tbody>
+                <tr><td>Peito de frango</td><td>200 g</td><td>1,25</td><td>R$ 3,20</td></tr>
+                <tr><td>Arroz</td><td>80 g</td><td>1,00</td><td>R$ 0,44</td></tr>
+                <tr><td>Feijão</td><td>50 g</td><td>1,00</td><td>R$ 0,40</td></tr>
+                <tr><td>Legumes</td><td>100 g</td><td>1,25</td><td>R$ 0,60</td></tr>
+                <tr><td>Óleo e temperos</td><td>·</td><td>·</td><td>R$ 0,36</td></tr>
+                <tr><td>Embalagem</td><td>1 un</td><td>·</td><td>R$ 0,80</td></tr>
+              </tbody>
+            </table>
+            <dl class="pagina-linha">
+              <div><dt>Custo do prato</dt><dd>R$ 5,80</dd></div>
+              <div><dt>Preço de venda</dt><dd>R$ 18,00</dd></div>
+              <div><dt>CMV do prato</dt><dd>32,2%</dd></div>
+            </dl>
+            <p class="pagina-rotulo">Curva ABC do cardápio</p>
+            <ul class="pagina-abc">
+              <li class="a"><span>Frango</span><i style="--v:38.2%"></i><b>38,2%</b></li>
+              <li class="a"><span>Carne</span><i style="--v:30.9%"></i><b>30,9%</b></li>
+              <li class="b"><span>Feijoada</span><i style="--v:13.1%"></i><b>13,1%</b></li>
+              <li class="b"><span>Salada</span><i style="--v:9.8%"></i><b>9,8%</b></li>
+              <li class="c"><span>Omelete</span><i style="--v:4.9%"></i><b>4,9%</b></li>
+              <li class="c"><span>Sopa</span><i style="--v:3.1%"></i><b>3,1%</b></li>
+            </ul>
+            <p class="pagina-nota">Fator de correção (FC) do frango 1,25 e índice de cocção 0,75: os 160 g limpos viram 120 g no prato. Classe A: dois pratos somam 69,1% do faturamento.</p>
+          </article>
+
+          <article class="pagina" aria-label="Página 4 de 8: Compras e estoque">
+            <header class="pagina-topo"><b>Raio-X da Cozinha</b><span>Compras e estoque · 04/08</span></header>
+            <p class="pagina-demo">Demonstração · dados fictícios</p>
+            <h3 class="pagina-titulo">Compras e estoque</h3>
+            <div class="pagina-bloco">
+              <p class="pagina-rotulo">Compras</p>
+              <p class="pagina-media">R$ 720 <small>por mês</small></p>
+              <p>5 itens comprados acima do preço, identificados nas notas de compra do período.</p>
+              <p class="pagina-como">Como foi medido: preço pago em cada nota, item por item, nos itens que mais pesam no custo.</p>
+            </div>
+            <div class="pagina-bloco">
+              <p class="pagina-rotulo">Estoque</p>
+              <p class="pagina-media">R$ 480 <small>por mês</small></p>
+              <p>Diferença entre o que entrou nas notas e o que a contagem encontrou, sem explicação.</p>
+              <p class="pagina-como">Como foi medido: contagem dos itens que mais pesam no custo, conferida contra as notas.</p>
+            </div>
+            <p class="pagina-nota">O CMV real de 38,0% sai daqui: notas de compra mais a contagem de estoque, não estimativa de percentual.</p>
+          </article>
+
+          <article class="pagina" aria-label="Página 5 de 8: Desperdícios e perdas">
+            <header class="pagina-topo"><b>Raio-X da Cozinha</b><span>Perdas · 05/08</span></header>
+            <p class="pagina-demo">Demonstração · dados fictícios</p>
+            <h3 class="pagina-titulo">Desperdícios e perdas</h3>
+            <div class="pagina-porcao">
+              <div><span>Ficha técnica</span><b>180 g</b></div>
+              <div class="medido"><span>Medido na praça</span><b>205 g</b></div>
+            </div>
+            <p class="pagina-nota pagina-nota-topo">Porção fora da ficha, pesada durante o serviço.</p>
+            <p class="pagina-rotulo">Mapa das perdas, por mês</p>
+            <ul class="pagina-barras">
+              <li><span>Sobra e lixo</span><i style="--v:100%"></i><b>R$ 900</b></li>
+              <li><span>Preço abaixo do custo</span><i style="--v:93.3%"></i><b>R$ 840</b></li>
+              <li><span>Compra sem cotação</span><i style="--v:80%"></i><b>R$ 720</b></li>
+              <li><span>Porção sem padrão</span><i style="--v:73.3%"></i><b>R$ 660</b></li>
+              <li><span>Estoque sem contagem</span><i style="--v:53.3%"></i><b>R$ 480</b></li>
+            </ul>
+          </article>
+
+          <article class="pagina" aria-label="Página 6 de 8: Problemas identificados">
+            <header class="pagina-topo"><b>Raio-X da Cozinha</b><span>Problemas · 06/08</span></header>
+            <p class="pagina-demo">Demonstração · dados fictícios</p>
+            <h3 class="pagina-titulo">Problemas identificados</h3>
+            <ol class="pagina-lista">
+              <li><b>Sobra de produção sem controle</b><span>Desperdício · R$ 900/mês</span></li>
+              <li><b>2 pratos com preço abaixo do custo</b><span>Gestão financeira · R$ 840/mês</span></li>
+              <li><b>5 itens comprados acima do preço</b><span>Compras · R$ 720/mês</span></li>
+              <li><b>Porção 25 g acima da ficha</b><span>Produção · R$ 660/mês</span></li>
+              <li><b>Estoque sem contagem</b><span>Estoque · R$ 480/mês</span></li>
+            </ol>
+            <p class="pagina-nota">Em ordem de valor. Cada linha tem a conta aberta na página da sua área.</p>
+          </article>
+
+          <article class="pagina" aria-label="Página 7 de 8: Oportunidades">
+            <header class="pagina-topo"><b>Raio-X da Cozinha</b><span>Oportunidades · 07/08</span></header>
+            <p class="pagina-demo">Demonstração · dados fictícios</p>
+            <h3 class="pagina-titulo">Oportunidades</h3>
+            <dl class="pagina-kpis">
+              <div><dt>Perda e melhoria medidas</dt><dd>R$ 3.600/mês</dd></div>
+              <div><dt>Em 12 meses</dt><dd>R$ 43.200</dd></div>
+              <div><dt>Sobre o faturamento</dt><dd>6,2%</dd></div>
+              <div><dt>Nas 3 primeiras correções</dt><dd>R$ 2.460/mês</dd></div>
+            </dl>
+            <p>As três primeiras correções concentram R$ 2.460 dos R$ 3.600 medidos. É por elas que o trabalho começa.</p>
+            <p class="pagina-nota">É o que foi medido, não promessa de resultado: quanto volta depende de a correção ser executada.</p>
+          </article>
+
+          <article class="pagina" aria-label="Página 8 de 8: Plano de correção">
+            <header class="pagina-topo"><b>Raio-X da Cozinha</b><span>Plano · 08/08</span></header>
+            <p class="pagina-demo">Demonstração · dados fictícios</p>
+            <h3 class="pagina-titulo">Plano de correção</h3>
+            <p class="pagina-rotulo">As três primeiras correções, em ordem de retorno</p>
+            <ol class="pagina-plano">
+              <li><b>Reduzir a sobra de produção</b><span>R$ 900/mês</span><i>Responsável: cozinha</i></li>
+              <li><b>Rever o preço de 2 pratos</b><span>R$ 840/mês</span><i>Responsável: dono</i></li>
+              <li><b>Cotar os 5 itens mais comprados</b><span>R$ 720/mês</span><i>Responsável: compras</i></li>
+            </ol>
+            <p class="pagina-nota">Três correções com responsável, não uma lista de trinta recomendações. Executar sozinho ou com ajuda é decisão sua.</p>
+          </article>
+
+        </div>
+        <div class="leitor-controles so-js">
+          <button type="button" class="leitor-seta" data-passo="-1" aria-label="Página anterior"><svg aria-hidden="true"><use href="#i-seta"/></svg></button>
+          <p class="leitor-contador" aria-live="polite"><span id="leitor-atual">1</span> / 8</p>
+          <button type="button" class="leitor-seta" data-passo="1" aria-label="Próxima página"><svg aria-hidden="true"><use href="#i-seta"/></svg></button>
+          <button type="button" class="leitor-ampliar" id="leitor-ampliar"><svg aria-hidden="true"><use href="#i-lupa"/></svg>Ampliar página</button>
+        </div>
+      </div>
     </div>
-    <figure class="relatorio-fig">
-      <div class="relatorio" role="img" aria-label="Amostra da primeira página do relatório, com dados fictícios: perda e melhoria medidas de R$ 3.600 por mês, os cinco números da casa e as três primeiras correções com responsável.">
-        <div class="relatorio-topo"><b>RAIO-X DA COZINHA</b><span>Página 1</span></div>
-        <p class="relatorio-casa">Restaurante Exemplo (fictício) · Visita em 03/11 · Entrega em 06/11</p>
-        <span class="relatorio-selo">Exemplo</span>
-        <p class="relatorio-titulo">Por onde o dinheiro sai</p>
-        <p class="relatorio-grande">R$ 3.600 <small>por mês</small></p>
-        <p class="relatorio-sub">Perda e melhoria medidas na sua operação</p>
-        <dl class="relatorio-numeros">
-          <div><dt>CMV real</dt><dd>38,0%</dd></div>
-          <div><dt>Custo do prato mais vendido</dt><dd>R$ 5,80</dd></div>
-          <div><dt>Curva ABC</dt><dd>2 pratos = 69,1%</dd></div>
-          <div><dt>Ponto de equilíbrio</dt><dd>R$ 1.538 por dia</dd></div>
-          <div><dt>Maior perda</dt><dd>Sobra, R$ 900</dd></div>
-        </dl>
-        <p class="relatorio-titulo-p">As três primeiras correções</p>
-        <ol class="relatorio-correcoes">
-          <li><span>Reduzir a sobra de produção</span><b>R$ 900/mês</b><i>Responsável: cozinha</i></li>
-          <li><span>Rever o preço de 2 pratos</span><b>R$ 840/mês</b><i>Responsável: dono</i></li>
-          <li><span>Cotar os 5 itens mais comprados</span><b>R$ 720/mês</b><i>Responsável: compras</i></li>
+    <p class="legenda">Páginas de demonstração, com dados fictícios de um restaurante que não existe. Os números do seu relatório saem da sua operação.</p>
+  </div>
+
+  <dialog class="ampliada" id="ampliada" aria-labelledby="ampliada-titulo">
+    <div class="ampliada-barra">
+      <p id="ampliada-titulo">Relatório de demonstração</p>
+      <button type="button" class="ampliada-fechar" id="ampliada-fechar" aria-label="Fechar a página ampliada"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="ampliada-corpo" id="ampliada-corpo"></div>
+  </dialog>
+</section>
+
+<!-- 6 · Como funciona: oito etapas em quatro fases -->
+<section class="bloco bloco-fundo" id="como-funciona" aria-labelledby="como-titulo">
+  <div class="conteudo">
+    <header class="cabeca">
+      <p class="indice"><span>04</span>Como funciona</p>
+      <h2 id="como-titulo">Oito etapas, duas visitas</h2>
+      <p class="cabeca-texto">Da primeira conversa à devolutiva, cada etapa tem um motivo. Você só se ocupa da conversa inicial e da devolutiva: na visita, continua tocando o serviço.</p>
+    </header>
+
+    <ol class="fases">
+      <li class="fase">
+        <p class="fase-nome"><span>Antes da visita</span></p>
+        <ol class="etapas" start="1">
+          <li class="etapa"><b>01</b><h3>Primeiro contato</h3><p>No WhatsApp ou na porta do seu negócio. Eu faço sete perguntas. Se o Raio-X não fizer sentido para o seu caso, eu falo na hora e não marco nada.</p></li>
+          <li class="etapa"><b>02</b><h3>Entendimento da operação</h3><p>Com as respostas, entendo como a sua casa funciona. Se fizer sentido, eu confirmo o dia e o período, e você paga R$ 397 para reservar a data.</p></li>
         </ol>
+      </li>
+      <li class="fase fase-visita">
+        <p class="fase-nome"><span>1ª visita · em média 3 horas</span></p>
+        <ol class="etapas" start="3">
+          <li class="etapa"><b>03</b><h3>Visita técnica</h3><p>Dentro da cozinha, no movimento. Levo balança e prancheta, e você toca o serviço normalmente.</p></li>
+          <li class="etapa"><b>04</b><h3>Levantamento de dados</h3><p>Notas de compra, faturamento e custos fixos, mais a contagem dos itens que mais pesam no estoque.</p></li>
+          <li class="etapa"><b>05</b><h3>Pesagens e verificações</h3><p>Porção na balança durante o serviço, rendimento, cocção e o que vira sobra.</p></li>
+        </ol>
+      </li>
+      <li class="fase">
+        <p class="fase-nome"><span>Análise · em até 3 dias úteis</span></p>
+        <ol class="etapas" start="6">
+          <li class="etapa"><b>06</b><h3>Análise dos números</h3><p>CMV real, custo do prato, curva ABC, ponto de equilíbrio e mapa das perdas, com os seus dados.</p></li>
+          <li class="etapa"><b>07</b><h3>Preparação do relatório</h3><p>Relatório impresso, com as contas abertas e as três primeiras correções priorizadas por retorno.</p></li>
+        </ol>
+      </li>
+      <li class="fase fase-visita">
+        <p class="fase-nome"><span>2ª visita · devolutiva</span></p>
+        <ol class="etapas" start="8">
+          <li class="etapa"><b>08</b><h3>Apresentação dos resultados</h3><p>Presencial, com o relatório impresso na mão. Eu explico cada número e deixo cada correção com responsável. O que você faz com isso depois é decisão sua.</p></li>
+        </ol>
+      </li>
+    </ol>
+    <p class="nota-prazo">O prazo de 3 dias úteis conta da visita feita e dos dados financeiros recebidos. Se os dados atrasarem, o prazo anda junto.</p>
+
+    <div class="visita">
+      <h3 class="visita-titulo">Dentro da 1ª visita, parada por parada</h3>
+      <p class="visita-lead">Toque em cada parada e veja o que eu faço ali e o que isso vira no seu relatório.</p>
+      <div class="visita-interativa">
+        <div class="rota-cartao so-js" id="rota-cartao" aria-live="polite">
+          <p class="rota-cartao-rotulo" id="rota-rotulo">Entrada</p>
+          <p class="rota-titulo" id="rota-titulo">A visita começa pelos números</p>
+          <p id="rota-faz">Toque em uma parada da planta ou veja a visita inteira.</p>
+          <p class="rota-recebe" id="rota-recebe"></p>
+          <button type="button" class="rota-tour" id="rota-tour">Ver a visita inteira</button>
+        </div>
+        <figure class="planta">
+          <svg viewBox="0 0 640 392" role="group" aria-label="Planta de uma cozinha com as seis paradas da visita">
+            <defs><pattern id="grade-planta" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#262626" stroke-width=".7"/></pattern></defs>
+            <rect x="0" y="0" width="640" height="392" fill="#121212"/>
+            <rect x="20" y="20" width="600" height="340" fill="url(#grade-planta)"/>
+            <rect class="zona" x="20" y="20" width="180" height="130"/>
+            <rect class="zona" x="200" y="20" width="420" height="230"/>
+            <rect class="zona" x="20" y="250" width="600" height="110"/>
+            <path class="planta-parede" d="M300 360H20V20H620V150M620 230V360H360M200 20V150H190M140 150H20"/>
+            <rect class="tr" x="35" y="34" width="150" height="12" rx="2"/>
+            <rect class="tr" x="35" y="62" width="150" height="12" rx="2"/>
+            <path class="tr tr-fino" d="M50 34v-10h20v10M95 34v-14h24v14M140 34v-8h18v8M55 62v-12h22v12M105 62v-9h20v9M150 62v-13h20v13"/>
+            <rect class="tr" x="250" y="40" width="170" height="50" rx="3"/>
+            <path class="tr tr-fino" d="M275 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0M310 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0M345 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0M380 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0"/>
+            <rect class="tr" x="450" y="40" width="90" height="40" rx="3"/>
+            <rect class="tr tr-fino" x="462" y="48" width="66" height="24" rx="6"/>
+            <path class="tr" d="M560 44h44M566 44l4 42h24l4-42"/>
+            <rect class="tr" x="250" y="205" width="220" height="36" rx="3"/>
+            <rect class="tr tr-fino" x="280" y="213" width="34" height="20" rx="2"/>
+            <rect class="tr" x="40" y="285" width="140" height="34" rx="3"/>
+            <path class="tr tr-fino" d="M60 293h28v18H60zM66 299h16M66 305h10"/>
+            <circle class="tr" cx="490" cy="305" r="24"/>
+            <path class="tr tr-fino" d="M478 272h24M478 338h24"/>
+            <path class="planta-rastro" d="M330 352V300H110H165V112H110H165V165H335V112H585V185H360H490V305"/>
+            <path class="planta-feito" id="planta-feito" d="M330 352V300H110H165V112H110H165V165H335V112H585V185H360H490V305"/>
+            <g class="planta-rotulo">
+              <text x="110" y="138">ESTOQUE</text><text x="335" y="32">FOGÃO</text><text x="495" y="32">PIA</text><text x="585" y="32">LIXO</text>
+              <text x="360" y="262">PRAÇA</text><text x="110" y="342">CAIXA E NOTAS</text><text x="490" y="352">MESA</text>
+              <text x="604" y="194" text-anchor="end">SALÃO</text><text x="330" y="384">ENTRADA</text>
+            </g>
+            <g class="marca">
+              <g class="parada" data-parada="1" data-xy="110 300" transform="translate(110 300)" tabindex="0" role="button" aria-label="Parada 1: Caixa e notas, abro os números"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">1</text></g>
+              <g class="parada" data-parada="2" data-xy="110 112" transform="translate(110 112)" tabindex="0" role="button" aria-label="Parada 2: Estoque, conto o que tem"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">2</text></g>
+              <g class="parada" data-parada="3" data-xy="335 112" transform="translate(335 112)" tabindex="0" role="button" aria-label="Parada 3: Fogão, acompanho a produção"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">3</text></g>
+              <g class="parada" data-parada="4" data-xy="585 112" transform="translate(585 112)" tabindex="0" role="button" aria-label="Parada 4: Lixo, olho o que vira sobra"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">4</text></g>
+              <g class="parada" data-parada="5" data-xy="360 185" transform="translate(360 185)" tabindex="0" role="button" aria-label="Parada 5: Praça, peso a porção"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">5</text></g>
+              <g class="parada" data-parada="6" data-xy="490 305" transform="translate(490 305)" tabindex="0" role="button" aria-label="Parada 6: Mesa, converso com você"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">6</text></g>
+            </g>
+            <g class="boneco so-js" id="boneco" transform="translate(330 352)" aria-hidden="true">
+              <ellipse class="boneco-sombra" cx="0" cy="2" rx="9" ry="3"/>
+              <g class="boneco-corpo">
+                <circle cx="0" cy="-30" r="6"/>
+                <path d="M0-24v14M0-10l-6 11M0-10l6 11M-8-19l8 4 8-4"/>
+                <rect x="7" y="-20" width="7" height="9" rx="1"/>
+              </g>
+            </g>
+          </svg>
+          <figcaption class="legenda">Ilustração de uma cozinha qualquer. A ordem muda conforme a sua operação.</figcaption>
+        </figure>
       </div>
-      <figcaption class="legenda">Amostra da primeira página, com dados fictícios. Os números do seu relatório saem da sua operação, com as contas abertas nas páginas seguintes.</figcaption>
-    </figure>
+      <ol class="rota-legenda">
+        <li><button type="button" data-parada="1"><b>1</b><span>Caixa e notas</span></button>
+          <div class="rota-detalhe"><p class="rota-titulo">Abro os números</p><p>Faturamento, custos fixos e notas de compra. É daqui que saem o CMV real e o ponto de equilíbrio.</p><p class="rota-recebe"><strong>No relatório:</strong> Quanto a casa precisa vender por dia para fechar o mês no zero.</p></div>
+        </li>
+        <li><button type="button" data-parada="2"><b>2</b><span>Estoque</span></button>
+          <div class="rota-detalhe"><p class="rota-titulo">Conto o que tem</p><p>Contagem dos itens que mais pesam no custo, conferida contra o que entrou nas notas.</p><p class="rota-recebe"><strong>No relatório:</strong> Quanto produto some sem explicação, em reais.</p></div>
+        </li>
+        <li><button type="button" data-parada="3"><b>3</b><span>Fogão</span></button>
+          <div class="rota-detalhe"><p class="rota-titulo">Acompanho a produção</p><p>O preparo no movimento: rendimento, cocção e quanto cada insumo perde na limpeza.</p><p class="rota-recebe"><strong>No relatório:</strong> O fator de correção e o índice de cocção dos pratos principais.</p></div>
+        </li>
+        <li><button type="button" data-parada="4"><b>4</b><span>Lixo</span></button>
+          <div class="rota-detalhe"><p class="rota-titulo">Olho o que vira sobra</p><p>Sobra de produção, produto vencido e porção fora do padrão, que somem do caixa sem relatório.</p><p class="rota-recebe"><strong>No relatório:</strong> O mapa das perdas, em reais por mês.</p></div>
+        </li>
+        <li><button type="button" data-parada="5"><b>5</b><span>Praça</span></button>
+          <div class="rota-detalhe"><p class="rota-titulo">Peso a porção</p><p>Na balança, durante o serviço, comparando o que sai com o que a ficha manda.</p><p class="rota-recebe"><strong>No relatório:</strong> O custo real do prato que mais vende.</p></div>
+        </li>
+        <li><button type="button" data-parada="6"><b>6</b><span>Mesa</span></button>
+          <div class="rota-detalhe"><p class="rota-titulo">Converso com você</p><p>Junto o que medi e pergunto o que só o dono sabe: fornecedor, escala, o que já foi tentado.</p><p class="rota-recebe"><strong>No relatório:</strong> As três primeiras correções, em ordem de retorno.</p></div>
+        </li>
+      </ol>
+    </div>
   </div>
 </section>
 
-<!-- Antes e depois do Raio-X -->
-<section class="bloco bloco-carvao" id="antes-depois">
+<!-- 7 · Resultados e credibilidade -->
+<section class="bloco" id="o-que-e" aria-labelledby="cred-titulo">
   <div class="conteudo">
-    <h2>O que muda depois do Raio-X</h2>
-    <p class="abertura leitura">Muda o que você sabe. O que fazer com isso continua sendo decisão sua.</p>
-    <div class="virada">
-      <input type="radio" name="virada" id="v-antes" class="virada-input" checked>
-      <input type="radio" name="virada" id="v-depois" class="virada-input">
-      <div class="virada-botoes">
-        <label for="v-antes">Antes</label>
-        <label for="v-depois">Depois do Raio-X</label>
-      </div>
-      <p class="virada-dica so-antes">Toque em "Depois do Raio-X" e veja a mesma cozinha com os números na mão.</p>
-      <div class="virada-painel">
-        <div class="virada-topo">
-          <span>Quanto escapa por mês</span>
-          <b class="so-antes">Ninguém sabe</b>
-          <b class="so-depois">R$ 3.600 identificados</b>
-        </div>
-        <ul class="virada-linhas">
-          <li><span class="virada-area">Compras</span><span class="so-antes virada-antes">Paga o preço que o fornecedor passa</span><span class="so-depois virada-depois">5 itens acima do preço: R$ 720 por mês</span></li>
-          <li><span class="virada-area">Estoque</span><span class="so-antes virada-antes">Não sabe o que sumiu</span><span class="so-depois virada-depois">CMV real de 38%, com nota e contagem</span></li>
-          <li><span class="virada-area">Lixo</span><span class="so-antes virada-antes">A sobra vai embora sem ninguém anotar</span><span class="so-depois virada-depois">Sobra medida: R$ 900 por mês</span></li>
-          <li><span class="virada-area">Preço</span><span class="so-antes virada-antes">Preço feito olhando o vizinho</span><span class="so-depois virada-depois">Prato mais vendido custa R$ 5,80</span></li>
-          <li><span class="virada-area">Fim do mês</span><span class="so-antes virada-antes">Só descobre se sobrou quando o mês fecha</span><span class="so-depois virada-depois">Ponto de equilíbrio: R$ 1.538 por dia</span></li>
-          <li><span class="virada-area">Prioridade</span><span class="so-antes virada-antes">Muita coisa para arrumar e nenhuma ordem</span><span class="so-depois virada-depois">3 correções, cada uma com responsável</span></li>
+    <header class="cabeca">
+      <p class="indice"><span>05</span>Método e fundamento</p>
+      <h2 id="cred-titulo">Nenhum número vem de média do setor</h2>
+      <p class="cabeca-texto">R$ 397 é o investimento no diagnóstico. Você está pagando pela análise da cozinha e do negócio: custos, compras, perdas, preço e rotina. O objetivo é descobrir onde o dinheiro está escapando e quais correções devem vir primeiro.</p>
+    </header>
+
+    <div class="fundamentos">
+      <article class="fundamento">
+        <p class="fundamento-n">A</p>
+        <h3>O que é investigado</h3>
+        <p>Compras, estoque, produção, desperdício e gestão financeira. Serve para restaurante, marmitaria, cafeteria, lanchonete e buffet por quilo em Curitiba e região.</p>
+      </article>
+      <article class="fundamento">
+        <p class="fundamento-n">B</p>
+        <h3>Quais dados entram</h3>
+        <p>Notas de compra, faturamento e custos fixos, mais o que eu conto e peso na visita: estoque, porção, rendimento, cocção e sobra.</p>
+      </article>
+      <article class="fundamento">
+        <p class="fundamento-n">C</p>
+        <h3>Cinco números que você não tem hoje</h3>
+        <ul class="lista-fina">
+          <li><strong>O seu CMV real</strong>, com as suas notas e a sua contagem de estoque.</li>
+          <li><strong>O custo do prato mais vendido</strong>, com ficha técnica, fator de correção e índice de cocção.</li>
+          <li><strong>A curva ABC do cardápio:</strong> o que vende, o que dá margem e o que só ocupa espaço.</li>
+          <li><strong>O ponto de equilíbrio:</strong> quanto vender por dia para o mês fechar no zero.</li>
+          <li><strong>O mapa das perdas:</strong> onde o produto vai embora e quanto custa por mês.</li>
         </ul>
-        <p class="virada-nota">Exemplo com os mesmos dados fictícios da amostra do relatório.</p>
+      </article>
+      <article class="fundamento">
+        <p class="fundamento-n">D</p>
+        <h3>Como as conclusões se sustentam</h3>
+        <p>Tudo sai da sua operação, com as contas abertas no relatório. Se eu não medi, não entra como número.</p>
+      </article>
+      <article class="fundamento">
+        <p class="fundamento-n">E</p>
+        <h3>O que você recebe</h3>
+        <p>Relatório impresso e devolutiva presencial, com as três primeiras correções priorizadas por retorno, cada uma com responsável.</p>
+      </article>
+      <article class="fundamento">
+        <p class="fundamento-n">F</p>
+        <h3>Como segue depois</h3>
+        <p>Se quiser ajuda para executar, a gente conversa depois da devolutiva, não antes. Se não quiser, o relatório é seu do mesmo jeito.</p>
+      </article>
+    </div>
+
+    <div class="antes-depois" id="antes-depois">
+      <h3 class="antes-depois-titulo">O que muda depois do Raio-X</h3>
+      <p class="antes-depois-lead">Muda o que você sabe. O que fazer com isso continua sendo decisão sua.</p>
+      <div class="virada">
+        <input type="radio" name="virada" id="v-antes" class="virada-input" checked>
+        <input type="radio" name="virada" id="v-depois" class="virada-input">
+        <div class="virada-botoes">
+          <label for="v-antes">Antes</label>
+          <label for="v-depois">Depois do Raio-X</label>
+        </div>
+        <div class="virada-painel">
+          <div class="virada-topo">
+            <span>Quanto escapa por mês</span>
+            <b class="so-antes">Ninguém sabe</b>
+            <b class="so-depois">R$ 3.600 identificados</b>
+          </div>
+          <ul class="virada-linhas">
+            <li><span class="virada-area">Compras</span><span class="so-antes">Paga o preço que o fornecedor passa</span><span class="so-depois">5 itens acima do preço: R$ 720 por mês</span></li>
+            <li><span class="virada-area">Estoque</span><span class="so-antes">Não sabe o que sumiu</span><span class="so-depois">CMV real de 38%, com nota e contagem</span></li>
+            <li><span class="virada-area">Lixo</span><span class="so-antes">A sobra vai embora sem ninguém anotar</span><span class="so-depois">Sobra medida: R$ 900 por mês</span></li>
+            <li><span class="virada-area">Preço</span><span class="so-antes">Preço feito olhando o vizinho</span><span class="so-depois">Prato mais vendido custa R$ 5,80</span></li>
+            <li><span class="virada-area">Fim do mês</span><span class="so-antes">Só descobre se sobrou quando o mês fecha</span><span class="so-depois">Ponto de equilíbrio: R$ 1.538 por dia</span></li>
+            <li><span class="virada-area">Prioridade</span><span class="so-antes">Muita coisa para arrumar e nenhuma ordem</span><span class="so-depois">3 correções, cada uma com responsável</span></li>
+          </ul>
+          <p class="virada-nota">Exemplo com os mesmos dados fictícios do relatório de demonstração.</p>
+        </div>
       </div>
     </div>
-    <a class="botao botao-ir meio-cta" href="#agendar">Escolher o dia da visita</a>
-  </div>
-</section>
 
-<!-- BLOCO 10 · Prova visual (dados fictícios, com legenda obrigatória) -->
-<section class="bloco" id="o-trabalho">
-  <div class="conteudo">
-    <h2>É assim que a conta aparece</h2>
-    <p class="abertura leitura">As páginas seguintes do relatório abrem cada número. Dá para conferir conta por conta, não é uma nota de 0 a 10.</p>
-    <div class="telas">
-
-      <figure class="tela tela-larga">
-        <figcaption class="tela-barra">Ficha técnica · Marmita de frango, 1 porção <span class="selo-exemplo">Exemplo</span></figcaption>
-        <div class="tela-corpo">
-          <table class="tabela">
-            <caption class="sprite">Exemplo de ficha técnica com dados fictícios</caption>
-            <thead><tr><th scope="col">Ingrediente</th><th scope="col">Peso bruto</th><th scope="col">Fator de correção</th><th scope="col" class="so-largo">Peso limpo</th><th scope="col" class="so-largo">R$/kg</th><th scope="col">Custo</th></tr></thead>
-            <tbody>
-              <tr><td>Peito de frango</td><td>200 g</td><td>1,25</td><td class="so-largo">160 g</td><td class="so-largo">16,00</td><td>R$ 3,20</td></tr>
-              <tr><td>Arroz</td><td>80 g</td><td>1,00</td><td class="so-largo">80 g</td><td class="so-largo">5,50</td><td>R$ 0,44</td></tr>
-              <tr><td>Feijão</td><td>50 g</td><td>1,00</td><td class="so-largo">50 g</td><td class="so-largo">8,00</td><td>R$ 0,40</td></tr>
-              <tr><td>Legumes</td><td>100 g</td><td>1,25</td><td class="so-largo">80 g</td><td class="so-largo">6,00</td><td>R$ 0,60</td></tr>
-              <tr><td>Óleo e temperos</td><td>·</td><td>·</td><td class="so-largo">·</td><td class="so-largo">·</td><td>R$ 0,36</td></tr>
-              <tr><td>Embalagem</td><td>1 un</td><td>·</td><td class="so-largo">·</td><td class="so-largo">·</td><td>R$ 0,80</td></tr>
-            </tbody>
-          </table>
-          <div class="tela-total">
-            <div>Custo do prato <b>R$ 5,80</b></div>
-            <div>Preço de venda <b>R$ 18,00</b></div>
-            <div>CMV do prato <b>32,2%</b></div>
-          </div>
-          <p class="nota-tela">Índice de cocção do frango: 0,75. Os 160 g limpos viram 120 g no prato.</p>
-        </div>
-      </figure>
-
-      <figure class="tela">
-        <figcaption class="tela-barra">Curva ABC do cardápio <span class="selo-exemplo">Exemplo</span></figcaption>
-        <div class="tela-corpo">
-          <svg class="grafico" viewBox="0 0 360 244" role="img" aria-label="Gráfico de exemplo da curva ABC com seis pratos. Marmita de frango e marmita de carne somam 69,1 por cento do faturamento e são classe A. Feijoada e salada levam a 92 por cento e são classe B. Omelete e sopa fecham em 100 por cento e são classe C.">
-            <path class="g-eixo" d="M12 170H348"/>
-            <path class="g-tracejada" d="M12 50H348"/>
-            <text x="348" y="44" text-anchor="end">80% do faturamento</text>
-            <rect class="g-barra" x="23" y="112.7" width="34" height="57.3"/><rect class="g-barra" x="79" y="123.7" width="34" height="46.3"/><rect class="g-barra" x="135" y="150.3" width="34" height="19.7"/><rect class="g-barra" x="191" y="155.4" width="34" height="14.6"/><rect class="g-barra" x="247" y="162.6" width="34" height="7.4"/><rect class="g-barra" x="303" y="165.4" width="34" height="4.6"/>
-            <path class="g-linha" d="M40 112.7 96 66.4 152 46.7 208 32 264 24.6 320 20"/>
-            <g fill="#E3C66B"><circle cx="40" cy="112.7" r="3.5"/><circle cx="96" cy="66.4" r="3.5"/><circle cx="152" cy="46.7" r="3.5"/><circle cx="208" cy="32" r="3.5"/><circle cx="264" cy="24.6" r="3.5"/><circle cx="320" cy="20" r="3.5"/></g>
-            <g text-anchor="middle"><text x="40" y="188">Frango</text><text class="destaque" x="40" y="205">38,2%</text><text x="96" y="188">Carne</text><text class="destaque" x="96" y="205">30,9%</text><text x="152" y="188">Feijoada</text><text class="destaque" x="152" y="205">13,1%</text><text x="208" y="188">Salada</text><text class="destaque" x="208" y="205">9,8%</text><text x="264" y="188">Omelete</text><text class="destaque" x="264" y="205">4,9%</text><text x="320" y="188">Sopa</text><text class="destaque" x="320" y="205">3,1%</text>
-              <path class="ou" d="M16 216H120M128 216H232M240 216H344"/>
-              <text class="destaque" x="68" y="236">Classe A</text><text class="destaque" x="180" y="236">Classe B</text><text class="destaque" x="292" y="236">Classe C</text>
-            </g>
-          </svg>
-          <p class="nota-tela">Faturamento do mês no exemplo: R$ 58.420. A linha soma o acumulado, prato a prato.</p>
-        </div>
-      </figure>
-
-      <figure class="tela">
-        <figcaption class="tela-barra">Ponto de equilíbrio <span class="selo-exemplo">Exemplo</span></figcaption>
-        <div class="tela-corpo">
-          <svg class="grafico" viewBox="0 0 360 208" role="img" aria-label="Gráfico de exemplo do ponto de equilíbrio. Com custos fixos de 18 mil reais e margem de contribuição de 45 por cento, a linha de vendas cruza a linha de custo total em 40 mil reais por mês, ou 1.538 reais por dia em 26 dias de operação.">
-            <path class="g-eixo" d="M34 20V180H346"/>
-            <path class="g-tracejada" d="M34 144H346"/>
-            <text x="346" y="138" text-anchor="end">Custos fixos R$ 18.000</text>
-            <path class="g-areia" d="M34 144 346 56"/>
-            <path class="g-linha" d="M34 180 346 20"/>
-            <path class="g-tracejada" d="M190 100V180"/>
-            <circle cx="190" cy="100" r="6" fill="#0E0E0E" stroke="#E3C66B" stroke-width="2"/>
-            <text class="destaque" x="322" y="26" text-anchor="end">Vendas</text>
-            <text x="346" y="92" text-anchor="end">Custo total</text>
-            <text class="destaque" x="182" y="88" text-anchor="end">Fecha no zero</text>
-            <text x="34" y="198" text-anchor="middle">0</text>
-            <text class="destaque" x="190" y="198" text-anchor="middle">R$ 40.000</text>
-            <text x="346" y="198" text-anchor="end">R$ 80.000</text>
-          </svg>
-          <div class="tela-total">
-            <div>Por mês <b>R$ 40.000</b></div>
-            <div>Por dia, em 26 dias <b>R$ 1.538</b></div>
-          </div>
-          <p class="nota-tela">Margem de contribuição de 45% no exemplo: R$ 18.000 ÷ 0,45 = R$ 40.000.</p>
-        </div>
-      </figure>
-    </div>
-    <p class="legenda legenda-telas">Exemplo ilustrativo do cálculo, com dados fictícios. Os números do seu relatório saem da sua operação.</p>
-  </div>
-</section>
-
-<!-- BLOCO 6 · Como funciona -->
-<section class="bloco bloco-carvao" id="como-funciona">
-  <div class="conteudo">
-    <h2>Três passos, duas visitas</h2>
-    <ol class="passos">
-      <li class="passo">
-        <span class="passo-icone"><svg class="icone" aria-hidden="true"><use href="#i-conversa"/></svg></span>
-        <span class="passo-rotulo">Passo 1</span>
-        <h3>Primeira conversa</h3>
-        <p>No WhatsApp ou na porta do seu negócio. Eu faço sete perguntas. Se o Raio-X não fizer sentido para o seu caso, eu falo na hora e não marco nada.</p>
-        <figure class="passo-cena passo-foto"><img src="img/passo-conversa.webp" width="640" height="320" loading="lazy" alt="Mão anotando respostas em uma prancheta."></figure>
-      </li>
-      <li class="passo">
-        <span class="passo-icone"><svg class="icone" aria-hidden="true"><use href="#i-balanca"/></svg></span>
-        <span class="passo-rotulo">Passo 2 · em média 3 horas</span>
-        <h3>Visita e análise dos dados</h3>
-        <p>Dentro da cozinha, no movimento. Levo balança e prancheta, e você toca o serviço normalmente. Depois eu analiso os dados financeiros que você me passar.</p>
-        <figure class="passo-cena passo-foto"><img src="img/passo-visita.webp" width="640" height="339" loading="lazy" alt="Panelas fumegando no fogão de uma cozinha em serviço."></figure>
-      </li>
-      <li class="passo">
-        <span class="passo-icone"><svg class="icone" aria-hidden="true"><use href="#i-relatorio"/></svg></span>
-        <span class="passo-rotulo">Passo 3 · em até 3 dias úteis</span>
-        <h3>Relatório e devolutiva</h3>
-        <p>Presencial, com o relatório impresso na mão. Eu explico cada número e deixo as três primeiras correções priorizadas. O que você faz com isso depois é decisão sua.</p>
-        <figure class="passo-cena passo-foto"><img src="img/passo-relatorio.webp" width="640" height="288" loading="lazy" alt="Caderno preto com gráfico dourado e caneta sobre a mesa."></figure>
-      </li>
-    </ol>
-    <p class="legenda fotos-ia">Imagens ilustrativas, criadas por IA.</p>
-    <h3 class="titulo-lista">Como é a visita, parada por parada</h3>
-    <p class="visita-lead">Em média 3 horas dentro da sua cozinha, no movimento. Toque em cada parada e veja o que eu faço ali e o que isso vira no seu relatório.</p>
-    <div class="visita-interativa">
-      <div class="rota-cartao so-js" id="rota-cartao" aria-live="polite">
-        <p class="rota-cartao-rotulo" id="rota-rotulo">Entrada</p>
-        <p class="rota-titulo" id="rota-titulo">A visita começa pelos números</p>
-        <p id="rota-faz">Toque em uma parada da planta ou veja a visita inteira.</p>
-        <p class="rota-recebe" id="rota-recebe"></p>
-        <button type="button" class="rota-tour" id="rota-tour">Ver a visita inteira</button>
-      </div>
-      <figure class="planta">
-        <svg viewBox="0 0 640 392" role="group" aria-label="Planta de uma cozinha com as seis paradas da visita">
-          <defs><pattern id="grade-planta" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#2A2A2A" stroke-width=".7"/></pattern></defs>
-          <rect x="0" y="0" width="640" height="392" fill="#121211"/>
-          <rect x="20" y="20" width="600" height="340" fill="url(#grade-planta)"/>
-          <rect class="zona zona-estoque" x="20" y="20" width="180" height="130"/>
-          <rect class="zona zona-cozinha" x="200" y="20" width="420" height="230"/>
-          <rect class="zona zona-salao" x="20" y="250" width="600" height="110"/>
-          <path class="planta-parede" d="M300 360H20V20H620V150M620 230V360H360M200 20V150H190M140 150H20"/>
-          <rect class="tr" x="35" y="34" width="150" height="12" rx="2"/>
-          <rect class="tr" x="35" y="62" width="150" height="12" rx="2"/>
-          <path class="tr tr-fino" d="M50 34v-10h20v10M95 34v-14h24v14M140 34v-8h18v8M55 62v-12h22v12M105 62v-9h20v9M150 62v-13h20v13"/>
-          <rect class="tr" x="250" y="40" width="170" height="50" rx="3"/>
-          <path class="tr tr-fino" d="M275 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0M310 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0M345 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0M380 65a10 10 0 1 0 20 0a10 10 0 1 0-20 0"/>
-          <rect class="tr" x="450" y="40" width="90" height="40" rx="3"/>
-          <rect class="tr tr-fino" x="462" y="48" width="66" height="24" rx="6"/>
-          <path class="tr" d="M560 44h44M566 44l4 42h24l4-42"/>
-          <rect class="tr" x="250" y="205" width="220" height="36" rx="3"/>
-          <rect class="tr tr-fino" x="280" y="213" width="34" height="20" rx="2"/>
-          <rect class="tr" x="40" y="285" width="140" height="34" rx="3"/>
-          <path class="tr tr-fino" d="M60 293h28v18H60zM66 299h16M66 305h10"/>
-          <circle class="tr" cx="490" cy="305" r="24"/>
-          <path class="tr tr-fino" d="M478 272h24M478 338h24"/>
-          <path class="planta-rastro" d="M330 352V300H110H165V112H110H165V165H335V112H585V185H360H490V305"/>
-          <path class="planta-feito" id="planta-feito" d="M330 352V300H110H165V112H110H165V165H335V112H585V185H360H490V305"/>
-          <g class="planta-rotulo">
-            <text x="110" y="138">ESTOQUE</text><text x="335" y="32">FOGÃO</text><text x="495" y="32">PIA</text><text x="585" y="32">LIXO</text>
-            <text x="360" y="262">PRAÇA</text><text x="110" y="342">CAIXA E NOTAS</text><text x="490" y="352">MESA</text>
-            <text x="604" y="194" text-anchor="end">SALÃO</text><text x="330" y="384">ENTRADA</text>
-          </g>
-          <g class="marca">
-            <g class="parada" data-parada="1" data-xy="110 300" transform="translate(110 300)" tabindex="0" role="button" aria-label="Parada 1: Caixa e notas, abro os números"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">1</text></g>
-            <g class="parada" data-parada="2" data-xy="110 112" transform="translate(110 112)" tabindex="0" role="button" aria-label="Parada 2: Estoque, conto o que tem"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">2</text></g>
-            <g class="parada" data-parada="3" data-xy="335 112" transform="translate(335 112)" tabindex="0" role="button" aria-label="Parada 3: Fogão, acompanho a produção"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">3</text></g>
-            <g class="parada" data-parada="4" data-xy="585 112" transform="translate(585 112)" tabindex="0" role="button" aria-label="Parada 4: Lixo, olho o que vira sobra"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">4</text></g>
-            <g class="parada" data-parada="5" data-xy="360 185" transform="translate(360 185)" tabindex="0" role="button" aria-label="Parada 5: Praça, peso a porção"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">5</text></g>
-            <g class="parada" data-parada="6" data-xy="490 305" transform="translate(490 305)" tabindex="0" role="button" aria-label="Parada 6: Mesa, converso com você"><circle class="anel" r="21"/><circle class="miolo" r="15"/><text y="6">6</text></g>
-          </g>
-          <g class="boneco so-js" id="boneco" transform="translate(330 352)" aria-hidden="true">
-            <ellipse class="boneco-sombra" cx="0" cy="2" rx="9" ry="3"/>
-            <g class="boneco-corpo">
-              <circle cx="0" cy="-30" r="6"/>
-              <path d="M0-24v14M0-10l-6 11M0-10l6 11M-8-19l8 4 8-4"/>
-              <rect x="7" y="-20" width="7" height="9" rx="1"/>
-            </g>
-          </g>
-        </svg>
-        <figcaption class="legenda">Ilustração de uma cozinha qualquer. A ordem muda conforme a sua operação.</figcaption>
-      </figure>
-    </div>
-    <ol class="rota-legenda">
-      <li><button type="button" data-parada="1"><b>1</b><span>Caixa e notas</span></button>
-        <div class="rota-detalhe"><p class="rota-titulo">Abro os números</p><p>Faturamento, custos fixos e notas de compra. É daqui que saem o CMV real e o ponto de equilíbrio.</p><p class="rota-recebe"><strong>No relatório:</strong> Quanto a casa precisa vender por dia para fechar o mês no zero.</p></div>
-      </li>
-      <li><button type="button" data-parada="2"><b>2</b><span>Estoque</span></button>
-        <div class="rota-detalhe"><p class="rota-titulo">Conto o que tem</p><p>Contagem dos itens que mais pesam no custo, conferida contra o que entrou nas notas.</p><p class="rota-recebe"><strong>No relatório:</strong> Quanto produto some sem explicação, em reais.</p></div>
-      </li>
-      <li><button type="button" data-parada="3"><b>3</b><span>Fogão</span></button>
-        <div class="rota-detalhe"><p class="rota-titulo">Acompanho a produção</p><p>O preparo no movimento: rendimento, cocção e quanto cada insumo perde na limpeza.</p><p class="rota-recebe"><strong>No relatório:</strong> O fator de correção e o índice de cocção dos pratos principais.</p></div>
-      </li>
-      <li><button type="button" data-parada="4"><b>4</b><span>Lixo</span></button>
-        <div class="rota-detalhe"><p class="rota-titulo">Olho o que vira sobra</p><p>Sobra de produção, produto vencido e porção fora do padrão, que somem do caixa sem relatório.</p><p class="rota-recebe"><strong>No relatório:</strong> O mapa das perdas, em reais por mês.</p></div>
-      </li>
-      <li><button type="button" data-parada="5"><b>5</b><span>Praça</span></button>
-        <div class="rota-detalhe"><p class="rota-titulo">Peso a porção</p><p>Na balança, durante o serviço, comparando o que sai com o que a ficha manda.</p><p class="rota-recebe"><strong>No relatório:</strong> O custo real do prato que mais vende.</p></div>
-      </li>
-      <li><button type="button" data-parada="6"><b>6</b><span>Mesa</span></button>
-        <div class="rota-detalhe"><p class="rota-titulo">Converso com você</p><p>Junto o que medi e pergunto o que só o dono sabe: fornecedor, escala, o que já foi tentado.</p><p class="rota-recebe"><strong>No relatório:</strong> As três primeiras correções, em ordem de retorno.</p></div>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- BLOCO 7 · Preço, garantia e agendamento -->
-<section class="bloco" id="preco">
-  <!-- Escada: do diagnóstico à correção -->
-  <div class="conteudo">
-    <h2>Do diagnóstico à correção</h2>
+    <h3 class="escada-titulo">Do diagnóstico à correção</h3>
     <ol class="escada">
-      <li class="etapa etapa-atual">
-        <span class="etapa-rotulo">Etapa 1 · Descobrir</span>
-        <h3>Raio-X da Cozinha</h3>
-        <p class="etapa-objetivo">Descobrir onde o dinheiro está sendo perdido.</p>
-        <p class="etapa-preco">R$ 397</p>
+      <li class="degrau degrau-atual">
+        <p class="degrau-rotulo">Etapa 1 · Descobrir</p>
+        <h4>Raio-X da Cozinha</h4>
+        <p class="degrau-objetivo">Descobrir onde o dinheiro está sendo perdido.</p>
+        <p class="degrau-preco">R$ 397</p>
         <p>Diagnóstico, relatório e as três primeiras correções priorizadas.</p>
       </li>
-      <li class="etapa">
-        <span class="etapa-rotulo">Etapa 2 · Corrigir</span>
-        <h3>Implantação <span data-metodo>LUCRO 360°</span></h3>
-        <p class="etapa-objetivo">Corrigir o que o diagnóstico encontrou, uma correção de cada vez.</p>
-        <ul class="lista-numeros">
+      <li class="degrau">
+        <p class="degrau-rotulo">Etapa 2 · Corrigir</p>
+        <h4>Implantação <span data-metodo>LUCRO 360°</span></h4>
+        <p class="degrau-objetivo">Corrigir o que o diagnóstico encontrou, uma correção de cada vez.</p>
+        <ul class="lista-fina">
           <li>Fichas técnicas, CMV e cardápio com margem</li>
           <li>Controle de compras e estoque</li>
           <li>Rotinas e processos com responsável</li>
@@ -596,143 +740,40 @@
           <li>Treinamento da rotina com a equipe</li>
         </ul>
       </li>
-      <li class="etapa">
-        <span class="etapa-rotulo">Etapa 3 · Manter, se fizer sentido</span>
-        <h3>Acompanhamento mensal</h3>
-        <p class="etapa-objetivo">Para a casa não voltar a ser o que era.</p>
+      <li class="degrau">
+        <p class="degrau-rotulo">Etapa 3 · Manter, se fizer sentido</p>
+        <h4>Acompanhamento mensal</h4>
+        <p class="degrau-objetivo">Para a casa não voltar a ser o que era.</p>
         <p>Corrigir uma vez é a parte fácil. O difícil é o número continuar certo quando o fornecedor sobe o preço, a equipe troca ou o cardápio muda. Uma vez por mês, a gente olha os números juntos:</p>
-        <ul class="lista-numeros">
+        <ul class="lista-fina">
           <li>CMV, perdas, compras e ponto de equilíbrio do mês</li>
           <li>Preço e cardápio revistos quando o custo muda</li>
           <li>A próxima correção, com prazo e responsável</li>
         </ul>
-        <p class="etapa-livre">Não é obrigatório. Você sai do Raio-X com o relatório e as três primeiras correções, e pode seguir sozinho. O acompanhamento é para quem prefere ter alguém olhando o número todo mês.</p>
-      </li>
-          <li>Preço e cardápio revistos quando o custo muda</li>
-          <li>A próxima correção, com prazo e responsável</li>
-        </ul>
+        <p class="degrau-livre">Não é obrigatório. Você sai do Raio-X com o relatório e as três primeiras correções, e pode seguir sozinho.</p>
       </li>
     </ol>
-    <p class="etapa-nota">Etapas 2 e 3 com orçamento depois do diagnóstico, só se você quiser. O crédito da garantia vale na implantação.</p>
-  </div>
-  <div class="conteudo fechar-grade">
-    <div class="preco-caixa">
-      <p class="preco-chamada">Investimento único no diagnóstico</p>
-      <h2>R$ 397</h2>
-      <p class="preco-condicao">Uma vez só, em Pix ou cartão pelo Mercado Pago, depois que a gente confirma o dia. Sem mensalidade, sem contrato amarrado e sem obrigação de contratar mais nada depois.</p>
-      <p class="subtitulo-lista">O que está incluído:</p>
-      <ul class="lista-numeros">
-        <li>Visita de, em média, 3 horas na sua operação.</li>
-        <li>Análise dos seus dados financeiros.</li>
-        <li>Relatório impresso, com as contas abertas.</li>
-        <li>Devolutiva presencial, com as três primeiras correções já priorizadas por retorno.</li>
-      </ul>
-      <div class="garantia">
-        <svg class="icone" aria-hidden="true"><use href="#i-escudo"/></svg>
-        <div>
-          <p class="garantia-titulo">Garantia</p>
-          <p>Se a perda e a melhoria que eu medir somarem menos de R$ 1.000 por mês, você escolhe: devolvo 60% (R$ 238,20) ou os R$ 397 inteiros viram crédito por 90 dias na implantação.</p>
-        </div>
-      </div>
-      <p class="preco-depois">Se no fim da devolutiva você quiser ajuda para implantar as correções, a gente conversa sobre isso naquele momento, não antes. Se não quiser, o relatório é seu do mesmo jeito.</p>
-      <a class="botao botao-ir botao-largo" href="#agendar">Escolher o dia da visita</a>
-    </div>
+    <p class="nota-prazo">Etapas 2 e 3 com orçamento depois do diagnóstico, só se você quiser. O crédito da garantia vale na implantação.</p>
 
-    <div class="agenda" id="agendar">
-      <h2>Marque a sua visita</h2>
-      <p class="agenda-alvo">Para negócios de alimentação que faturam a partir de R$ 20 mil por mês. Faço no máximo 3 visitas por semana.</p>
-      <ol class="agenda-fluxo">
-        <li><b>1</b>Você pede</li>
-        <li><b>2</b>Eu confirmo</li>
-        <li><b>3</b>Você paga</li>
-        <li><b>4</b>Data reservada</li>
-      </ol>
-
-      <div id="agenda">
-        <fieldset class="agenda-etapa so-js">
-          <legend><span class="etapa-numero" aria-hidden="true">1</span>Qual é o seu negócio?</legend>
-          <div class="opcoes">
-            <label class="opcao"><input type="radio" name="negocio" value="restaurante"><span>Restaurante</span></label>
-            <label class="opcao"><input type="radio" name="negocio" value="buffet por quilo"><span>Buffet por quilo</span></label>
-            <label class="opcao"><input type="radio" name="negocio" value="marmitaria"><span>Marmitaria</span></label>
-            <label class="opcao"><input type="radio" name="negocio" value="cafeteria"><span>Cafeteria</span></label>
-            <label class="opcao"><input type="radio" name="negocio" value="lanchonete"><span>Lanchonete</span></label>
-            <label class="opcao"><input type="radio" name="negocio" value="outros"><span>Outros</span></label>
-          </div>
-        </fieldset>
-
-        <fieldset class="agenda-etapa so-js">
-          <legend><span class="etapa-numero" aria-hidden="true">2</span>Qual dia fica melhor?</legend>
-          <div class="opcoes" id="agenda-dias"></div>
-        </fieldset>
-
-        <fieldset class="agenda-etapa so-js">
-          <legend><span class="etapa-numero" aria-hidden="true">3</span>Em qual período eu acompanho a operação?</legend>
-          <div class="opcoes">
-            <label class="opcao"><input type="radio" name="periodo" value="manhã"><span>Manhã</span></label>
-            <label class="opcao"><input type="radio" name="periodo" value="almoço"><span>Almoço</span></label>
-            <label class="opcao"><input type="radio" name="periodo" value="tarde"><span>Tarde</span></label>
-            <label class="opcao"><input type="radio" name="periodo" value="noite"><span>Noite</span></label>
-          </div>
-        </fieldset>
-
-        <div class="envio">
-          <div class="resumo so-js" id="agenda-resumo">
-            <p class="resumo-titulo">Confira o seu pedido</p>
-            <dl>
-              <div><dt>Negócio</dt><dd data-campo="negocio">falta escolher</dd></div>
-              <div><dt>Dia</dt><dd data-campo="dia">falta escolher</dd></div>
-              <div><dt>Período</dt><dd data-campo="periodo">falta escolher</dd></div>
-            </dl>
-          </div>
-          <a class="botao botao-zap botao-largo" id="botao-envio" data-wa="RAIOX-AGENDA" href="https://wa.me/5541998824094?text=Oi%20Anderson%2C%20quero%20marcar%20o%20Raio-X%20da%20Cozinha%20(R%24%20397).%0A%0ANeg%C3%B3cio%3A%20a%20combinar%0ADia%20de%20prefer%C3%AAncia%3A%20a%20combinar%0APer%C3%ADodo%3A%20a%20combinar%0A%0ANome%20do%20neg%C3%B3cio%3A%20%0ABairro%3A%20%0A%0ASei%20que%20o%20hor%C3%A1rio%20s%C3%B3%20fica%20marcado%20depois%20da%20sua%20confirma%C3%A7%C3%A3o.%20%5BRAIOX-AGENDA%5D" target="_blank" rel="noopener">
-            <svg aria-hidden="true"><use href="#i-zap"/></svg>Enviar o pedido pelo WhatsApp
-          </a>
-          <p class="aviso-pedido"><strong>Isto ainda é um pedido.</strong> O horário só fica marcado depois que eu responder confirmando. A mensagem sai pronta: é só completar o nome do negócio e o bairro.</p>
-        </div>
-
-        <div class="pagamento">
-          <p class="pagamento-titulo">Recebeu a minha confirmação? Pague para reservar a data.</p>
-          <a class="botao botao-pagar botao-largo" data-pagar href="https://mpago.la/14SBgW3" target="_blank" rel="noopener">Pagar R$ 397 no Mercado Pago</a>
-          <p class="apoio">Pix ou cartão, na página do Mercado Pago. Depois me manda o comprovante na mesma conversa.</p>
-        </div>
-      </div>
+    <!-- Estudos de caso: estrutura pronta, escondida até existir caso real com autorização do cliente.
+         Para publicar: copie o <template>, preencha só com números medidos e autorizados e tire o atributo hidden. -->
+    <div class="casos" id="casos" hidden>
+      <h3>Casos atendidos</h3>
+      <div class="casos-lista"></div>
+      <template id="modelo-caso">
+        <article class="caso">
+          <p class="caso-tipo">Tipo de negócio · bairro</p>
+          <h4>O que foi encontrado</h4>
+          <dl><div><dt>Perda medida</dt><dd>R$ 0/mês</dd></div><div><dt>Corrigido em</dt><dd>0 semanas</dd></div></dl>
+          <p class="caso-fonte">Publicado com autorização do cliente em dd/mm/aaaa.</p>
+        </article>
+      </template>
     </div>
   </div>
 </section>
 
-<!-- Regras do atendimento -->
-<section class="bloco bloco-carvao" id="regras">
-  <div class="conteudo">
-    <h2>As regras, antes de você pagar</h2>
-    <ul class="regras">
-      <li class="regra"><svg class="icone" aria-hidden="true"><use href="#i-relogio"/></svg><h3>Prazo</h3><p>Relatório em até 3 dias úteis, contados da visita feita e dos dados financeiros recebidos. Se os dados atrasarem, o prazo anda junto.</p></li>
-      <li class="regra"><svg class="icone" aria-hidden="true"><use href="#i-calendario"/></svg><h3>Cancelamento e remarcação</h3><p>Avisou com pelo menos 24 horas: remarco sem custo ou devolvo 100%. Com menos de 24 horas ou falta: fico com 30% (R$ 119,10) pelo deslocamento e pela vaga, e o resto volta ou vira nova data.</p></li>
-      <li class="regra"><svg class="icone" aria-hidden="true"><use href="#i-rota"/></svg><h3>Deslocamento</h3><p>Incluído em Curitiba e região metropolitana. Fora disso, o valor é combinado antes de marcar.</p></li>
-      <li class="regra"><svg class="icone" aria-hidden="true"><use href="#i-conferir"/></svg><h3>O que entra e o que não entra</h3><p>Entra: visita, análise de custos, compras, perdas, preço e rotina, relatório e devolutiva. Não entra: implantar as correções, contabilidade e fiscal.</p></li>
-      <li class="regra"><svg class="icone" aria-hidden="true"><use href="#i-cadeado"/></svg><h3>Dados e sigilo</h3><p>Preciso ver notas de compra, faturamento e custos fixos. O que eu vejo fica em sigilo e serve só para o seu relatório.</p></li>
-    </ul>
-  </div>
-</section>
-
-<!-- BLOCO 8 · Para quem isto não serve -->
-<section class="bloco bloco-nao" id="quando-digo-nao">
-  <div class="conteudo">
-    <h2>Quando eu digo não</h2>
-    <p class="abertura leitura">Eu prefiro perder a venda agora a te entregar um relatório que não vai mudar nada. Estes são os casos em que eu recuso ou proponho outra coisa:</p>
-    <ul class="lista-nao">
-      <li><svg aria-hidden="true"><use href="#i-x"/></svg><strong>Faturamento abaixo de R$ 20 mil por mês.</strong> Abaixo disso o Raio-X não se paga, por mais certo que esteja o diagnóstico. Eu te falo isso antes de você pagar, não depois.</li>
-      <li><svg aria-hidden="true"><use href="#i-x"/></svg><strong>Quem quer vender mais.</strong> Eu mexo em custo, perda, preço e rotina. Marketing, mídia paga e delivery não são comigo.</li>
-      <li><svg aria-hidden="true"><use href="#i-x"/></svg><strong>Quem não pode ou não quer registrar nada, nem abrir os números.</strong> O método depende de anotar compra, perda e contagem, e eu preciso ver os dados financeiros do negócio. Sem registro e sem dados, não existe número.</li>
-      <li><svg aria-hidden="true"><use href="#i-x"/></svg><strong>Quem está pensando em vender ou fechar nos próximos seis meses.</strong> Não dá tempo de o trabalho se pagar.</li>
-      <li><svg aria-hidden="true"><use href="#i-x"/></svg><strong>Quem precisa de responsável técnico.</strong> Eu implanto rotina e controle de gestão. Responsabilidade técnica sanitária é outro profissional.</li>
-    </ul>
-    <p class="triagem leitura">Fatura abaixo de R$ 20 mil? Em geral existe um ponto único que vale a pena atacar sozinho. <a data-wa="RAIOX-TRIAGEM" href="https://wa.me/5541998824094?text=Oi%20Anderson%2C%20meu%20faturamento%20%C3%A9%20menor%2C%20queria%20saber%20o%20que%20d%C3%A1%20para%20fazer.%20%5BRAIOX-TRIAGEM%5D" target="_blank" rel="noopener">Me chama que eu te digo qual é.</a></p>
-  </div>
-</section>
-
-<!-- BLOCO 9 · Quem sou -->
-<section class="bloco" id="quem-sou">
+<!-- 8 · Quem realiza -->
+<section class="bloco bloco-fundo" id="quem-sou" aria-labelledby="quem-titulo">
   <div class="conteudo quem">
     <aside class="quem-id">
       <figure class="retrato">
@@ -741,10 +782,11 @@
       </figure>
       <img class="logo-marca" src="img/logo-lucro360.webp" width="600" height="176" loading="lazy" alt="Logotipo LUCRO 360 Consultoria. Planejamento inteligente. Resultados reais.">
     </aside>
-    <div>
-      <h2>Quem vai entrar na sua cozinha e no seu negócio</h2>
+    <div class="quem-texto">
+      <p class="indice"><span>06</span>Quem realiza</p>
+      <h2 id="quem-titulo">Quem vai entrar na sua cozinha e no seu negócio</h2>
       <div class="leitura">
-        <p>Sou Anderson Guedes, chef de cozinha formado no Centro Europeu, com estudos de gestão de restaurantes no Basque Culinary Center, na Espanha, e na Università Bocconi, na Itália. Trabalho com cozinha desde 2013, em bistrô, restaurante, hotel e alimentação saudável, como cozinheiro, chef e gerente.</p>
+        <p class="quem-abre">Sou Anderson Guedes, chef de cozinha formado no Centro Europeu, com estudos de gestão de restaurantes no Basque Culinary Center, na Espanha, e na Università Bocconi, na Itália. Trabalho com cozinha desde 2013, em bistrô, restaurante, hotel e alimentação saudável, como cozinheiro, chef e gerente.</p>
         <p>Também já toquei operação própria. Sei o que é fechar o mês com o caixa apertado e não conseguir explicar para onde foi o dinheiro. Por isso faço uma coisa só: entro na cozinha, meço o que ninguém mede e mostro a conta.</p>
         <p>Não vendo sistema, não vendo curso e não recebo comissão de fornecedor. O que eu recomendo é pensado só no seu caixa.</p>
       </div>
@@ -754,41 +796,201 @@
         <li><b>Operação própria</b>já fechei mês apertado do lado de dentro</li>
         <li><b>3 países</b>de formação: Brasil, Espanha e Itália</li>
       </ul>
+      <h3 class="formacoes-titulo">O que eu estudei e o que isso muda na sua cozinha</h3>
       <div class="formacoes">
-        <h3>O que eu estudei e o que isso muda na sua cozinha</h3>
-        <p class="formacoes-lead">Sou chef e estudei cozinha e gestão de restaurante em três escolas de três países. Veja o que cada uma muda na sua cozinha.</p>
-        <div class="formacoes-grade formacoes-grade-curta">
-          <article class="formacao formacao-curta">
-            <p class="formacao-onde"><b>Brasil</b> · Centro Europeu</p>
-            <h4>Chef de Cuisine e Restaurateur</h4>
-            <p class="formacao-gancho">Cozinha de verdade por trás de cada número.</p>
-            <p class="formacao-resultado">Técnica, ficha técnica e formação de preço. Sei o que a limpeza e a cocção tiram de cada prato.</p>
-          </article>
-          <article class="formacao formacao-curta">
-            <p class="formacao-onde"><b>Espanha</b> · Basque Culinary Center</p>
-            <h4>Gestão de Restaurantes e de Equipes</h4>
-            <p class="formacao-gancho">O restaurante lido como negócio.</p>
-            <p class="formacao-resultado">Custo, compras, engenharia de cardápio e liderança de equipe, com decisão tomada por número.</p>
-          </article>
-          <article class="formacao formacao-curta">
-            <p class="formacao-onde"><b>Itália</b> · Università Bocconi</p>
-            <h4>Food &amp; Beverage Management</h4>
-            <p class="formacao-gancho">Preço pelo valor que o cliente enxerga.</p>
-            <p class="formacao-resultado">Valor percebido e posicionamento. O preço do prato deixa de seguir o vizinho.</p>
-          </article>
-        </div>
-        <p class="legenda formacoes-nota">São cursos de tamanhos diferentes. Nenhum deles mede a sua cozinha: quem mede é a balança, na visita.</p>
+        <article class="formacao">
+          <p class="formacao-onde"><b>Brasil</b> · Centro Europeu</p>
+          <h4>Chef de Cuisine e Restaurateur</h4>
+          <p class="formacao-gancho">Cozinha de verdade por trás de cada número.</p>
+          <p>Técnica, ficha técnica e formação de preço. Sei o que a limpeza e a cocção tiram de cada prato.</p>
+        </article>
+        <article class="formacao">
+          <p class="formacao-onde"><b>Espanha</b> · Basque Culinary Center</p>
+          <h4>Gestão de Restaurantes e de Equipes</h4>
+          <p class="formacao-gancho">O restaurante lido como negócio.</p>
+          <p>Custo, compras, engenharia de cardápio e liderança de equipe, com decisão tomada por número.</p>
+        </article>
+        <article class="formacao">
+          <p class="formacao-onde"><b>Itália</b> · Università Bocconi</p>
+          <h4>Food &amp; Beverage Management</h4>
+          <p class="formacao-gancho">Preço pelo valor que o cliente enxerga.</p>
+          <p>Valor percebido e posicionamento. O preço do prato deixa de seguir o vizinho.</p>
+        </article>
       </div>
+      <p class="legenda">São cursos de tamanhos diferentes. Nenhum deles mede a sua cozinha: quem mede é a balança, na visita.</p>
     </div>
   </div>
 </section>
 
-<!-- BLOCO 11 · Perguntas que sempre me fazem -->
-<section class="bloco bloco-carvao" id="perguntas">
+<!-- 9 · Investimento, garantia e regras -->
+<section class="bloco" id="preco" aria-labelledby="preco-titulo">
   <div class="conteudo">
-    <h2>Perguntas que sempre me fazem</h2>
-    <div class="perguntas leitura">
-      <details open>
+    <header class="cabeca">
+      <p class="indice"><span>07</span>Investimento e garantia</p>
+      <h2 id="preco-titulo">Um valor, uma vez, com as regras na mesa</h2>
+    </header>
+
+    <div class="investimento">
+      <div class="preco-caixa">
+        <p class="preco-chamada">Investimento único no diagnóstico</p>
+        <p class="preco-valor">R$ 397</p>
+        <p class="preco-condicao">Uma vez só, em Pix ou cartão pelo Mercado Pago, depois que a gente confirma o dia. Sem mensalidade, sem contrato amarrado e sem obrigação de contratar mais nada depois.</p>
+        <p class="preco-sub">O que está incluído</p>
+        <ul class="lista-check">
+          <li>Visita de, em média, 3 horas na sua operação.</li>
+          <li>Análise dos seus dados financeiros.</li>
+          <li>Relatório impresso, com as contas abertas.</li>
+          <li>Devolutiva presencial, com as três primeiras correções já priorizadas por retorno.</li>
+          <li>Deslocamento em Curitiba e região metropolitana.</li>
+        </ul>
+        <a class="botao botao-ouro botao-largo" href="#agendar">Escolher o dia da visita</a>
+      </div>
+
+      <div class="garantia">
+        <svg class="garantia-icone" aria-hidden="true"><use href="#i-escudo"/></svg>
+        <p class="garantia-rotulo">Garantia</p>
+        <p class="garantia-regra">Se a perda e a melhoria que eu medir somarem menos de <strong>R$ 1.000 por mês</strong>, você escolhe:</p>
+        <div class="garantia-opcoes">
+          <div><b>60% de volta</b><span>R$ 238,20 devolvidos</span></div>
+          <p class="garantia-ou" aria-hidden="true">ou</p>
+          <div><b>Crédito inteiro</b><span>Os R$ 397 viram crédito por 90 dias na implantação</span></div>
+        </div>
+        <p class="preco-sub">Para quem é</p>
+        <ul class="lista-fina">
+          <li>Negócios de alimentação que faturam a partir de R$ 20 mil por mês, sem teto.</li>
+          <li>Em Curitiba e região metropolitana. Fora disso, o deslocamento é combinado antes de marcar.</li>
+          <li>Quem aceita mostrar notas de compra, faturamento e custos fixos.</li>
+        </ul>
+        <p class="garantia-nota">Faço no máximo 3 visitas por semana.</p>
+      </div>
+    </div>
+
+    <ul class="regras">
+      <li class="regra"><svg aria-hidden="true"><use href="#i-relogio"/></svg><h3>Prazo</h3><p>Relatório em até 3 dias úteis, contados da visita feita e dos dados financeiros recebidos. Se os dados atrasarem, o prazo anda junto.</p></li>
+      <li class="regra"><svg aria-hidden="true"><use href="#i-calendario"/></svg><h3>Cancelamento e remarcação</h3><p>Avisou com pelo menos 24 horas: remarco sem custo ou devolvo 100%. Com menos de 24 horas ou falta: fico com 30% (R$ 119,10) pelo deslocamento e pela vaga, e o resto volta ou vira nova data.</p></li>
+      <li class="regra"><svg aria-hidden="true"><use href="#i-rota"/></svg><h3>Deslocamento</h3><p>Incluído em Curitiba e região metropolitana. Fora disso, o valor é combinado antes de marcar.</p></li>
+      <li class="regra"><svg aria-hidden="true"><use href="#i-conferir"/></svg><h3>O que entra e o que não entra</h3><p>Entra: visita, análise de custos, compras, perdas, preço e rotina, relatório e devolutiva. Não entra: implantar as correções, contabilidade e fiscal.</p></li>
+      <li class="regra"><svg aria-hidden="true"><use href="#i-cadeado"/></svg><h3>Dados e sigilo</h3><p>Preciso ver notas de compra, faturamento e custos fixos. O que eu vejo fica em sigilo e serve só para o seu relatório.</p></li>
+    </ul>
+
+    <div class="nao" id="quando-digo-nao">
+      <h3 class="nao-titulo">Quando eu digo não</h3>
+      <p class="nao-lead">Eu prefiro perder a venda agora a te entregar um relatório que não vai mudar nada. Estes são os casos em que eu recuso ou proponho outra coisa:</p>
+      <ul class="lista-nao">
+        <li><svg aria-hidden="true"><use href="#i-x"/></svg><p><strong>Faturamento abaixo de R$ 20 mil por mês.</strong> Abaixo disso o Raio-X não se paga, por mais certo que esteja o diagnóstico. Eu te falo isso antes de você pagar, não depois.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-x"/></svg><p><strong>Quem quer vender mais.</strong> Eu mexo em custo, perda, preço e rotina. Marketing, mídia paga e delivery não são comigo.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-x"/></svg><p><strong>Quem não pode ou não quer registrar nada, nem abrir os números.</strong> O método depende de anotar compra, perda e contagem, e eu preciso ver os dados financeiros do negócio. Sem registro e sem dados, não existe número.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-x"/></svg><p><strong>Quem está pensando em vender ou fechar nos próximos seis meses.</strong> Não dá tempo de o trabalho se pagar.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-x"/></svg><p><strong>Quem precisa de responsável técnico.</strong> Eu implanto rotina e controle de gestão. Responsabilidade técnica sanitária é outro profissional.</p></li>
+      </ul>
+      <p class="triagem">Fatura abaixo de R$ 20 mil? Em geral existe um ponto único que vale a pena atacar sozinho. <a data-wa="RAIOX-TRIAGEM" href="https://wa.me/5541998824094?text=Oi%20Anderson%2C%20meu%20faturamento%20%C3%A9%20menor%2C%20queria%20saber%20o%20que%20d%C3%A1%20para%20fazer.%20%5BRAIOX-TRIAGEM%5D" target="_blank" rel="noopener">Me chama que eu te digo qual é.</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · Agendamento -->
+<section class="bloco bloco-fundo" id="agendar" aria-labelledby="agendar-titulo">
+  <div class="conteudo agenda-grade">
+    <div class="agenda-lado">
+      <p class="indice"><span>08</span>Agendamento</p>
+      <h2 id="agendar-titulo">Marque a sua visita</h2>
+      <p class="agenda-alvo">Para negócios de alimentação que faturam a partir de R$ 20 mil por mês. Faço no máximo 3 visitas por semana.</p>
+      <ol class="agenda-fluxo">
+        <li><b>1</b><span>Você pede</span></li>
+        <li><b>2</b><span>Eu confirmo</span></li>
+        <li><b>3</b><span>Você paga</span></li>
+        <li><b>4</b><span>Data reservada</span></li>
+      </ol>
+      <p class="aviso-pedido"><strong>Isto ainda é um pedido.</strong> O horário só fica marcado depois que eu responder confirmando. A mensagem sai pronta no WhatsApp com o que você preencher.</p>
+      <div class="pagamento">
+        <p class="pagamento-titulo">Recebeu a minha confirmação? Pague para reservar a data.</p>
+        <a class="botao botao-linha botao-largo" data-pagar href="https://mpago.la/14SBgW3" target="_blank" rel="noopener">Pagar R$ 397 no Mercado Pago</a>
+        <p class="apoio">Pix ou cartão, na página do Mercado Pago. Depois me manda o comprovante na mesma conversa.</p>
+      </div>
+    </div>
+
+    <form class="agenda" id="agenda" novalidate aria-describedby="agenda-dica">
+      <p class="agenda-dica" id="agenda-dica">Todos os campos são obrigatórios, menos o nome do negócio. Nada fica salvo nesta página.</p>
+      <div class="erros" id="agenda-erros" tabindex="-1" hidden>
+        <p>Falta completar:</p>
+        <ul></ul>
+      </div>
+
+      <div class="campo-duplo">
+        <div class="campo" data-campo="nome">
+          <label for="f-nome">Seu nome</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="name" required maxlength="60" aria-describedby="f-nome-erro">
+          <p class="campo-erro" id="f-nome-erro"></p>
+        </div>
+        <div class="campo" data-campo="casa">
+          <label for="f-casa">Nome do negócio <span class="opcional">opcional</span></label>
+          <input id="f-casa" name="casa" type="text" autocomplete="organization" maxlength="60">
+        </div>
+      </div>
+
+      <fieldset class="campo" data-campo="negocio">
+        <legend>Tipo de estabelecimento</legend>
+        <div class="opcoes">
+          <label class="opcao"><input type="radio" name="negocio" value="restaurante" required><span>Restaurante</span></label>
+          <label class="opcao"><input type="radio" name="negocio" value="buffet por quilo"><span>Buffet por quilo</span></label>
+          <label class="opcao"><input type="radio" name="negocio" value="marmitaria"><span>Marmitaria</span></label>
+          <label class="opcao"><input type="radio" name="negocio" value="cafeteria"><span>Cafeteria</span></label>
+          <label class="opcao"><input type="radio" name="negocio" value="lanchonete"><span>Lanchonete</span></label>
+          <label class="opcao"><input type="radio" name="negocio" value="outros"><span>Outros</span></label>
+        </div>
+        <p class="campo-erro"></p>
+      </fieldset>
+
+      <div class="campo" data-campo="bairro">
+        <label for="f-bairro">Bairro e cidade</label>
+        <input id="f-bairro" name="bairro" type="text" autocomplete="address-level3" required maxlength="60" placeholder="Ex.: Batel, Curitiba" aria-describedby="f-bairro-ajuda f-bairro-erro">
+        <p class="campo-ajuda" id="f-bairro-ajuda">Curitiba e região metropolitana têm deslocamento incluído.</p>
+        <p class="campo-erro" id="f-bairro-erro"></p>
+      </div>
+
+      <fieldset class="campo" data-campo="dia">
+        <legend>Dia de preferência</legend>
+        <div class="opcoes opcoes-dias" id="agenda-dias"></div>
+        <p class="campo-erro"></p>
+      </fieldset>
+
+      <fieldset class="campo" data-campo="periodo">
+        <legend>Período em que eu acompanho a operação</legend>
+        <div class="opcoes">
+          <label class="opcao"><input type="radio" name="periodo" value="manhã" required><span>Manhã</span></label>
+          <label class="opcao"><input type="radio" name="periodo" value="almoço"><span>Almoço</span></label>
+          <label class="opcao"><input type="radio" name="periodo" value="tarde"><span>Tarde</span></label>
+          <label class="opcao"><input type="radio" name="periodo" value="noite"><span>Noite</span></label>
+        </div>
+        <p class="campo-erro"></p>
+      </fieldset>
+
+      <fieldset class="campo" data-campo="canal">
+        <legend>Como prefere que eu responda</legend>
+        <div class="opcoes">
+          <label class="opcao"><input type="radio" name="canal" value="mensagem no WhatsApp" required><span>Mensagem no WhatsApp</span></label>
+          <label class="opcao"><input type="radio" name="canal" value="ligação"><span>Ligação</span></label>
+        </div>
+        <p class="campo-erro"></p>
+      </fieldset>
+
+      <button class="botao botao-zap botao-largo" type="submit"><svg aria-hidden="true"><use href="#i-zap"/></svg>Enviar o pedido pelo WhatsApp</button>
+      <p class="agenda-sem-js so-sem-js">Sem JavaScript? <a data-wa="RAIOX-AGENDA" href="https://wa.me/5541998824094?text=Oi%20Anderson%2C%20quero%20marcar%20o%20Raio-X%20da%20Cozinha%20(R%24%20397).%20%5BRAIOX-AGENDA%5D" target="_blank" rel="noopener">Abra o WhatsApp direto</a> e me diga o negócio, o bairro, o dia e o período.</p>
+      <p class="apoio">Respondo das 14h30 às 17h.</p>
+    </form>
+  </div>
+</section>
+
+<!-- 11 · Perguntas -->
+<section class="bloco" id="perguntas" aria-labelledby="perguntas-titulo">
+  <div class="conteudo perguntas-grade">
+    <header class="cabeca">
+      <p class="indice"><span>09</span>Perguntas</p>
+      <h2 id="perguntas-titulo">Perguntas que sempre me fazem</h2>
+      <p class="cabeca-texto">Não achou a sua? <a data-wa="RAIOX-FINAL" href="https://wa.me/5541998824094?text=Oi%20Anderson%2C%20quero%20conversar%20sobre%20o%20Raio-X.%20%5BRAIOX-FINAL%5D" target="_blank" rel="noopener">Pergunte no WhatsApp.</a></p>
+    </header>
+    <div class="perguntas">
+      <details>
         <summary>"R$ 397 está caro."</summary>
         <p>Pense assim: numa casa que fatura R$ 60 mil por mês, cada 1% que escapa em sobra, porção maior ou compra mais cara são R$ 600 por mês, todo mês. O diagnóstico custa R$ 397, uma vez, e são oito horas de trabalho, em média três delas dentro da sua cozinha. E se eu medir menos de R$ 1.000 por mês, a garantia vale.</p>
       </details>
@@ -840,16 +1042,14 @@
   </div>
 </section>
 
-<!-- BLOCO 12 · Fechamento -->
-<section class="bloco fechamento" id="fechamento">
+<!-- 12 · Fechamento -->
+<section class="fechamento" id="fechamento" aria-labelledby="fechamento-titulo">
   <div class="conteudo">
-    <h2>Quanto saiu da sua cozinha no mês passado?</h2>
-    <p class="leitura">Se você já sabe que tem alguma coisa errada mas não consegue apontar onde, é exatamente para isso que o Raio-X serve.</p>
+    <h2 id="fechamento-titulo">Quanto saiu da sua cozinha no mês passado?</h2>
+    <p>Se você já sabe que tem alguma coisa errada mas não consegue apontar onde, é exatamente para isso que o Raio-X serve.</p>
     <div class="fechamento-botoes">
-      <a class="botao botao-zap" data-wa="RAIOX-FINAL" href="https://wa.me/5541998824094?text=Oi%20Anderson%2C%20quero%20conversar%20sobre%20o%20Raio-X.%20%5BRAIOX-FINAL%5D" target="_blank" rel="noopener">
-        <svg aria-hidden="true"><use href="#i-zap"/></svg>Começar por uma conversa
-      </a>
-      <a class="botao botao-ir" href="#agendar">Escolher o dia da visita</a>
+      <a class="botao botao-ouro" href="#agendar">Quero fazer o Raio-X da minha cozinha</a>
+      <a class="botao botao-linha" data-wa="RAIOX-FINAL" href="https://wa.me/5541998824094?text=Oi%20Anderson%2C%20quero%20conversar%20sobre%20o%20Raio-X.%20%5BRAIOX-FINAL%5D" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Começar por uma conversa</a>
     </div>
     <p class="linha-final">Sem compromisso. Se não fizer sentido, eu falo na hora.</p>
   </div>
@@ -857,23 +1057,38 @@
 
 </main>
 
-<!-- BLOCO 13 · Rodapé -->
+<!-- Rodapé -->
 <footer class="rodape">
-  <div class="conteudo">
-    <div>
+  <div class="conteudo rodape-grade">
+    <div class="rodape-marca">
+      <img src="img/logo-lucro360-p.webp" width="420" height="123" loading="lazy" alt="LUCRO 360 Consultoria">
       <p><strong>Anderson Guedes · Gestão de cozinha para negócios de alimentação</strong></p>
       <p>Curitiba e região metropolitana, Paraná</p>
+    </div>
+    <div>
+      <p class="rodape-titulo">Contato</p>
+      <p><a data-wa="RAIOX-FIXO" href="https://wa.me/5541998824094?text=Oi%20Anderson%2C%20vim%20pela%20p%C3%A1gina%20do%20Raio-X%20da%20Cozinha.%20%5BRAIOX-FIXO%5D" target="_blank" rel="noopener">WhatsApp (41) 99882-4094</a></p>
+      <p>Respondo das 14h30 às 17h.</p>
+    </div>
+    <nav aria-label="Atalhos do rodapé">
+      <p class="rodape-titulo">Página</p>
+      <p><a href="#relatorio">O relatório</a></p>
+      <p><a href="#preco">Investimento e garantia</a></p>
+      <p><a href="#perguntas">Perguntas</a></p>
+      <p><a href="privacidade.html">Política de privacidade</a></p>
+    </nav>
+    <div class="rodape-legal">
       <p>ANDERSON GUEDES · CNPJ 35.414.930/0001-76</p>
       <p>Método <span data-metodo>LUCRO 360°</span></p>
+      <p>Imagens ilustrativas criadas por IA. Exemplos com dados fictícios.</p>
     </div>
-    <p><a href="privacidade.html">Política de privacidade</a></p>
   </div>
 </footer>
 
 <!-- Barra fixa no celular: WhatsApp e agenda sempre à mão -->
-<div class="barra-fixa">
+<div class="barra-fixa" aria-label="Atalhos">
   <a class="botao botao-zap" data-wa="RAIOX-FIXO" href="https://wa.me/5541998824094?text=Oi%20Anderson%2C%20vim%20pela%20p%C3%A1gina%20do%20Raio-X%20da%20Cozinha.%20%5BRAIOX-FIXO%5D" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>WhatsApp</a>
-  <a class="botao botao-pagar" href="#agendar">Marcar visita</a>
+  <a class="botao botao-ouro" href="#agendar">Marcar visita</a>
 </div>
 
 </body>
