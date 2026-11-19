@@ -23,7 +23,7 @@ function pedidoTexto(e) {
     "Bairro e cidade: " + (e.bairro || ""),
     "Dia de preferência: " + (e.dia || "a combinar"),
     "Período: " + (e.periodo || "a combinar"),
-    "Prefiro resposta por: " + (e.canal || "mensagem no WhatsApp"),
+    "Prefiro resposta por: " + (e.canal || "mensagem no WhatsApp") + (e.canal === "ligação" && e.telefone ? ", no " + e.telefone : ""),
     "",
     "Sei que o horário só fica marcado depois da sua confirmação."
   ].join("\n");
@@ -54,12 +54,11 @@ document.querySelectorAll("[data-metodo]").forEach((e) => { e.textContent = METO
 const menuBotao = document.querySelector(".menu-botao");
 const menu = document.getElementById("menu");
 if (menuBotao && menu) {
-  const fechar = () => { menu.classList.remove("aberto"); menuBotao.setAttribute("aria-expanded", "false"); menuBotao.setAttribute("aria-label", "Abrir o menu"); };
+  const fechar = () => { menu.classList.remove("aberto"); menuBotao.setAttribute("aria-expanded", "false"); };
   menuBotao.addEventListener("click", () => {
     const abrir = !menu.classList.contains("aberto");
     menu.classList.toggle("aberto", abrir);
     menuBotao.setAttribute("aria-expanded", String(abrir));
-    menuBotao.setAttribute("aria-label", abrir ? "Fechar o menu" : "Abrir o menu");
     if (abrir) menu.querySelector("a").focus();
   });
   menu.addEventListener("click", (e) => { if (e.target.closest("a")) fechar(); });
@@ -211,8 +210,12 @@ if (agenda) {
     { campo: "bairro", texto: true, msg: "Escreva o bairro e a cidade." },
     { campo: "dia", msg: "Escolha um dia de preferência." },
     { campo: "periodo", msg: "Escolha o período." },
-    { campo: "canal", msg: "Escolha como prefere que eu responda." }
+    { campo: "canal", msg: "Escolha como prefere que eu responda." },
+    { campo: "telefone", msg: "Escreva o telefone com DDD para eu ligar.", quando: () => valor("canal") === "ligação" }
   ];
+  // telefone só aparece (e só é obrigatório) quando a resposta for por ligação
+  const campoTelefone = document.getElementById("campo-telefone");
+  const digitos = (t) => t.replace(/\D/g, "").length;
   const caixaErros = document.getElementById("agenda-erros");
   const valor = (nome) => {
     const el = agenda.elements[nome];
@@ -228,13 +231,23 @@ if (agenda) {
       if (errado) el.setAttribute("aria-invalid", "true"); else el.removeAttribute("aria-invalid");
     });
   };
-  const invalido = (r) => r.texto ? valor(r.campo).length < 2 : !valor(r.campo);
+  const invalido = (r) => {
+    if (r.quando && !r.quando()) return false;
+    if (r.campo === "telefone") { const d = digitos(valor("telefone")); return d < 10 || d > 13; }
+    return r.texto ? valor(r.campo).length < 2 : !valor(r.campo);
+  };
 
   agenda.addEventListener("input", (e) => {
     const r = regras.find((x) => x.campo === e.target.name);
     if (r && bloco(r.campo).classList.contains("com-erro") && !invalido(r)) marcarErro(r, false);
   });
   agenda.addEventListener("change", (e) => {
+    if (e.target.name === "canal") {
+      const ligar = valor("canal") === "ligação";
+      campoTelefone.hidden = !ligar;
+      document.getElementById("f-telefone").required = ligar;
+      if (!ligar) marcarErro(regras.find((x) => x.campo === "telefone"), false);
+    }
     const r = regras.find((x) => x.campo === e.target.name);
     if (r && !invalido(r)) marcarErro(r, false);
     if (!caixaErros.hidden && regras.every((x) => !invalido(x))) caixaErros.hidden = true;
@@ -261,7 +274,7 @@ if (agenda) {
     }
     caixaErros.hidden = true;
     const dados = {};
-    ["nome", "casa", "negocio", "bairro", "dia", "periodo", "canal"].forEach((n) => { dados[n] = valor(n); });
+    ["nome", "casa", "negocio", "bairro", "dia", "periodo", "canal", "telefone"].forEach((n) => { dados[n] = valor(n); });
     const link = linkWhats("RAIOX-AGENDA", pedidoTexto(dados));
     const aba = window.open(link, "_blank", "noopener");
     if (!aba) window.location.href = link;
@@ -341,7 +354,7 @@ if (planta && planta.querySelector("#boneco")) {
 
 // 8. Entrada suave dos blocos ao rolar (some com movimento reduzido)
 if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  const alvos = document.querySelectorAll("main .bloco .cabeca, .area, .calc, .exemplo, .leitor, .fase, .visita, .fundamentos, .antes-depois, .escada, .quem-id, .quem-texto, .investimento, .regras, .nao, .agenda-lado, .agenda, .perguntas");
+  const alvos = document.querySelectorAll("main .bloco .cabeca, .problema-grade, .area, .calc, .exemplo, .leitor, .fase, .visita, .investiga, .entregas, .antes-depois, .escada, .quem-id, .quem-texto, .investimento, .regras, .nao, .agenda-lado, .agenda, .perguntas");
   const vigia = new IntersectionObserver((itens) => {
     itens.forEach((item) => { if (item.isIntersecting) { item.target.classList.add("visto"); vigia.unobserve(item.target); } });
   }, { rootMargin: "0px 0px -8% 0px" });
