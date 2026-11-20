@@ -179,8 +179,10 @@ html:not(.js) .menu-botao { display: none; }
 .area { display: grid; overflow: hidden; border: 1px solid var(--linha); border-radius: var(--raio); background: var(--preto-2); transition: border-color .4s var(--curva); }
 .area:hover { border-color: var(--borda-ouro); }
 .area-foto { position: relative; margin: 0; aspect-ratio: 16 / 10; overflow: hidden; background: var(--preto-3); }
-.area-foto img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.72) brightness(.88); transition: transform 1.2s var(--curva), filter .6s var(--curva); }
-.area:hover .area-foto img { transform: scale(1.03); filter: saturate(.85) brightness(.98); }
+.area-foto img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.94); transition: transform 1.2s var(--curva), filter .6s var(--curva); }
+.area:hover .area-foto img { transform: scale(1.03); filter: saturate(1); }
+.area-foto .foco-60 { object-position: 58% 50%; }
+.area-foto .foco-direita { object-position: 80% 50%; }
 .area-foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(14,14,14,.75)); }
 .area-foto figcaption { position: absolute; z-index: 1; left: 16px; bottom: 14px; display: flex; align-items: baseline; gap: 10px; font: 700 11px/1 var(--texto); letter-spacing: .26em; text-transform: uppercase; color: var(--papel); }
 .area-foto figcaption span { font: 700 34px/1 var(--texto); letter-spacing: -.03em; }
