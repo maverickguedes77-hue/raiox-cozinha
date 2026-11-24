@@ -182,6 +182,16 @@ html:not(.js) .menu-botao { display: none; }
 .area-foto img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.94); transition: transform 1.2s var(--curva), filter .6s var(--curva); }
 .area:hover .area-foto img { transform: scale(1.03); filter: saturate(1); }
 .area-foto .foco-60 { object-position: 58% 50%; }
+.area-foto picture { display: contents; }
+.area-foto .foco-compras { object-position: 58% 50%; }
+/* cartões das fontes lado a lado só a partir de 1024 px; no tablet a foto fica em cima, como no celular */
+@media (min-width: 1024px) {
+  .area { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+  .area-foto { aspect-ratio: auto; min-height: 100%; }
+  .area:nth-child(even) { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+  .area:nth-child(even) .area-foto { order: 2; }
+  .area-foto .foco-compras { object-position: 88% 50%; }
+}
 .area-foto .foco-direita { object-position: 80% 50%; }
 .area-foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(14,14,14,.75)); }
 .area-foto figcaption { position: absolute; z-index: 1; left: 16px; bottom: 14px; display: flex; align-items: baseline; gap: 10px; font: 700 11px/1 var(--texto); letter-spacing: .26em; text-transform: uppercase; color: var(--papel); }
@@ -653,10 +663,6 @@ html:not(.js) .barra-fixa { transform: none; }
   :root { --margem: 40px; --bloco: 112px; --cabecalho: 76px; }
   body { font-size: 16.5px; }
   .heroi { padding: 56px 0 88px; }
-  .area { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
-  .area-foto { aspect-ratio: auto; min-height: 100%; }
-  .area:nth-child(even) { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
-  .area:nth-child(even) .area-foto { order: 2; }
   .area-corpo { padding: 32px 32px 30px; }
   .conta-grade { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; }
   .calc { padding: 34px 30px; }
@@ -734,6 +740,39 @@ html:not(.js) .barra-fixa { transform: none; }
 /* ≥ 1280 px */
 @media (min-width: 1280px) {
   .area-corpo { padding: 40px 44px 38px; }
+}
+
+
+/* Gestão financeira: ilustração vetorial (nítida em qualquer tela) */
+.area-ilustra { width: 100%; height: 100%; display: block; }
+.fin-orbita { fill: none; stroke: #C0C3C8; stroke-opacity: .28; stroke-width: 1; }
+.fin-orbita .fin-arco { stroke: url(#fin-ouro); stroke-opacity: 1; stroke-width: 2.5; stroke-linecap: round; }
+.fin-curva { fill: none; stroke: url(#fin-ouro); stroke-width: 1.6; stroke-dasharray: 2 6; stroke-linecap: round; }
+.fin-ponto circle { fill: #E6C97A; }
+.fin-pasta { fill: rgba(212,175,55,.06); stroke: url(#fin-ouro); stroke-width: 2; }
+.fin-doc { fill: #F5F3EE; fill-opacity: .07; stroke: #C0C3C8; stroke-opacity: .7; stroke-width: 1.4; }
+.fin-doc-atras { fill-opacity: .03; stroke-opacity: .35; }
+.fin-doc-titulo { stroke: #E6C97A; stroke-width: 3; stroke-linecap: round; }
+.fin-linha { stroke: #C0C3C8; stroke-opacity: .45; stroke-width: 1.6; stroke-linecap: round; }
+.fin-check { fill: none; stroke: #E6C97A; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.fin-calc { fill: #151515; stroke: url(#fin-ouro); stroke-width: 2; }
+.fin-visor { fill: #0B0B0B; stroke: #C0C3C8; stroke-opacity: .5; }
+.fin-botoes .b { fill: none; stroke: #C0C3C8; stroke-opacity: .55; }
+.fin-botoes .b-ouro { fill: rgba(212,175,55,.18); stroke: #D4AF37; }
+.fin-moedas ellipse, .fin-moedas path { fill: #151515; stroke: url(#fin-ouro); stroke-width: 1.6; }
+.fin-moedas .fin-moeda-topo { fill: rgba(212,175,55,.22); }
+.fin-canto { fill: none; stroke: #D4AF37; stroke-opacity: .8; stroke-width: 1.2; }
+
+/* Produção: foto de 552 px exibida estreita no computador para manter a nitidez em tela de alta densidade */
+@media (min-width: 600px) {
+  .area.area-estreita { grid-template-columns: 260px minmax(0, 1fr); }
+  .area-estreita .area-foto { min-height: 0; align-self: center; margin: 24px 0 24px 24px; aspect-ratio: 552 / 452; border: 1px solid var(--borda-ouro); border-radius: 6px; }
+  .area-estreita .area-ficha div { grid-template-columns: 1fr; gap: 2px; }
+}
+@media (min-width: 1024px) {
+  .area.area-estreita { grid-template-columns: 300px minmax(0, 1fr); }
+  .area-estreita .area-ficha div { grid-template-columns: 11em 1fr; gap: 16px; }
+  .area-estreita .area-foto { min-height: 0; align-self: center; margin: 28px 0 28px 28px; aspect-ratio: 552 / 452; border: 1px solid var(--borda-ouro); border-radius: 6px; }
 }
 
 /* Movimento reduzido */
