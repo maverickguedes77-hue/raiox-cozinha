@@ -775,6 +775,19 @@ html:not(.js) .barra-fixa { transform: none; }
   .area-estreita .area-foto { min-height: 0; align-self: center; margin: 28px 0 28px 28px; aspect-ratio: 552 / 452; border: 1px solid var(--borda-ouro); border-radius: 6px; }
 }
 
+/* Fotos 2.1 (segunda leva): enquadramento por foto */
+.area-foto .foco-producao { object-position: 62% 50%; }
+@media (min-width: 1024px) {
+  .area-foto .foco-compras { object-position: 36% 50%; }
+}
+
+/* Gestão financeira e precificação: foto inteira em 16:9, ao lado do texto só no computador */
+.area-media .area-foto { aspect-ratio: 1672 / 941; }
+@media (min-width: 1024px) {
+  .area.area-media { grid-template-columns: 520px minmax(0, 1fr); }
+  .area-media .area-foto { min-height: 0; align-self: center; margin: 28px 0 28px 28px; border: 1px solid var(--borda-ouro); border-radius: 6px; }
+}
+
 /* Movimento reduzido */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
